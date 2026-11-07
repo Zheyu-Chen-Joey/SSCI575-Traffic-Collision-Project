@@ -1,0 +1,19 @@
+{
+  "status": "not_confirmed_no_robust_unique_minimum",
+  "local_minima_m": [
+    1100,
+    1550,
+    1850,
+    2300
+  ],
+  "first_candidate_m": 1100,
+  "traffic_coverage_verified": false,
+  "fit_model": "spherical",
+  "max_lag_m": 25000,
+  "boundary_cell_min_fraction": 0.8,
+  "working_candidate_m": 1100,
+  "final_scale_m": null,
+  "origin_support_at_1100": "3 of 4 tested origins near candidate band",
+  "traffic_location_coverage_1100": 0.6886178861788618,
+  "reason": "first main-model dip is shallow; shifts with lag/model/origin; traffic layer contains report links, not validated dated count values"
+}

@@ -1,0 +1,219 @@
+[
+  {
+    "scale_m": 500,
+    "n_grid": 5468,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 650,
+    "n_grid": 3304,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 800,
+    "n_grid": 2246,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 950,
+    "n_grid": 1629,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 1100,
+    "n_grid": 1230,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 1250,
+    "n_grid": 971,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 1400,
+    "n_grid": 784,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 1550,
+    "n_grid": 656,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 1700,
+    "n_grid": 563,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 1850,
+    "n_grid": 472,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 2000,
+    "n_grid": 419,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 2150,
+    "n_grid": 361,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 2300,
+    "n_grid": 329,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 2450,
+    "n_grid": 292,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 2600,
+    "n_grid": 261,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 2750,
+    "n_grid": 237,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 2900,
+    "n_grid": 223,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 3050,
+    "n_grid": 196,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 3200,
+    "n_grid": 182,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 3350,
+    "n_grid": 165,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 3500,
+    "n_grid": 154,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 3650,
+    "n_grid": 145,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 3800,
+    "n_grid": 135,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 3950,
+    "n_grid": 124,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 4100,
+    "n_grid": 114,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 4250,
+    "n_grid": 115,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 4400,
+    "n_grid": 107,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 4550,
+    "n_grid": 103,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 4700,
+    "n_grid": 90,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 4850,
+    "n_grid": 90,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  },
+  {
+    "scale_m": 5000,
+    "n_grid": 85,
+    "collision_sum": 230536,
+    "valid_geometry": true,
+    "crs": "EPSG:26911"
+  }
+]

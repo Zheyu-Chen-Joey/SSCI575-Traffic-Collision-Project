@@ -1,0 +1,10 @@
+{
+  "project": "SSCI575 LA collisions 2017-2021",
+  "crs": "EPSG:26911",
+  "scales_m": {"start":500,"stop":5000,"step":150},
+  "seed":575,
+  "variogram": {"model":"spherical","max_lag_m":25000,"bins":25,"minimum_pairs":30,"max_sample_cells":2500,"min_city_area_fraction":0.8},
+  "final_scale_m":null,
+  "working_candidate_m":1100,
+  "model_allowed":false
+}

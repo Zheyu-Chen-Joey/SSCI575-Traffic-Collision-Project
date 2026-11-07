@@ -1,0 +1,760 @@
+{
+  "retrieved_utc": "2026-11-07T05:20:15.703408+00:00",
+  "files": [
+    {
+      "file": "01_data\\raw\\acs2021_population.failed.html",
+      "bytes": 8764,
+      "sha256": "85fef59e37a60fc6ea402b2a915c3e2c607c2ce02ce02d9945337ddd7bb185e9"
+    },
+    {
+      "file": "01_data\\raw\\block_groups_2021.zip",
+      "bytes": 52387061,
+      "sha256": "e09b986d158f1bd965d3d3e213af976d9b830d1979408092d6863bd2b60d80c6"
+    },
+    {
+      "file": "01_data\\raw\\boundary_metadata.json",
+      "bytes": 9637,
+      "sha256": "3fe4696bde3e7b587b412b04cf3df43a27d0aa5386e7a61639529b1dfb9c066d"
+    },
+    {
+      "file": "01_data\\raw\\city_boundary.json",
+      "bytes": 369226,
+      "sha256": "35e762fbdfec92c7a851fd122d90a47efce55c02bf86814a1e583cf57647b28e"
+    },
+    {
+      "file": "01_data\\raw\\collisions_2017.json",
+      "bytes": 14072382,
+      "sha256": "88a00fc18c1fe8cab2dbe99d93dc7efd49596e10b0d59e1828dde04f7bd1f488"
+    },
+    {
+      "file": "01_data\\raw\\collisions_2018.json",
+      "bytes": 13934010,
+      "sha256": "f0c7c26ad3b3d70ff6cf122597ff346071c81e0289c292f09c1f5984ca6bae96"
+    },
+    {
+      "file": "01_data\\raw\\collisions_2019.json",
+      "bytes": 13804282,
+      "sha256": "d5e2abef99b0e0503a11cdaee263f16c30128d5b5c8c9dbb9b05c46dd5f41de0"
+    },
+    {
+      "file": "01_data\\raw\\collisions_2020.json",
+      "bytes": 10330102,
+      "sha256": "4f2fd9daad6e0b9184e71e728d39491998222a90ea223556b11665f89c220e74"
+    },
+    {
+      "file": "01_data\\raw\\collisions_2021.json",
+      "bytes": 4580164,
+      "sha256": "f15e28b757afb5144393822f4530d4f32e66a8ecc8054cc351e07913e77b25ab"
+    },
+    {
+      "file": "01_data\\raw\\collision_metadata.json",
+      "bytes": 30771,
+      "sha256": "eac5ab3f92ceeb65e18af61d083d97d797488f0866cb018435fcff1ae6d90bd1"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_0.json",
+      "bytes": 10566980,
+      "sha256": "ce286916b864550d1196f9ac95fe6ad39546fcfbf7f2a8c5c833f34c00de6444"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_1000.json",
+      "bytes": 10408112,
+      "sha256": "eafc5efb8d77088ea5cd5157dead8b17a2185ed2180b15b27e4c9d66997a48f2"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_10000.json",
+      "bytes": 4865177,
+      "sha256": "a3c7aac7a664b795517be74dca23fa3dd691428c598a3c1dac348113852562d2"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_10500.json",
+      "bytes": 6853500,
+      "sha256": "09e5d743b5e77a4ddda4b71717c42b129998099e8e7e1b0e96d69b37c320e19b"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_11000.json",
+      "bytes": 5920153,
+      "sha256": "5196bd02fcb59db31fa8c27e5023be6e525ac6f2064cf0444f039427e73174eb"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_11500.json",
+      "bytes": 6050490,
+      "sha256": "e6bbcb67f8885ae8ddf06fd3de147632e558521023a32440c7655fce7d708aa4"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_12000.json",
+      "bytes": 7078106,
+      "sha256": "7b1b8e1704c8e593d51caf13849bac7bf4be77be0c9dba607098e49a52a297f6"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_12500.json",
+      "bytes": 4139856,
+      "sha256": "b841b4cf79ec7d22016298711af01114847376ba8bd4cfc84006533e06043265"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_13000.json",
+      "bytes": 4369321,
+      "sha256": "f9993c247426d38562afb0ba4b2cf56a465c7083737d93aa6f0529663dd4b6ed"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_13500.json",
+      "bytes": 12206519,
+      "sha256": "8a9dc7cad7da0d8b5660575696d34bbabe4720c6b05b5cb5301b5eb2268ca400"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_14000.json",
+      "bytes": 9194801,
+      "sha256": "4762af3c66d34aaa0380f5cae2e02cbea07064d4ac9999ea6ad537a7be6bc57f"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_14500.json",
+      "bytes": 10584794,
+      "sha256": "dbb26bf322bee28cd203c74280ca1c87244ca2d8efbdb2751d9eabcef1ee34b7"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_1500.json",
+      "bytes": 11719020,
+      "sha256": "17ea43a33830bed922d885b4084741ef98d3a471781e4502d612debaf5d311ef"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_15000.json",
+      "bytes": 7435949,
+      "sha256": "125d6038818b63d67c08210fd3496a6729926a57f6b11e17034c27c9a31e1552"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_15500.json",
+      "bytes": 2766229,
+      "sha256": "50c28df34c54079d4fc7588b95eb1068853f658e4a59cd51f7c6e1af900ebd32"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_16000.json",
+      "bytes": 1257745,
+      "sha256": "f8a6f3e7b5b09433a4f715d6694ea33e07df1981e3eaa772317406f4abd8809a"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_16500.json",
+      "bytes": 2876930,
+      "sha256": "0e8d9e47ebb1238f7bac0d373eb6c754ec3fa7e9e31ffd58f903acb126b90a3e"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_17000.json",
+      "bytes": 4277215,
+      "sha256": "744675a101a53104f4115ce00fdad6ab751b1d20e40a9be0e76acad6d036c41b"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_17500.json",
+      "bytes": 4202955,
+      "sha256": "73f2bd37c173ae4c5a9f65758f84a56b0b849820cba346e3aaffa6e83f7ffbe9"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_18000.json",
+      "bytes": 7004512,
+      "sha256": "045cbb2e3316c134ee98218bebd91235357def2fd6f77b71c9502db2548d2a8c"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_18500.json",
+      "bytes": 8900501,
+      "sha256": "137f137766dd623783f6d6c99cba8f2df19597200d3e49fb885969408ed826fd"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_19000.json",
+      "bytes": 4493960,
+      "sha256": "f83135c3e30732db613ef1843d75231db0f2a65c65691a4395bc394f7dd8c9a9"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_19500.json",
+      "bytes": 3025065,
+      "sha256": "664461337be049c5a8a05e9ab5a1cfebcef2f96406518317e9be5565c6a0e41b"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_2000.json",
+      "bytes": 15269803,
+      "sha256": "0c0cf59127fb8a25a42195fe4cae112f97604e8291c132646df1db8b7967112d"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_20000.json",
+      "bytes": 2464379,
+      "sha256": "981bb0d56ddbaf98200892c0a17b4b90bcaf9799217c56e8efd0e8270ae5d6a1"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_20500.json",
+      "bytes": 1529791,
+      "sha256": "69d55e13fc2126535553587063daf2e48369e6e08c303cc736daf23047041032"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_21000.json",
+      "bytes": 1050455,
+      "sha256": "ee3f00342727f8faa117244c1267f137ea2433d150841762dc28b3ed2be1c158"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_21500.json",
+      "bytes": 1110351,
+      "sha256": "b0c19f73d169c8b8f2ed5c352cac2aed5a0a9bf704c2ffbe2312e28f0f30aa55"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_22000.json",
+      "bytes": 2044869,
+      "sha256": "e6ea382e72f064dfc99c842aa6cc04f513db926f5d3e6ab31f6a658d3fe3a8c4"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_22500.json",
+      "bytes": 1802147,
+      "sha256": "cf767e34020f38ee8125cdd46ce8e5a94c51ae25857fc7651afd89f5d415dcc9"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_23000.json",
+      "bytes": 1732413,
+      "sha256": "1b5a5e2cd539e00ca6e9b66887de62d1cc3114e4ea4b1a358e2fae62e876fe50"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_23500.json",
+      "bytes": 2095458,
+      "sha256": "40e1d95134aa0b001b442afb64df27b6f18f96733b11b1eb2f961b57ec2331bf"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_24000.json",
+      "bytes": 2262450,
+      "sha256": "02ebb9488c362f335e7b5f1f9479ffb7e4802c9706b02b46abe0ba459c3124ee"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_24500.json",
+      "bytes": 1564306,
+      "sha256": "93e80aa474fa922e5405223fc98719c1411bed4a9ecdb3e68e659107d711bed1"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_2500.json",
+      "bytes": 17389460,
+      "sha256": "75bf55c2ef3ad09a5d3254b970d35228d82484b3241f2919617578d6b93203ca"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_25000.json",
+      "bytes": 1423795,
+      "sha256": "f6c3848e897ad93bc8d51e5903867075f1088133e44a54bc9b1a62acb39b11d0"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_25500.json",
+      "bytes": 1367724,
+      "sha256": "0e198d7e9c461c3b59660ed3b349c7cae4157ce88cae403a88ef701c530c9c0a"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_26000.json",
+      "bytes": 1376333,
+      "sha256": "a3b6d4444168e6380c4236d785c984422f4b538bb9d8ba462c7867f5e4b2cb29"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_26500.json",
+      "bytes": 1887175,
+      "sha256": "b449337b707407483fe39d55763c3b801367081fa53f44d8d5269140449fe51e"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_27000.json",
+      "bytes": 1668858,
+      "sha256": "31bd7cd3dff2136999725de2231df17a8f3a4299465c45f24b16195f4087f9ed"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_27500.json",
+      "bytes": 1849897,
+      "sha256": "c8ce4176d065bc45f598ac6a98cba80984d29044e172f0b7774d376bb79df697"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_28000.json",
+      "bytes": 2751952,
+      "sha256": "402e90182b67f801140b454809c4a7d19fff95ea0f4b93fda5fde28ed66c43a0"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_28500.json",
+      "bytes": 2287897,
+      "sha256": "8802b6502c3fc75e942ae07703abde994a1ffa55e5b414098a3fb876cc2abd8d"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_29000.json",
+      "bytes": 2033231,
+      "sha256": "972fb7134d0c57bb7bd7269b4a97877af7a191c2d9e865ebcd933c0a99c50e23"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_29500.json",
+      "bytes": 1784665,
+      "sha256": "d96310b93074a9a972e693414f289e80a0913b443ba54577156965e9c1fd0ec6"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_3000.json",
+      "bytes": 10938740,
+      "sha256": "b0adb636bdd66646006b98490ccbdd625ce842010ed79dea3d7b62203ec86468"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_30000.json",
+      "bytes": 2316956,
+      "sha256": "8a03230d3fa497e7b78ec9c0f6e0e45bfb60b793300dc56129682310514efb1c"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_30500.json",
+      "bytes": 2697992,
+      "sha256": "94e249792e0d3dd369ebb903076ffc6b913aa98a0230b40e04098115434d06e1"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_31000.json",
+      "bytes": 1458519,
+      "sha256": "2dcb873d4da156254a0f45229e64830d05e348398fc810c287c51f59427a5bcc"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_31500.json",
+      "bytes": 1465053,
+      "sha256": "ce3e3ed9fc151456b24991a8f490ea31e2709c29ad482d223479845eabecb85a"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_32000.json",
+      "bytes": 2127488,
+      "sha256": "3a460dbbd9a4e2703dc7e9e53365a651f597ffcfb911433774fed49b6da173a2"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_32500.json",
+      "bytes": 2034302,
+      "sha256": "076d4bac409854d2d96f008dc6918f850dc44b9d3c8cb29c414c3b260320a0df"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_33000.json",
+      "bytes": 1479938,
+      "sha256": "cb25fa84940a2a29d0b1ed99afd7cbc1569ebecef982183239e6ffc83a11c996"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_33500.json",
+      "bytes": 1323525,
+      "sha256": "2499ee1f236abf566e32d388c298eddf67325c43b10b95c704023f188849dea5"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_34000.json",
+      "bytes": 1158216,
+      "sha256": "195d07b867cc1af3ffa3aa46f9f736833b7522a9d750f4697530800471e4f0bf"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_34500.json",
+      "bytes": 934006,
+      "sha256": "d646654e71d5dbf3052a0042c36c8125794286b7dd0357c1c6e67c24d9bcaeba"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_3500.json",
+      "bytes": 4470743,
+      "sha256": "6daa6d0609799d64248be6e04d354526fd7821e79f184e74994e99e8692b7972"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_35000.json",
+      "bytes": 1185122,
+      "sha256": "c6882674f6b59d0318b905b2aebb08cba930b619b3427cf0bf2284a3c7686f25"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_35500.json",
+      "bytes": 1239154,
+      "sha256": "01b2c7a95210a776e8e3fffa3586250bd75e5928a70c432211a128559e2ebdcb"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_36000.json",
+      "bytes": 1462058,
+      "sha256": "9fde19913c3cd4bae0134d5c0aeb1ac87f903635ef7bf5e49d734ed26396f5a4"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_36500.json",
+      "bytes": 1969104,
+      "sha256": "58e13534bb0554cfd11f6a3697716288a61dff04f8d2aa5e0338337e5d8b8bcc"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_37000.json",
+      "bytes": 1731844,
+      "sha256": "ac8f671b4005042585ca11665ebb27367bbcd0ef9e0a9fd204294a1fcb4f38c7"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_37500.json",
+      "bytes": 1647877,
+      "sha256": "30926fe76bfa9715640d995e1af3ee6f3a606c97ab1b9a6b8fb4008070b607b8"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_38000.json",
+      "bytes": 1943853,
+      "sha256": "f86dcca7d0dca7a829706fc257b15dd88510255cc0c61cc396218ebcf4918f71"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_38500.json",
+      "bytes": 2078532,
+      "sha256": "1ad63b1c1cefaded48f97870f323639f8a4d6361909800aaf45bb8855afb2072"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_39000.json",
+      "bytes": 1878872,
+      "sha256": "7fef7a4a0125d82bdb12c44eabea6b9338fc481b92a3907dde4520cc45913a75"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_39500.json",
+      "bytes": 1476563,
+      "sha256": "c1be1aeb5089c6010acc85e91697c94ba02093f27d74addf769d801a25f79249"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_4000.json",
+      "bytes": 8428390,
+      "sha256": "32a30ff025b12fba22b30afc7f6fc1e073b89f36d339b242f014d7a6a99ac273"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_40000.json",
+      "bytes": 1708306,
+      "sha256": "fbc0e941aa57a148893e66f963525cdfc6609fd2c369073a866e9e676409cdb0"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_40500.json",
+      "bytes": 2410136,
+      "sha256": "b5cf8189959d8bbaa0b07dfb5d83722b67886a03e5a9e41d1d3c6f26c1c04dd0"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_41000.json",
+      "bytes": 1634663,
+      "sha256": "e210b2416297af0b279e1d4135c8182c57742ffd538220346ffadae2e6b9a60d"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_41500.json",
+      "bytes": 1912509,
+      "sha256": "67da34a68a2a9882c8894860c7311eb7a99a71322f4d8b8b98a3ad2102872f48"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_42000.json",
+      "bytes": 2550596,
+      "sha256": "4674b678c3a4ba1fed00ae5178270533d527e9769b10cf844260f3e8641faa9c"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_42500.json",
+      "bytes": 2141210,
+      "sha256": "139711e7cf9255d188b20b1e4c3b87149ead1c97cfb31bd6e23f205137574b0c"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_43000.json",
+      "bytes": 1238252,
+      "sha256": "719b4f69d6a9f83b39f4d3ee8c60a474be6decaf1dbeeb4ca730042444920e45"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_43500.json",
+      "bytes": 3357615,
+      "sha256": "0c70764a64d181bb8c00ba1306ebb230be8777a2a07bfe15164315fc4f90657a"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_44000.json",
+      "bytes": 2398039,
+      "sha256": "90b871db09214da3d3f13a8e7c448b1415a95f4f778908db2eeb46b2bfb6505a"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_44500.json",
+      "bytes": 3760705,
+      "sha256": "517924301c3eda384043d585fdc2005f92f381b7c642291e0bc3d90b99c6ac38"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_4500.json",
+      "bytes": 9454734,
+      "sha256": "9480fc9c293d5cb59f5ea44fc9ec533dd61b90e1cab42fbcaec639fbc06f0eaa"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_45000.json",
+      "bytes": 2368833,
+      "sha256": "2faba39447b8dfe9c9f480848b70f27321ec682c1a9e0a6a89e6c058ea3e64a9"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_45500.json",
+      "bytes": 4307211,
+      "sha256": "14742ef23297ce9bb8aad73ecaff9cbfd64f53c32aeea80effc083429b8d074c"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_46000.json",
+      "bytes": 2662253,
+      "sha256": "6e7431229d53314ddaa0e73c5e76d7777922b58a341d988889943657d49d2253"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_46500.json",
+      "bytes": 2264437,
+      "sha256": "2706821f22f29efb39fa273d2d43bfb4a88b590f72a0d76afe640a58777a6d0b"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_47000.json",
+      "bytes": 2221583,
+      "sha256": "2cf4b46d9deeef96ed1e3903c2755a40487a8f42203aa889b577f4c62ab5a611"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_47500.json",
+      "bytes": 1882579,
+      "sha256": "b6bc1a0099644b93760e48fa113a36753b2dd400efbfe8725763ba370858191e"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_48000.json",
+      "bytes": 1659068,
+      "sha256": "93146b6056b9994dc561b22e7344b7cb9419d5dcd4bffb20887625e6b7fb73b6"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_48500.json",
+      "bytes": 1496770,
+      "sha256": "e62d418d5df4447460b6b3dc21d50f458c193498b70adfdc5657f499f37f2a17"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_49000.json",
+      "bytes": 1583873,
+      "sha256": "f76f12a0e86af020bb021080f77587c034eec8e9761d9c7854c1a1f6e8a74cc1"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_49500.json",
+      "bytes": 1628089,
+      "sha256": "ebface927cd7d043565be684ee14e5e3fe1b4c560094214fe5a0a4aac7848bc4"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_500.json",
+      "bytes": 14446850,
+      "sha256": "693cceb88f95d5d687d87890dc02534fa6e5720cfa3eff64f1dc87009954c51d"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_5000.json",
+      "bytes": 8926212,
+      "sha256": "f0404c5437bb7fa7aef07a0c8d20542a894cce0fac9a0435f1e35fea6e3b3ade"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_50000.json",
+      "bytes": 4818657,
+      "sha256": "4d13e10d63228e0ff105f3a8e7ccff7fd1b0dc8881fb6d9b8dfbcbb5b184a35e"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_50500.json",
+      "bytes": 1034720,
+      "sha256": "7ed32276a8e0bf4a187d44708fca63978ab03d867022b3d1ef9c865dec650b45"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_5500.json",
+      "bytes": 7138442,
+      "sha256": "df80ec540d4de38b9767bd4158377de8bf307f068107501b3fadb187c600b3c9"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_6000.json",
+      "bytes": 6342588,
+      "sha256": "466f34efde42a6d7e84d763ce5f745a3393e04b4863782379818886c0d2ddec1"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_6500.json",
+      "bytes": 5700941,
+      "sha256": "d32f37bc5953a73ac6c4b007dcc1f9cbfd3a823b663129b8e1634147c2de5aca"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_7000.json",
+      "bytes": 5903449,
+      "sha256": "d63f137f4b7c1b4128be6366876f43eeb504b13a64f709a70e1d7234c6a67af2"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_7500.json",
+      "bytes": 5278433,
+      "sha256": "986fae9159c75cb74519679bb0e3791bc63ae82fe1e11c4256e0c3d8596b13cb"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_8000.json",
+      "bytes": 4739373,
+      "sha256": "aa9b835f61564e0e10be2f0898a38e80cf5f0f43aa9dfa843b864d5150606172"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_8500.json",
+      "bytes": 4945782,
+      "sha256": "baf05bb41c80dc874065edc4f7e7e862140634de3dccce9edcc0df3da127f78b"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_9000.json",
+      "bytes": 6796909,
+      "sha256": "6999eaa81a665cad5dca37a311c126f69fc42aff967aba2e5ad6d125b04fc11b"
+    },
+    {
+      "file": "01_data\\raw\\landuse_batch_9500.json",
+      "bytes": 8578197,
+      "sha256": "e82c9bccaf52780723c0df4391668beb48298a1554429b65f4c33411486d47f9"
+    },
+    {
+      "file": "01_data\\raw\\landuse_ids.json",
+      "bytes": 343450,
+      "sha256": "d29d68b793d77e3518263e2de56898ddfc4a7cdc06280469a81e78b473bfd4f5"
+    },
+    {
+      "file": "01_data\\raw\\landuse_metadata.json",
+      "bytes": 24095,
+      "sha256": "3fd5505b8b5824d2d4f17a73b19f47596090193d8a6b343417a21e26be5937c2"
+    },
+    {
+      "file": "01_data\\raw\\landuse_probe.json",
+      "bytes": 1833,
+      "sha256": "dc31e6bda17f5de95ff65150065951ab68ce134da821467d43ab284232700c10"
+    },
+    {
+      "file": "01_data\\raw\\newcollision_metadata.json",
+      "bytes": 6,
+      "sha256": "05dd45608d9ad2c6befefa0cfb63251e75e8fae7c378ea12fcdf5ce5c89c00b1"
+    },
+    {
+      "file": "01_data\\raw\\planning_metadata.json",
+      "bytes": 7407,
+      "sha256": "d8384cc99b4213afd05e311431226d790f269aebcefa5813396ad58d6b65864d"
+    },
+    {
+      "file": "01_data\\raw\\signals_metadata.json",
+      "bytes": 20351,
+      "sha256": "1f41f501315056b4a550bf34a37c3cc9b8ed25c7c589d00bf965f6775ecb1d4b"
+    },
+    {
+      "file": "01_data\\raw\\signals_probe.json",
+      "bytes": 344,
+      "sha256": "094c908f8008c6f2a01b5ce42dd1ee9a1cfc83f2d337353678cfabf66c29edf8"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_0.json",
+      "bytes": 123383,
+      "sha256": "3790d8578ecc43dd63629e2b3105c5f8ace49cc3b2a220b56f752e863cc042ae"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_1000.json",
+      "bytes": 124786,
+      "sha256": "87e6c3bb9d734a9590f57de744f9009a19daddecbcf7d148de72a90c6e8ef184"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_1500.json",
+      "bytes": 125129,
+      "sha256": "5a14006200d6a9103359ca7248f7abc37b6f7164c3e4bea48af64ec488ce5738"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_2000.json",
+      "bytes": 125151,
+      "sha256": "c2148d5c960f8434d2bddbc0611b4f4d96850865d59038b545e8ab135b73c1c7"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_2500.json",
+      "bytes": 125591,
+      "sha256": "e4e2868917f183c3341d77da8a839726fc39a0ae57b4bcf5ecf6142d776f6f48"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_3000.json",
+      "bytes": 125262,
+      "sha256": "23914f6bb6fbf36b41198db5223773913ad9a55eb331a13959a4d6f271fba79d"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_3500.json",
+      "bytes": 124952,
+      "sha256": "bf04035bcdda9fb923339de3164a45ddb4d5b54a649c3f807b5b00ae93244a03"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_4000.json",
+      "bytes": 124604,
+      "sha256": "fdcd88e67ff13c76bb089750165ccf1e88ee4058fbf652ed1e083f1fc95b4c7c"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_4500.json",
+      "bytes": 125141,
+      "sha256": "27b05953ad035bc19cbf51bf74fac720d6bbb1a6a0fb7e3cd0a3688bf3cda04b"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_500.json",
+      "bytes": 123779,
+      "sha256": "94dc1b93d5379d4e1487a47da6de88882962421dd7bd702b7206187ffe7b4808"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_5000.json",
+      "bytes": 124309,
+      "sha256": "97a9a19fe0347ba91e3cb819831539279e9f0686f1bca40faf5aaa6ee63bda96"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_batch_5500.json",
+      "bytes": 22739,
+      "sha256": "f47ec0255739eff1114df92735e8ccf5c006a1fbb51d0bd9d096f59f82739715"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_ids.json",
+      "bytes": 32502,
+      "sha256": "1c8a5b4c775460af1b576661e693f789e9cc47647aa290f7892de028a02ec73a"
+    },
+    {
+      "file": "01_data\\raw\\signal_locations_metadata.json",
+      "bytes": 3700,
+      "sha256": "0c06f4dfb4017865c0f46b07d74b415e12a9de60ac9c11dcfb7fbb6e145639ee"
+    },
+    {
+      "file": "01_data\\raw\\tiger_roads_2021.zip",
+      "bytes": 20901730,
+      "sha256": "d1543f40964f516ece1fd1dac2c82ff15730918ac8c7a9c4925017aec856d47d"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_0.json",
+      "bytes": 367570,
+      "sha256": "ab0fd17a6c863ba57e251f0e84cde58df854aff43b371c614ad01c042df43015"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_1000.json",
+      "bytes": 317144,
+      "sha256": "97efaa62f18fd1912dc45ec1c19bbb77cd5693926b6de21b3bad6dff0e328268"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_1500.json",
+      "bytes": 345145,
+      "sha256": "66c31829534a05c9bb61d45a8d98cde3e7420e18656ac1db689cf7f188683562"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_2000.json",
+      "bytes": 371083,
+      "sha256": "c4e778f10d8f32abacde65e7c0aca009d288c598c3c1c0f5e75734ab1464b7a0"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_2500.json",
+      "bytes": 345409,
+      "sha256": "5a40503f921ad5887af7dcc7e9905d3885f83241adbf5eff69a6e7b34d9fbeff"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_3000.json",
+      "bytes": 339508,
+      "sha256": "59227b6b101992b573eea712c4de84dbcc691560b1c5d0650aac6d49ab2985a6"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_3500.json",
+      "bytes": 338752,
+      "sha256": "7d23115412473233a522f0b04fa4764a3dde9a2292fc4f9cf250913b3bfe89a6"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_4000.json",
+      "bytes": 369062,
+      "sha256": "58619871e855b6af6ca234aef629a0affa722698c2b85d683c0fa71454d4f4f3"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_4500.json",
+      "bytes": 341150,
+      "sha256": "d94a9953cd5e5175e7562322876eb584355619f5f1a0eef20600c5769a121c4d"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_500.json",
+      "bytes": 347318,
+      "sha256": "4854975575f98be90c30325cf452696f60ea87263b50a6b582ad4f8bb1caa15e"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_5000.json",
+      "bytes": 357466,
+      "sha256": "bc384becfb577f1cbab0bd38c42698e671346540c212806dd53bdeb8095e34e1"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_5500.json",
+      "bytes": 343778,
+      "sha256": "538dc0704d0d5142893ee3b587761431968be8c3bf8124d582c2f85cf54526d1"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_6000.json",
+      "bytes": 349233,
+      "sha256": "b3976b12eea61501d8bd4d0fbdf3bd51dd42bdc0988dcc9a78e0c96ad5f519b6"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_batch_6500.json",
+      "bytes": 224464,
+      "sha256": "dace7241db9f8c07c2b5bc287e37f0e67acefb865b8e6ec77626422ef652ff04"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_ids.json",
+      "bytes": 39861,
+      "sha256": "b1613353f6a3d8f0a3a80c3f46d7e1ab649f94e77befbe6ae790c55cb2444764"
+    },
+    {
+      "file": "01_data\\raw\\traffic_counts_metadata.json",
+      "bytes": 3224,
+      "sha256": "c461935d8de4344ee578d9a208120155906cad36d4123d5d680e682b2768d388"
+    },
+    {
+      "file": "01_data\\raw\\traffic_metadata.json",
+      "bytes": 8627,
+      "sha256": "fbffdab083d7f8a555e8e403fcca1d3cc4efebbbd07c67c29949db50510ab9a6"
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+SSCI 575 – Final Project / Presentation #2
+修订后的研究方案
+洛杉矶交通事故空间负担预测
+根据老师与同学反馈调整：加入道路设计变量，并使用 Semi-variogram + NSR 在建模前选择空间尺度
+1. 为什么需要修改第一阶段研究设计
+第一阶段方案使用六个网格级变量——交通流量、道路密度、交叉口密度、道路类型、人口密度和土地利用——预测 2017–2021 年记录的交通事故总数。新的反馈指出两个重要问题：第一，仅使用土地利用可能不足以反映高速公路和主要干道的真实安全条件，因为道路经过的土地利用并不一定代表道路本身的运行特征；第二，道路限速、弯曲程度和视距等道路设计因素也可能影响事故发生。因此，第二阶段将在保留原有变量的基础上加入道路设计变量。与此同时，本研究不再预设 1 km × 1 km 为最终尺度，而是先使用多尺度 Semi-variogram 与 Nugget-to-Sill Ratio（NSR）从 500 m–5 km 的候选尺度中识别数据驱动的候选尺度，再进入 Random Forest 建模。
+2. 修订后的项目题目与研究问题
+推荐中文题目：
+基于城市环境与道路设计因素的洛杉矶交通事故空间负担预测
+英文题目：
+Spatial Prediction of Traffic Collision Burden Using Urban and Roadway-Design Factors in Los Angeles
+RQ1：交通暴露、道路网络结构、人口和土地利用变量在多大程度上能够预测洛杉矶 2017–2021 年交通事故数量的空间差异？
+RQ2：加入限速、道路曲率和高速公路/主干道占比后，是否能在原有六个变量基础上进一步提高预测能力？
+RQ3：在 500 m–5 km、每 150 m 一个候选尺度的范围内，哪一个尺度能够通过 Semi-variogram 与 Nugget-to-Sill Ratio（NSR）表现出较稳定的空间结构，并适合作为后续 Random Forest 建模的分析尺度？
+3. 研究范围
+项目
+修订后方案
+研究区域
+City of Los Angeles
+事故研究时期
+2017–2021
+预测目标
+每个网格内 2017–2021 年记录的交通事故总数
+机器学习模型
+仅使用 Random Forest Regression
+尺度敏感性分析
+500 m–5 km；每 150 m 一个候选尺度（共 31 个尺度），建模前用 Semi-variogram + NSR 选择
+主要解释目标
+先从事故点空间结构确定候选尺度，再分析城市环境与道路设计变量的预测贡献；不进行因果推断
+4. 预测变量设计
+新方案保留第一阶段的全部六个变量，以保证结果可直接比较，同时加入能够回应老师反馈的道路设计变量。
+变量
+状态
+类型
+研究意义
+网格内汇总方式
+Traffic Volume（交通流量）
+原变量
+连续
+表示车辆暴露程度
+网格内平均值/代表值
+Road Density（道路密度）
+原变量
+连续
+反映单位面积道路基础设施数量
+道路总长度 / km²
+Intersection Density（交叉口密度）
+原变量
+连续
+反映道路连通性和潜在冲突点
+交叉口数 / km²
+Road Type（道路类型）
+原变量
+分类/比例
+区分地方道路、主干道和高速公路
+主导类型或道路等级长度占比
+Population Density（人口密度）
+原变量
+连续
+反映区域活动强度
+人口 / km²
+Land Use（土地利用）
+原变量，修改编码
+分类/比例
+反映周边城市功能
+各土地利用类型面积占比
+Speed Limit（限速）
+新增—优先
+连续
+直接反映道路运行环境
+长度加权平均限速；高限速道路占比
+Road Curvature（道路曲率）
+新增—优先
+连续
+反映土地利用无法体现的道路几何复杂度
+曲率指数或弯曲道路长度占比
+Freeway / Arterial Share（高速/主干道占比）
+新增—优先
+连续
+区分高等级道路与周边土地利用
+不同道路等级长度占总道路长度比例
+Signalized Intersection Density（信号交叉口密度）
+新增—可选
+连续
+区别普通交叉口和受控交叉口
+信号交叉口数 / km²
+Sight Distance / Sightline（视距）
+可选
+连续
+可能的重要道路安全因素
+仅在有可靠全市数据时加入
+关键设计决定：
+不单独加入由人口密度定义的 rurality（乡村性）变量。因为人口密度已经在模型中，再利用人口构建 rurality 会造成信息重复，并可能引入共线性。
+5. 新方案与先前研究/第一阶段方案的区别
+比较项
+Bao et al. (2017)
+第一阶段方案
+第二阶段修订方案
+空间单元
+896 个 TAZ
+固定 1 km 网格
+500 m–5 km、每 150 m 进行多尺度搜索；用 Semi-variogram + NSR 建模前选尺度
+人类活动表示
+Twitter-based human activity
+人口 + 土地利用
+人口 + 土地利用 + 道路设计
+道路特征
+传统交通/道路变量
+道路密度、交叉口、道路类型
+新增限速、曲率、高速/主干道占比、信号交叉口
+模型
+GWR
+Random Forest
+仍只用 Random Forest；比较基础特征与增强特征
+空间验证
+空间变系数回归
+计划检查残差
+建模前：NSR + Moran's I + sparsity；建模后：Residual Moran's I + 空间训练/测试敏感性
+6. 建模前的空间尺度选择：500 m–5 km 多尺度搜索
+本研究不再只比较 500 m、1 km 和 2 km 三个离散尺度，而是从 500 m 开始，以 150 m 为间隔逐步增加到 5 km，共形成 31 个候选尺度。每一个尺度都先只聚合 2017–2021 年事故点数量，不训练 Random Forest。这样可以把“空间尺度选择”和“机器学习模型表现”分开，避免因为模型参数或预测误差反过来决定空间单元。该思路借鉴 Chen et al. (2019) 使用 Semi-variogram 和 Nugget-to-Sill Ratio（NSR）量化 scale effect 的方法，并结合交通安全研究中对 MAUP 的敏感性分析建议（Xu et al., 2016）。
+项目
+本研究设置
+计算/判断方式
+为什么需要
+输出
+候选尺度
+500–5000 m；步长 150 m
+s = 500 + 150k
+避免主观只选少数尺度
+31 个尺度
+主尺度指标
+Nugget-to-Sill Ratio (NSR)
+NSR = Nugget / Sill
+衡量局部变异占总变异比例
+NSR–Scale 曲线
+辅助指标
+Zero rate、有效网格数、Moran's I、Traffic coverage
+各尺度统一计算
+排除过细、过粗或覆盖不足
+尺度诊断表
+7. Semi-variogram + NSR 的尺度选择方法
+7.1 第一步：在每个候选尺度上聚合事故点
+对 500 m、650 m、800 m……直到 5,000 m 的每一个规则网格，重新统计 2017–2021 年 Collision Count。此阶段只使用事故点本身，不使用人口、道路、土地利用等 predictor，也不训练 Random Forest。
+7.2 第二步：计算每个尺度的 Semi-variogram
+γ(h) = [1 / 2N(h)] Σ [Z(xᵢ) − Z(xⱼ)]²
+其中，Z 表示网格中的事故数量，h 表示网格之间的距离，N(h) 表示处于该距离区间的网格对数量。拟合 empirical semi-variogram 后得到 Nugget、Sill 和 Range。Nugget 反映非常小距离下仍然存在的局部/随机变异，Sill 表示总体空间变异达到稳定后的水平，Range 表示空间相关性大致持续到的距离。
+7.3 第三步：计算 Nugget-to-Sill Ratio（NSR）
+NSR = Nugget / Sill = c₀ / (c₀ + c₁)
+NSR 是一个标准化、可跨尺度比较的指标。较低的 NSR 表示局部未解释变异占总变异的比例较小，空间结构相对更稳定。Chen et al. (2019) 将 NSR 随尺度变化时出现的第一个局部最小值定义为候选 optimal scale。
+7.4 本项目的选择规则
+从 500 m 开始，每增加 150 m 计算一次 NSR，直到 5 km。
+绘制 Grid Size–NSR 曲线，不在第一次轻微下降或上升时立即停止，而是观察第一个稳定的局部低点。
+把第一个稳定 NSR 低点作为主要候选尺度，同时检查相邻尺度是否表现相近，避免因单次 variogram 拟合产生异常点。
+同时检查 Zero-collision rate、有效网格数量、LADOT Traffic Count 覆盖率和 Global Moran's I；如果某个 NSR 低点对应极端稀疏或样本过少，则不机械采用。
+尺度确定后才构建完整 predictor table，并进入 Random Forest。最终 Test Set 不参与尺度选择。
+因此，本研究的“最佳尺度”首先指基于事故空间结构得到的 data-driven candidate scale，而不是提前假定 1 km，也不是通过反复训练 Random Forest 后选择 R² 最高的尺度。Random Forest 的作用是对已选尺度进行预测验证和变量解释。
+8. 建模策略：一个算法，两套特征
+只有在 Semi-variogram + NSR 完成尺度选择之后，第二阶段才进入 Random Forest Regression。模型仍然只有一个算法；我们比较的是不同特征集，而不是用不同算法寻找尺度。尺度搜索阶段与 RF 调参阶段严格分离。
+模型运行
+预测变量
+目的
+Baseline RF
+原有六个变量
+复现第一阶段研究设计
+Enhanced RF
+原六个变量 + 新增道路设计变量
+检验新增变量是否提供额外预测价值
+在选定尺度上，先运行 Baseline RF（原有六个变量），再运行 Enhanced RF（加入道路设计变量）。如果 Enhanced RF 能降低 RMSE/MAE、提高 R²，并降低 Residual Moran's I，则说明新增道路设计变量提供了有用的额外预测信息。
+9. 更新后的研究流程
+图 1. 优化后的流程：先通过 Semi-variogram + NSR 进行建模前尺度选择，再构建完整变量并训练 Random Forest。
+10. 拟使用的数据集
+数据集
+作用
+原有/新增
+备注
+LAPD Collision Records, 2017–2021
+预测目标 + 建模前尺度选择
+原有
+在 500 m–5 km 的每个候选尺度统计事故数量，用于 Semi-variogram / NSR，并在最终尺度作为 RF target
+LADOT Traffic Counts
+交通暴露
+原有
+建模前检查年份与空间覆盖
+Census TIGER/Line Roads
+道路密度、交叉口、道路等级
+原有 + 扩展
+利用 road class 计算 freeway/arterial share；利用线几何计算曲率
+ACS 2021 5-year Estimates
+人口密度
+原有
+将 block-group 人口汇总到网格
+Los Angeles General Plan Land Use
+土地利用构成
+原有，修改编码
+由单一主导类别改为各类别面积占比
+Posted Speed Limit / Street Speed Data
+限速变量
+新增
+数据覆盖完整时计算长度加权平均限速
+Traffic Signal Locations
+信号交叉口密度
+新增，可选
+仅在存在一致的全市点数据时加入
+10.1 新增变量的数据可获取性核验（网络搜索结果）
+对第二阶段新增变量进行网络核验后，可以确认大部分变量都有可公开访问的空间数据，但不同变量的数据完整性并不相同。道路曲率、高速/主干道占比和信号化交叉口密度的可行性较高；Speed Limit（限速）虽然有公开数据，但目前找到的权威全国数据主要覆盖 National Highway System（NHS）道路，无法保证覆盖洛杉矶所有地方道路，因此更适合作为“覆盖率足够时加入”的变量。Sight Distance（视距）暂未找到适合 City of Los Angeles 全域分析的统一开放数据，因此不建议在本阶段强行加入。
+新增变量
+推荐数据源
+在线可获取性
+覆盖/数据特点
+网格变量构造方式
+建议
+Speed Limit
+（限速）
+FHWA 2022 Speed Limit Study Results（基于 HPMS/NHS 路段）
+可以在线获取
+提供 posted speed limits，但主要针对 National Highway System；不能保证覆盖全部洛杉矶地方道路。
+若覆盖率足够，计算每个网格道路长度加权平均限速，以及高限速道路长度占比。
+可选变量；先做覆盖率审计，再决定是否进入最终模型。
+Road Curvature
+（道路曲率）
+City of Los Angeles Street Centerline / Census TIGER/Line Roads
+可以在线获取
+官方道路中心线和 TIGER/Line 都提供道路折线几何；无需单独下载“曲率数据”。
+由道路折线几何计算曲率，例如：实际折线长度 ÷ 起终点直线距离；再按道路长度在网格内加权平均。
+强烈建议加入；数据最容易获得，也直接回应老师关于 curves 的反馈。
+Freeway / Arterial Share
+（高速/主干道占比）
+Caltrans CRS Functional Classification；也可用 TIGER/Line MTFCC
+可以在线获取
+Caltrans 提供全州道路功能分类公开 Feature Layer；TIGER/Line 也区分 primary / secondary / local roads。
+分别计算高速/主干道道路长度 ÷ 网格内总道路长度，形成 freeway share、arterial share。
+强烈建议加入；比单一 land use 更能表示道路运行环境。
+Signalized Intersection Density
+（信号交叉口密度）
+City of Los Angeles Vision Zero Improvements – Conventional Signals
+可以在线获取
+公开 ArcGIS 点图层中约有 5,106 个 Conventional Signals 点；使用前需要核验是否代表全量城市信号。
+统计每个网格内 signal points 数量，再除以网格面积，得到 signals/km²。
+建议加入；与普通 intersection density 形成互补。
+Sight Distance / Sightline
+（视距）
+暂未找到适合全市、统一、可直接下载的开放 GIS 数据
+当前不稳定
+视距通常需要道路几何、坡度、障碍物或现场测量，难以在全市范围保持一致。
+若没有可靠数据，不构造该变量。
+本阶段不建议加入，避免为了增加变量而引入低质量数据。
+结论：
+第二次 Presentation 最稳妥的新增变量组合是 Road Curvature + Freeway/Arterial Share + Signalized Intersection Density。Speed Limit 可以保留为优先候选，但只有在洛杉矶研究区内的空间覆盖率足够时才加入最终模型。Sight Distance 暂时删除。这样既回应老师提出的道路设计因素，又不会让项目因数据难以获得而失控。
+10.2 已核验的在线来源
+City of Los Angeles Street Centerline（官方道路中心线 / Bureau of Engineering）
+https://portald1.lalightsaws.lacity.org/server/rest/services/LABureauOfStreetLighting032923/FeatureServer/0
+U.S. Census TIGER/Line Shapefiles（道路几何与 MTFCC 道路分类）
+https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+Caltrans CRS Functional Classification（道路功能分类）
+https://geodata.dot.ca.gov/arcgis/rest/services/chhighway/CRS_Functional_Classification/FeatureServer/0
+FHWA 2022 Speed Limit Study Results（NHS posted speed limits）
+https://geo.dot.gov/server/rest/services/hosted/fhwa__2022_speed_limit_study_results__all_states/featureserver
+City of Los Angeles Vision Zero Improvements – Conventional Signals（信号点）
+https://services1.arcgis.com/tp9wqSVX1AitKgjd/arcgis/rest/services/Vision_Zero__Improvements/FeatureServer/2
+注：以上链接证明相关数据源在网上可以访问，但正式建模前仍需进行字段检查、空间覆盖检查和时间一致性检查。其中，Semi-variogram + NSR 的尺度选择只依赖 LAPD collision points；道路、人口、土地利用和新增道路设计变量将在候选尺度确定后统一聚合。Speed Limit 与 Conventional Signals 仍需检查研究区覆盖率。
+11. Road Curvature（道路曲率）如何计算
+如果道路数据已经包含折线几何，就不一定需要额外寻找道路曲率数据。可以用每条道路的实际折线长度与起点—终点直线距离之比构建简单曲率指标。笔直道路的比值接近 1，弯曲道路的比值更大。随后可在每个网格内计算道路长度加权平均曲率，或统计高曲率道路长度占总道路长度的比例。
+12. 第二阶段暂时不建议加入的内容
+不加入由人口变量构建的 rurality，因为人口密度已经在模型中。
+如果无法获得可靠的全市统一数据，不加入 sight distance / sightline。
+不为了“模型比较”而增加多个机器学习算法，继续只使用 Random Forest。
+不提前宣称 1 km 是最佳尺度；先使用 Semi-variogram + NSR 在 500 m–5 km 范围内确定候选尺度。
+13. 第二次 Presentation 建议结构
+Slide 1 – Project Update
+：回顾第一阶段研究问题，说明反馈后做了哪些修改。
+Slide 2 – Feedback and Design Response
+：说明 land use 的局限、新增道路设计变量，以及为什么不采用人口衍生的 rurality。
+Slide 3 – Revised Variables
+：展示原有六个变量 + Speed Limit + Curvature + Freeway/Arterial Share + 可选 Signal Density。
+Slide 4 – Why Spatial Scale Matters：说明 MAUP 与 scale effect，并介绍 500 m–5 km、每 150 m 的多尺度搜索范围。
+Slide 5 – Pre-model Scale Selection：介绍 Semi-variogram、Nugget/Sill/Range 与 NSR；展示如何用第一个稳定 NSR 低点选择候选尺度，并辅以 Zero Rate、Moran's I 与数据覆盖检查。
+Slide 6 – Random Forest Experiment：尺度确定后再训练 Random Forest，比较 Baseline RF 与 Enhanced RF，并用 R²/RMSE/MAE 和 Residual Moran's I 评价。
+Slide 7 – Updated Workflow and Contribution
+：展示新版流程，并说明与 Bao et al. (2017) 和第一阶段方案的区别。
+14. 第二次 Presentation 的核心结论
+修订后的设计更强，因为它不再假设土地利用变量和固定 1 km 网格已经足够。第二阶段首先使用 500 m–5 km 的多尺度事故聚合、Semi-variogram 和 NSR，在 Random Forest 之前确定数据驱动的候选尺度；随后才在该尺度上比较 Baseline RF 与 Enhanced RF。这样可以把空间尺度效应与机器学习模型效应分开，使项目更符合 Spatial Data Science 的分析逻辑，也能更直接回应 MAUP 问题。
+15. 当前可继续使用的核心文献
+Bao, J., Liu, P., Yu, H., & Xu, C. (2017). Incorporating Twitter-based human activity information in spatial analysis of crashes in urban areas. Accident Analysis & Prevention, 106, 358–369.
+Dong, N., Huang, H., & Zheng, L. (2015). Support vector machine in crash prediction at the level of traffic analysis zones: Assessing the spatial proximity effects. Accident Analysis & Prevention, 82, 192–198.
+Pu, Z., Li, Z., Ash, J., Zhu, W., & Wang, Y. (2020). An ensemble machine learning-based modeling framework for analysis of traffic crash frequency. Computer-Aided Civil and Infrastructure Engineering, 35(3), 258–276.
+Siddiqui, C., Abdel-Aty, M., & Huang, H. (2012). Aggregate nonparametric safety analysis of traffic zones. Accident Analysis & Prevention, 45, 317–325.
+Wu, D., Zhang, Y., & Xiang, Q. (2024). Geographically weighted random forests for macro-level crash frequency prediction. Accident Analysis & Prevention, 194, 107370.
+Chen, L., Gao, Y., Zhu, D., Yuan, Y., & Liu, Y. (2019). Quantifying the scale effect in geospatial big data using semi-variograms. PLOS ONE, 14(11), e0225139. https://doi.org/10.1371/journal.pone.0225139
+Xu, P., Huang, H., & Dong, N. (2016). The modifiable areal unit problem in traffic safety: Basic issue, potential solutions and future research. Journal of Traffic and Transportation Engineering (English Edition), 5(1), 73–82. https://doi.org/10.1016/j.jtte.2015.09.010
+Briz-Redón, Á., Martínez-Ruiz, F., & Montes, F. (2019). Investigation of the consequences of the modifiable areal unit problem in macroscopic traffic safety analysis: A case study accounting for scale and zoning. Accident Analysis & Prevention, 132, 105276. https://doi.org/10.1016/j.aap.2019.105276

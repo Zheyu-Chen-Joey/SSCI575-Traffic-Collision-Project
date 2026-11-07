@@ -1,0 +1,65 @@
+[
+  {
+    "dataset": "roads",
+    "retained": 28364,
+    "status": "cleaned; MTFCC is not calibrated arterial classification"
+  },
+  {
+    "dataset": "block_groups",
+    "retained": 2941,
+    "status": "geometry only; population API requires key"
+  },
+  {
+    "dataset": "traffic_counts",
+    "downloaded": 6820,
+    "retained": 6800,
+    "columns": [
+      "geometry",
+      "OBJECTID",
+      "ASSETID",
+      "ID",
+      "Location",
+      "TOOLTIP",
+      "NLA_URL"
+    ],
+    "status": "spatially cleaned; temporal audit required"
+  },
+  {
+    "dataset": "landuse",
+    "downloaded": 50644,
+    "retained": 50643,
+    "columns": [
+      "geometry",
+      "OBJECTID",
+      "GPLU",
+      "CPA",
+      "CF",
+      "ADOPTDATE",
+      "UPDATE_",
+      "JTX_ID",
+      "PAPER_ST",
+      "CPC",
+      "COMMENTS",
+      "VALUE_",
+      "Category",
+      "GPLU_Legend",
+      "TOOLTIP"
+    ],
+    "status": "spatially cleaned; temporal audit required"
+  },
+  {
+    "dataset": "signal_locations",
+    "downloaded": 5592,
+    "retained": 5506,
+    "columns": [
+      "geometry",
+      "ID",
+      "ST1",
+      "ST2",
+      "ST3",
+      "lat",
+      "lon"
+    ],
+    "status": "spatially cleaned; temporal audit required"
+  }
+]
