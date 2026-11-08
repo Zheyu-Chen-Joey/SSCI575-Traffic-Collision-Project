@@ -1,2 +1,0 @@
-from pathlib import Path
-p=Path('03_scripts/pretraining/build_1km_features.py');s=p.read_text(encoding='utf-8-sig').replace("r[['source_id','MTFCC','sinuosity','source_length','geometry']],how='intersection',keep_geom_type=True)","r[['source_id','MTFCC','sinuosity','source_length','geometry']],how='intersection',keep_geom_type=False)");s=s.replace("print('ROAD_ASSIGN',parts[['i','j']].head().to_dict(),own[:5].tolist(),mid.head().to_wkt().tolist(),flush=True);",'');p.write_text(s,encoding='utf8')

@@ -1,4 +1,0 @@
-from pathlib import Path
-p=Path('03_scripts/11_build_report.py');s=p.read_text(encoding='utf-8-sig');s=s.replace("st.paragraph_format.space_after=Pt(7);st.paragraph_format.line_spacing=1.15","st.paragraph_format.space_after=Pt(5);st.paragraph_format.line_spacing=1.12\n for border in list(st.element.xpath('.//w:pBdr')):border.getparent().remove(border)")
-s=s.replace("table(['边长 m','全域格数','训练格数','零事故率','NSR','拟合状态'],rows,[1.0,1.1,1.1,1.1,1.1,1.35],8)","t=table(['边长 m','全域格数','训练格数','零事故率','NSR','拟合状态'],rows,[1.0,1.1,1.1,1.1,1.1,1.35],8)\nfor row in t.rows:\n for c in row.cells:\n  for e in c._tc.xpath('.//w:tcMar/w:top | .//w:tcMar/w:bottom'):e.set(qn('w:w'),'30')\n  for par in c.paragraphs:par.paragraph_format.space_after=Pt(0);par.paragraph_format.space_before=Pt(0);par.paragraph_format.line_spacing=1.0")
-p.write_text(s,encoding='utf-8')

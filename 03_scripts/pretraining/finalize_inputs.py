@@ -61,5 +61,5 @@ for folder in [ROOT/'01_data/raw/pretraining_20261107',P]:
  for f in sorted(folder.glob('*')):
   if f.is_file():manifest.append({'path':str(f.relative_to(ROOT)),'bytes':f.stat().st_size,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()})
 (ROOT/'00_admin/pretraining_manifest.json').write_text(json.dumps({'generated_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':manifest},indent=2))
-versions={m:importlib.metadata.version(m) for m in ['numpy','pandas','scipy','geopandas','shapely','pyproj','scikit-learn','joblib']};(ROOT/'05_models/pretraining/environment.json').write_text(json.dumps({'python':platform.python_version(),'packages':versions},indent=2));print(json.dumps(qa,indent=2));print('READINESS',ready['status'])
+versions={m:importlib.metadata.version(m) for m in ['numpy','pandas','scipy','geopandas','shapely','pyproj','scikit-learn','joblib']};(Q/'environment.json').write_text(json.dumps({'python':platform.python_version(),'packages':versions},indent=2));print(json.dumps(qa,indent=2));print('READINESS',ready['status'])
 

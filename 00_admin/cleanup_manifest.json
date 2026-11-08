@@ -1,0 +1,1042 @@
+{
+  "protected": [
+    "01_data/raw",
+    "00_admin/source",
+    ".git",
+    ".runtime",
+    "07_agents"
+  ],
+  "planned_removals": [
+    {
+      "file_count": 1,
+      "path": "00_admin\\pretraining_manifest.json",
+      "bytes": 54217
+    },
+    {
+      "file_count": 1,
+      "path": "00_admin\\project_result_manifest_v1.json",
+      "bytes": 17370
+    },
+    {
+      "file_count": 1,
+      "path": "01_data\\processed\\pretraining_1km\\grid_features_1000.gpkg",
+      "bytes": 901120
+    },
+    {
+      "file_count": 1,
+      "path": "01_data\\processed\\pretraining_1km\\intersection_endpoint_candidates.gpkg",
+      "bytes": 225280
+    },
+    {
+      "file_count": 1,
+      "path": "01_data\\processed\\pretraining_1km\\model_table_1000_final.gpkg",
+      "bytes": 983040
+    },
+    {
+      "file_count": 1,
+      "path": "01_data\\processed\\pretraining_1km\\test_1000.csv",
+      "bytes": 113083
+    },
+    {
+      "file_count": 1,
+      "path": "01_data\\processed\\pretraining_1km\\train_1000.csv",
+      "bytes": 363314
+    },
+    {
+      "file_count": 1,
+      "path": "01_data\\processed\\pretraining_1km\\validation_1000.csv",
+      "bytes": 85246
+    },
+    {
+      "file_count": 2,
+      "path": "01_data\\processed\\speed_audit_20261107",
+      "bytes": 1609728
+    },
+    {
+      "file_count": 1,
+      "path": "01_data\\processed\\traffic_counts.gpkg",
+      "bytes": 3072000
+    },
+    {
+      "file_count": 1,
+      "path": "02_config\\traffic_values_input_template.csv",
+      "bytes": 106
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\figures\\candidate_grid_1100.png",
+      "bytes": 76057
+    },
+    {
+      "file_count": 186,
+      "path": "06_reports\\_qa",
+      "bytes": 30800314
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\archive",
+      "bytes": 15581247
+    },
+    {
+      "file_count": 1,
+      "path": "SSCI575_Project_Update.docx",
+      "bytes": 376364
+    },
+    {
+      "file_count": 18,
+      "path": "03_scripts\\__pycache__",
+      "bytes": 75222
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\08_finalize.py",
+      "bytes": 1612
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\09_verify.py",
+      "bytes": 1833
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\13_update_presentation.mjs",
+      "bytes": 19107
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\14_update_current_presentation.mjs",
+      "bytes": 31921
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\15_update_speed_audit_presentation.mjs",
+      "bytes": 33607
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\16_minimal_presentation_update.mjs",
+      "bytes": 32964
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\check_metadata.py",
+      "bytes": 328
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\check_sources.py",
+      "bytes": 797
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\contact_report.py",
+      "bytes": 421
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\create_final_project_report.py",
+      "bytes": 19226
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\create_rf_v4_report.py",
+      "bytes": 7548
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\discover.py",
+      "bytes": 513
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\fields.py",
+      "bytes": 184
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\finalize_project_status.py",
+      "bytes": 8243
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\fix_download.py",
+      "bytes": 758
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\freeze_env.py",
+      "bytes": 325
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\inspect_source_ppt.py",
+      "bytes": 1096
+    },
+    {
+      "file_count": 33,
+      "path": "03_scripts\\pretraining\\__pycache__",
+      "bytes": 169201
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\audit_speed_limits.py",
+      "bytes": 9894
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\audit_traffic_summary.py",
+      "bytes": 1899
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\check_coverage.py",
+      "bytes": 431
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\check_revised_inputs.py",
+      "bytes": 907
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\check_traffic_dates.py",
+      "bytes": 251
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\complete_interfaces.py",
+      "bytes": 1470
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\debug_road.py",
+      "bytes": 365
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\download_speed_limits.py",
+      "bytes": 3125
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\download_traffic_summary.py",
+      "bytes": 1011
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\export_project_results.py",
+      "bytes": 8776
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\export_residual_refinement.py",
+      "bytes": 7816
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\export_rf_coverage_v4.py",
+      "bytes": 7335
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\export_rf_crossfit_v3.py",
+      "bytes": 10668
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\fix_road_overlay.py",
+      "bytes": 502
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\guard_importer.py",
+      "bytes": 438
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\import_traffic_values.py",
+      "bytes": 3841
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\inspect_fields.py",
+      "bytes": 914
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\optimize_landuse.py",
+      "bytes": 1828
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\peek_features.py",
+      "bytes": 381
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\predict_frozen_rf.py",
+      "bytes": 1215
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\predict_rf_v4b.py",
+      "bytes": 1049
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\prepare_training.py",
+      "bytes": 2243
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\probe_sources.py",
+      "bytes": 1086
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\probe_traffic.py",
+      "bytes": 1049
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\record_decision.py",
+      "bytes": 844
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\reevaluate_frozen_refinement.py",
+      "bytes": 3157
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\refine_rf_residuals.py",
+      "bytes": 7194
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\revise_feature_design.py",
+      "bytes": 3663
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\rf_fixed_blend.py",
+      "bytes": 379
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\rf_residual_model.py",
+      "bytes": 1472
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\rf_spatial_residual_model.py",
+      "bytes": 794
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\run_preparation.ps1",
+      "bytes": 835
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\run_project_training.py",
+      "bytes": 12409
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\train_rf_coverage_v4.py",
+      "bytes": 7709
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\train_rf_crossfit_v3.py",
+      "bytes": 8301
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\train_rf_spatial_residual_v5b.py",
+      "bytes": 8751
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\train_rf_spatial_v5.py",
+      "bytes": 9978
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\train_rf_stability_blend_v4b.py",
+      "bytes": 5069
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\train_rf.py",
+      "bytes": 3811
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\update_design_docs.py",
+      "bytes": 5169
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\verify_coordinate_ablation_v5.py",
+      "bytes": 2550
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\verify_download_and_freeze.py",
+      "bytes": 1274
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\verify_inputs.py",
+      "bytes": 2286
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\verify_trained_project.py",
+      "bytes": 3290
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\pretraining\\write_status.py",
+      "bytes": 14593
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\probe.py",
+      "bytes": 638
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\refine_report.py",
+      "bytes": 923
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\render_current_ppt.ps1",
+      "bytes": 437
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\render_final_ppt.ps1",
+      "bytes": 440
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\render_final_report_pdf.py",
+      "bytes": 400
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\render_minimal_ppt.ps1",
+      "bytes": 439
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\render_source_ppt.ps1",
+      "bytes": 365
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\render_speaking_pdf.py",
+      "bytes": 401
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\render_speed_ppt.ps1",
+      "bytes": 449
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\render_updated_ppt.ps1",
+      "bytes": 411
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\show_origin.py",
+      "bytes": 448
+    },
+    {
+      "file_count": 1,
+      "path": "03_scripts\\summarize_range.py",
+      "bytes": 547
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_1100.gpkg",
+      "bytes": 589824
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_1250.gpkg",
+      "bytes": 540672
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_1400.gpkg",
+      "bytes": 483328
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_1550.gpkg",
+      "bytes": 446464
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_1700.gpkg",
+      "bytes": 434176
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_1850.gpkg",
+      "bytes": 417792
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_2000.gpkg",
+      "bytes": 385024
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_2150.gpkg",
+      "bytes": 364544
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_2300.gpkg",
+      "bytes": 364544
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_2450.gpkg",
+      "bytes": 348160
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_2600.gpkg",
+      "bytes": 339968
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_2750.gpkg",
+      "bytes": 344064
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_2900.gpkg",
+      "bytes": 339968
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_3050.gpkg",
+      "bytes": 327680
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_3200.gpkg",
+      "bytes": 319488
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_3350.gpkg",
+      "bytes": 315392
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_3500.gpkg",
+      "bytes": 311296
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_3650.gpkg",
+      "bytes": 315392
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_3800.gpkg",
+      "bytes": 303104
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_3950.gpkg",
+      "bytes": 315392
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_4100.gpkg",
+      "bytes": 303104
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_4250.gpkg",
+      "bytes": 303104
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_4400.gpkg",
+      "bytes": 307200
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_4550.gpkg",
+      "bytes": 303104
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_4700.gpkg",
+      "bytes": 286720
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_4850.gpkg",
+      "bytes": 290816
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_500.gpkg",
+      "bytes": 1654784
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_5000.gpkg",
+      "bytes": 278528
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_650.gpkg",
+      "bytes": 1093632
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_800.gpkg",
+      "bytes": 839680
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\grid_search\\grid_950.gpkg",
+      "bytes": 688128
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\pretraining\\missingness.csv",
+      "bytes": 1361
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\pretraining\\pre_fit_verification.log",
+      "bytes": 430
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\pretraining\\readiness.json",
+      "bytes": 4099
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\pretraining\\signal_topology_match.csv",
+      "bytes": 162917
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\refinement_v2.log",
+      "bytes": 2314
+    },
+    {
+      "file_count": 12,
+      "path": "04_outputs\\rf_coverage_v4",
+      "bytes": 2737350
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_coverage_v4_training.log",
+      "bytes": 4928
+    },
+    {
+      "file_count": 18,
+      "path": "04_outputs\\rf_crossfit_v3",
+      "bytes": 3866641
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_crossfit_v3_training.log",
+      "bytes": 1480
+    },
+    {
+      "file_count": 33,
+      "path": "04_outputs\\rf_project_v1",
+      "bytes": 9365516
+    },
+    {
+      "file_count": 19,
+      "path": "04_outputs\\rf_residual_refinement_v2",
+      "bytes": 3640555
+    },
+    {
+      "file_count": 9,
+      "path": "04_outputs\\rf_spatial_residual_v5b",
+      "bytes": 1197739
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_residual_v5b_training.log",
+      "bytes": 1421
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_v5_training.log",
+      "bytes": 3430
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_v5\\ablation.log",
+      "bytes": 499
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_v5\\all_predictions.csv",
+      "bytes": 317140
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_v5\\best_only_verification.log",
+      "bytes": 950
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_v5\\cli_predictions_check.csv",
+      "bytes": 44586
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_v5\\export.log",
+      "bytes": 952
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_v5\\oof_predictions.csv",
+      "bytes": 2352317
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_v5\\paired_block_bootstrap.csv",
+      "bytes": 156940
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_spatial_v5\\validation_predictions.csv",
+      "bytes": 109479
+    },
+    {
+      "file_count": 17,
+      "path": "04_outputs\\rf_stability_blend_v4b",
+      "bytes": 2629297
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\rf_stability_blend_v4b.log",
+      "bytes": 663
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\speed_audit\\denominator_recomputed.csv",
+      "bytes": 42835
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\speed_audit\\grid_speed_coverage.csv",
+      "bytes": 211650
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\speed_audit\\input_check.log",
+      "bytes": 1660
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\speed_audit\\input_verification.log",
+      "bytes": 430
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\speed_audit\\road_class_coverage.csv",
+      "bytes": 2800
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\speed_audit\\road_coverage_buffer_sensitivity.csv",
+      "bytes": 1003
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\speed_audit\\run_indexed.log",
+      "bytes": 3630
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\speed_audit\\run.log",
+      "bytes": 34
+    },
+    {
+      "file_count": 1,
+      "path": "04_outputs\\speed_audit\\source_records_city.csv",
+      "bytes": 321918
+    },
+    {
+      "file_count": 16,
+      "path": "05_models\\pretraining",
+      "bytes": 436804
+    },
+    {
+      "file_count": 14,
+      "path": "05_models\\rf_coverage_v4",
+      "bytes": 119740200
+    },
+    {
+      "file_count": 5,
+      "path": "05_models\\rf_crossfit_v3",
+      "bytes": 25091567
+    },
+    {
+      "file_count": 13,
+      "path": "05_models\\rf_project_v1",
+      "bytes": 37248573
+    },
+    {
+      "file_count": 6,
+      "path": "05_models\\rf_residual_refinement_v2",
+      "bytes": 36607634
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_residual_v5b",
+      "bytes": 4922819
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\0_ensemble_trainonly.joblib",
+      "bytes": 13263982
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\0_single_trainonly.joblib",
+      "bytes": 4399790
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\1_single_trainonly.joblib",
+      "bytes": 4626606
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\17_ensemble_trainonly.joblib",
+      "bytes": 16110622
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\17_single_trainonly.joblib",
+      "bytes": 5364158
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\19_ensemble_trainonly.joblib",
+      "bytes": 13874014
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\19_single_trainonly.joblib",
+      "bytes": 4634942
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\2_single_trainonly.joblib",
+      "bytes": 4392750
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\28_ensemble_trainonly.joblib",
+      "bytes": 13804174
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\28_single_trainonly.joblib",
+      "bytes": 4592478
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\3_single_trainonly.joblib",
+      "bytes": 4611630
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\33_ensemble_trainonly.joblib",
+      "bytes": 16125886
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\33_single_trainonly.joblib",
+      "bytes": 5376270
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\35_ensemble_trainonly.joblib",
+      "bytes": 13849246
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\35_single_trainonly.joblib",
+      "bytes": 4621422
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\matched_position_False_rf.joblib",
+      "bytes": 19756030
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\matched_position_False_trainonly.joblib",
+      "bytes": 16156798
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\matched_position_True_rf.joblib",
+      "bytes": 19720654
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_spatial_v5\\matched_position_True_trainonly.joblib",
+      "bytes": 16110622
+    },
+    {
+      "file_count": 1,
+      "path": "05_models\\rf_stability_blend_v4b",
+      "bytes": 17576300
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\presentations\\SSCI575_Presentation2_1km_SpeedAudit_Final.pptx",
+      "bytes": 176414
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\presentations\\SSCI575_Presentation2_1km_SpeedAudit.pptx",
+      "bytes": 176426
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\presentations\\SSCI575_Presentation2_Current_1km_Final.pptx",
+      "bytes": 172896
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\presentations\\SSCI575_Presentation2_Current_1km_NoTraffic.pptx",
+      "bytes": 172923
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\presentations\\SSCI575_Presentation2_Downloads_Minimal.pptx",
+      "bytes": 2773225
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\presentations\\SSCI575_Presentation2_Minimal_Update.pptx",
+      "bytes": 172754
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\presentations\\SSCI575_Presentation2_Updated_1km_Final.pptx",
+      "bytes": 173784
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\presentations\\SSCI575_Presentation2_Updated_1km_Reviewed.pptx",
+      "bytes": 173762
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\presentations\\SSCI575_Presentation2_Updated_1km.pptx",
+      "bytes": 173745
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\pretraining_status_20261107.txt",
+      "bytes": 7864
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\PROJECT_DELIVERABLES.txt",
+      "bytes": 2051
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\range_validation.md",
+      "bytes": 3719
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\report_render.log",
+      "bytes": 1189
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\Residual_Refinement_v2.txt",
+      "bytes": 4974
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\RF_Continuous_Optimization_v4.docx",
+      "bytes": 214336
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\RF_Continuous_Optimization_v4.txt",
+      "bytes": 4513
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\RF_Crossfit_Residual_Optimization_v3.txt",
+      "bytes": 3277
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\RF_Spatial_Extension_v5.txt",
+      "bytes": 6298
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\speed_limit_audit_20261107.txt",
+      "bytes": 3814
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\SSCI575_Final_Project_Report.docx",
+      "bytes": 734410
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\SSCI575_Final_Project_Report.txt",
+      "bytes": 13382
+    },
+    {
+      "file_count": 1,
+      "path": "06_reports\\SSCI575_Grid_Methods_and_Validation_Report.docx",
+      "bytes": 347550
+    }
+  ],
+  "total_files": 589.0,
+  "reference_predictions_saved": "04_outputs/rf_spatial_v5/reference_predictions.csv",
+  "kept_model": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib",
+  "status": "removed",
+  "selection_basis": "lowest recorded RMSE and MAE among saved candidates, not lowest spatial Moran",
+  "total_bytes": 544514625.0,
+  "authorized_request": "User requested removing unnecessary content and retaining only best result",
+  "post_cleanup_checks": {
+    "raw_snapshot_hashes_verified": 174,
+    "only_one_model": true,
+    "inference1473rows_matches_saved_results": true,
+    "no_training_executed": true,
+    "best_export_and_verification_pass": true,
+    "final_report_rendered_pages": 5,
+    "obsolete_QA_and_logs_removed": true
+  }
+}

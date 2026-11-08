@@ -1,9 +1,0 @@
-"""Audit historical traffic counts without substituting them for study-period exposure."""
-import sys,pathlib,json,collections
-ROOT=pathlib.Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'.runtime'))
-import pandas as pd,numpy as np
-R=ROOT/'01_data/raw/pretraining_20261107';Q=ROOT/'04_outputs/pretraining';r=json.loads((R/'traffic_summary.json').read_text());df=pd.DataFrame(r);df['parsed_date']=pd.to_datetime(df['count_date'],errors='coerce');df.loc[~df['parsed_date'].between('1950-01-01','2026-11-07'),'parsed_date']=pd.NaT;df['total_numeric']=pd.to_numeric(df.total,errors='coerce');df['study_period']=df.parsed_date.between('2017-01-01','2021-12-31');df.to_csv(ROOT/'01_data/interim/ladot_summary_audited.csv',index=False)
-count_by_year=df.parsed_date.dt.year.value_counts().sort_index().to_dict();count_by_year={str(int(k)):int(v) for k,v in count_by_year.items()}
-qa={'source':'https://data.lacity.org/resource/94wu-3ps3.json','n_rows':len(df),'date_min':str(df.parsed_date.min()),'date_max':str(df.parsed_date.max()),'n_invalid_dates':int(df.parsed_date.isna().sum()),'n_study_period':int(df.study_period.sum()),'years':count_by_year,'manual_count_caution':'Publisher: MAN generally 6-hour counts expanded by a conversion factor. Not automatically equivalent to measured AADT.','coordinates_present':False,'included_in_2017_2021_volume_feature':False,'reason':'No records in required study period. No relabeling of 2011–2016 counts as 2017–2021.'};(Q/'traffic_audit.json').write_text(json.dumps(qa,indent=2));print(json.dumps(qa,indent=2))
-# Contract for a future authorized report export; coordinates are WGS84 and daily volume units explicit.
-pd.DataFrame(columns=['station_id','count_date','longitude','latitude','daily_volume_vehicles','count_type','is_daily_equivalent','source_url']).to_csv(ROOT/'02_config/traffic_values_input_template.csv',index=False)

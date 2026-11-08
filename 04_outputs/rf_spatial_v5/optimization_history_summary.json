@@ -1,0 +1,507 @@
+{
+  "purpose": "compact audit trail of prior experiments; only selected spatial model artifact is retained",
+  "legacy_comparisons_exploratory": true,
+  "runs": [
+    {
+      "run": "rf_project_v1",
+      "archival_source_path": "05_models/rf_project_v1/evaluation.json",
+      "evaluation_summary": {
+        "baseline_initial": {
+          "test": {
+            "rmse": 118.96406701434199,
+            "mae": 77.63408432271574,
+            "r2": 0.604562831696911,
+            "bias_pred_minus_obs": 23.601103990699976
+          },
+          "residual_moran": {
+            "4": {
+              "I": 0.3538276903216947,
+              "p_two_sided": 0.0001,
+              "k": 4,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            },
+            "8": {
+              "I": 0.26029771611029556,
+              "p_two_sided": 0.0001,
+              "k": 8,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            },
+            "12": {
+              "I": 0.1786058718484696,
+              "p_two_sided": 0.0001,
+              "k": 12,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            }
+          },
+          "params": {
+            "rf__n_estimators": 300,
+            "rf__max_depth": 12,
+            "rf__min_samples_split": 10,
+            "rf__min_samples_leaf": 5,
+            "rf__max_features": "sqrt",
+            "rf__criterion": "squared_error"
+          },
+          "development_train": {
+            "rmse": 103.20483198007824,
+            "mae": 62.83756066399041,
+            "r2": 0.8070049409897146,
+            "bias_pred_minus_obs": -0.19586453801330045
+          },
+          "top10pct": {
+            "cells": 23,
+            "overlap_fraction": 0.5217391304347826,
+            "observed_burden_capture_fraction": 0.2608737032454554
+          }
+        },
+        "baseline_optimized": {
+          "test": {
+            "rmse": 131.18413701493105,
+            "mae": 77.72234687477838,
+            "r2": 0.5191512106628717,
+            "bias_pred_minus_obs": 17.10467194240367
+          },
+          "residual_moran": {
+            "4": {
+              "I": 0.4034342248194991,
+              "p_two_sided": 0.0001,
+              "k": 4,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            },
+            "8": {
+              "I": 0.30394084284673717,
+              "p_two_sided": 0.0001,
+              "k": 8,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            },
+            "12": {
+              "I": 0.20060379212319526,
+              "p_two_sided": 0.0001,
+              "k": 12,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            }
+          },
+          "params": {
+            "rf__n_estimators": 500,
+            "rf__min_samples_split": 10,
+            "rf__min_samples_leaf": 5,
+            "rf__max_features": 0.7,
+            "rf__max_depth": null,
+            "rf__criterion": "poisson"
+          },
+          "development_train": {
+            "rmse": 78.47575093041131,
+            "mae": 44.78113313639465,
+            "r2": 0.8884121041308574,
+            "bias_pred_minus_obs": -0.4387338253834463
+          },
+          "top10pct": {
+            "cells": 23,
+            "overlap_fraction": 0.5652173913043478,
+            "observed_burden_capture_fraction": 0.2643713714666413
+          }
+        },
+        "enhanced_initial": {
+          "test": {
+            "rmse": 99.2249249042013,
+            "mae": 67.3579962069067,
+            "r2": 0.7249019959652899,
+            "bias_pred_minus_obs": 19.95879194044431
+          },
+          "residual_moran": {
+            "4": {
+              "I": 0.40130858965090244,
+              "p_two_sided": 0.0001,
+              "k": 4,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            },
+            "8": {
+              "I": 0.2890319590844666,
+              "p_two_sided": 0.0001,
+              "k": 8,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            },
+            "12": {
+              "I": 0.22740652733671085,
+              "p_two_sided": 0.0001,
+              "k": 12,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            }
+          },
+          "params": {
+            "rf__n_estimators": 300,
+            "rf__max_depth": 12,
+            "rf__min_samples_split": 10,
+            "rf__min_samples_leaf": 5,
+            "rf__max_features": "sqrt",
+            "rf__criterion": "squared_error"
+          },
+          "development_train": {
+            "rmse": 78.51570916222106,
+            "mae": 46.25368537519424,
+            "r2": 0.8882984386957167,
+            "bias_pred_minus_obs": -0.13788328523240814
+          },
+          "top10pct": {
+            "cells": 23,
+            "overlap_fraction": 0.6521739130434783,
+            "observed_burden_capture_fraction": 0.30039497477871896
+          }
+        },
+        "enhanced_optimized": {
+          "test": {
+            "rmse": 97.98476177522151,
+            "mae": 64.95975977733255,
+            "r2": 0.731735649242557,
+            "bias_pred_minus_obs": 19.098146715374174
+          },
+          "residual_moran": {
+            "4": {
+              "I": 0.3964267047682421,
+              "p_two_sided": 0.0001,
+              "k": 4,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            },
+            "8": {
+              "I": 0.2995772384796701,
+              "p_two_sided": 0.0001,
+              "k": 8,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            },
+            "12": {
+              "I": 0.24562090019487312,
+              "p_two_sided": 0.0001,
+              "k": 12,
+              "permutations": 9999,
+              "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+              "expected": -0.004424778761061947
+            }
+          },
+          "params": {
+            "rf__n_estimators": 500,
+            "rf__min_samples_split": 10,
+            "rf__min_samples_leaf": 5,
+            "rf__max_features": 0.7,
+            "rf__max_depth": 8,
+            "rf__criterion": "squared_error"
+          },
+          "development_train": {
+            "rmse": 62.15277549451785,
+            "mae": 36.58325488937621,
+            "r2": 0.9300049734261693,
+            "bias_pred_minus_obs": -0.06445095837991358
+          },
+          "top10pct": {
+            "cells": 23,
+            "overlap_fraction": 0.6521739130434783,
+            "observed_burden_capture_fraction": 0.3002760064718759
+          }
+        },
+        "2017_2020_sensitivity": {
+          "variant": "enhanced",
+          "test": {
+            "rmse": 89.46645890807198,
+            "mae": 59.31909814392694,
+            "r2": 0.7339576029211572,
+            "bias_pred_minus_obs": 16.71431864872792
+          },
+          "target_total": 212034,
+          "comparison": "different four-year count target; RMSE magnitudes not directly comparable to five-year target",
+          "residual_moran_knn8": {
+            "I": 0.29449564996419575,
+            "p_two_sided": 0.0001,
+            "k": 8,
+            "permutations": 9999,
+            "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+            "expected": -0.004424778761061947
+          }
+        },
+        "training_mean_reference": {
+          "rmse": 189.29395775571618,
+          "mae": 143.02824653692784,
+          "r2": -0.0011966428688165998,
+          "bias_pred_minus_obs": 6.544241803482475
+        },
+        "observed_target_moran_knn8": {
+          "I": 0.6197151326276977,
+          "p_two_sided": 0.0001,
+          "k": 8,
+          "permutations": 9999,
+          "weights": "directed kNN row-standardized within evaluation cells; no cross-split neighbors",
+          "expected": -0.004424778761061947
+        },
+        "preferred_before_test": "enhanced",
+        "test_evaluation_batch_utc": "2026-11-08T03:08:24.927176+00:00"
+      }
+    },
+    {
+      "run": "rf_residual_refinement_v2",
+      "archival_source_path": "04_outputs/rf_residual_refinement_v2/evaluation.json",
+      "evaluation_summary": {
+        "v1_anchor": {
+          "legacy_test": {
+            "rmse": 97.9847617752215,
+            "mae": 64.95975977733255,
+            "r2": 0.7317356492425571,
+            "bias": 19.098146715374174
+          },
+          "moran": {
+            "I": 0.2995772384796702,
+            "n": 227,
+            "k": 8,
+            "p_two_sided": 0.0001,
+            "permutations": 9999
+          },
+          "candidate": 0
+        },
+        "v2_frozen": {
+          "legacy_test": {
+            "rmse": 100.28925600929621,
+            "mae": 65.70795646102242,
+            "r2": 0.7189686946258744,
+            "bias": 19.459041444762963
+          },
+          "moran": {
+            "I": 0.28579426937193575,
+            "n": 227,
+            "k": 8,
+            "p_two_sided": 0.0001,
+            "permutations": 9999
+          },
+          "candidate": 2
+        },
+        "decision": {
+          "selected_candidate": 2,
+          "parameters": {
+            "rf__n_estimators": 500,
+            "rf__min_samples_split": 10,
+            "rf__min_samples_leaf": 3,
+            "rf__max_features": 1.0,
+            "rf__max_depth": null,
+            "rf__criterion": "squared_error"
+          },
+          "cv_shortlist": [
+            21,
+            2,
+            17
+          ],
+          "development_joint_improvement": true,
+          "selection_frozen_before_legacy_test": true,
+          "legacy_test_previously_seen": true,
+          "reason": "Passed both development RMSE and residual-autocorrelation gates"
+        },
+        "interpretation": "Exploratory legacy-test comparison; prior test performance influenced the decision to start follow-up. It cannot re-establish untouched-test generalization."
+      }
+    },
+    {
+      "run": "rf_crossfit_v3",
+      "archival_source_path": "04_outputs/rf_crossfit_v3/evaluation.json",
+      "evaluation_summary": {
+        "decision": {
+          "selected_candidate": 36,
+          "candidate_spec": {
+            "setting": 8,
+            "strength": 1.0
+          },
+          "correction_params": {
+            "rf__max_depth": 5,
+            "rf__min_samples_leaf": 15,
+            "rf__max_features": 0.7
+          },
+          "passes_joint_development_gate": true,
+          "original_model_retained_if_zero": false,
+          "reason": "Nested CV and development-validation joint gate; no legacy target used",
+          "frozen_utc": "2026-11-08T03:58:39.605561+00:00"
+        },
+        "exploratory_legacy_reuse": true,
+        "v1": {
+          "legacy_evaluation": {
+            "rmse": 97.9847617752215,
+            "mae": 64.95975977733255,
+            "r2": 0.7317356492425571,
+            "bias": 19.098146715374174
+          },
+          "moran": {
+            "I": 0.2995772384796702,
+            "k": 8,
+            "p_two_sided": 0.0001,
+            "permutations": 9999
+          }
+        },
+        "v3": {
+          "legacy_evaluation": {
+            "rmse": 103.62242729133277,
+            "mae": 65.85487996798324,
+            "r2": 0.6999777913101912,
+            "bias": 23.737112178141807
+          },
+          "moran": {
+            "I": 0.31870229036187403,
+            "k": 8,
+            "p_two_sided": 0.0001,
+            "permutations": 9999
+          }
+        }
+      }
+    },
+    {
+      "run": "rf_coverage_v4",
+      "archival_source_path": "04_outputs/rf_coverage_v4/evaluation.json",
+      "evaluation_summary": {
+        "decision": {
+          "model_id": "30_single",
+          "candidate": 30,
+          "seed_mode": "single",
+          "settings": {
+            "landuse_mode": "conditional",
+            "scale_mode": "signal_sqrt",
+            "rf_params": {
+              "rf__n_estimators": 500,
+              "rf__min_samples_split": 10,
+              "rf__min_samples_leaf": 5,
+              "rf__max_features": 0.7,
+              "rf__max_depth": 8,
+              "rf__criterion": "squared_error"
+            }
+          },
+          "development_joint_improvement": true,
+          "frozen_utc": "2026-11-08T04:08:00.675042+00:00",
+          "legacy_targets_for_selection": false
+        },
+        "legacy_comparison_is_exploratory": true,
+        "v1": {
+          "legacy_evaluation": {
+            "rmse": 97.9847617752215,
+            "mae": 64.95975977733255,
+            "r2": 0.7317356492425571,
+            "bias": 19.098146715374178
+          },
+          "moran": {
+            "I": 0.29957723847967016,
+            "k": 8,
+            "p_two_sided": 0.0001,
+            "permutations": 9999
+          }
+        },
+        "v4": {
+          "legacy_evaluation": {
+            "rmse": 101.21427868659279,
+            "mae": 64.224144686318,
+            "r2": 0.7137605752505647,
+            "bias": 12.284652951946423
+          },
+          "moran": {
+            "I": 0.3210602755522489,
+            "k": 8,
+            "p_two_sided": 0.0001,
+            "permutations": 9999
+          }
+        }
+      }
+    },
+    {
+      "run": "rf_stability_blend_v4b",
+      "archival_source_path": "04_outputs/rf_stability_blend_v4b/evaluation.json",
+      "evaluation_summary": {
+        "decision": {
+          "selected_candidate": 1,
+          "weights": [
+            0.5,
+            0,
+            0.5
+          ],
+          "frozen_utc": "2026-11-08T04:10:32.257207+00:00",
+          "development_gate_pass": true
+        },
+        "legacy_reuse_exploratory": true,
+        "v1": {
+          "legacy_evaluation": {
+            "rmse": 97.9847617752215,
+            "mae": 64.95975977733255,
+            "r2": 0.7317356492425571,
+            "bias": 19.09814671537417
+          },
+          "moran_i": 0.29957723847967016
+        },
+        "blend": {
+          "legacy_evaluation": {
+            "rmse": 97.53338096218178,
+            "mae": 63.84199268512546,
+            "r2": 0.7342015525278027,
+            "bias": 15.691399833660302
+          },
+          "moran_i": 0.3189482060312819
+        }
+      }
+    },
+    {
+      "run": "rf_spatial_residual_v5b",
+      "archival_source_path": "04_outputs/rf_spatial_residual_v5b/evaluation.json",
+      "evaluation_summary": {
+        "decision": {
+          "selected_candidate": 0,
+          "candidate_spec": {
+            "setting": null,
+            "strength": 0
+          },
+          "correction_params": null,
+          "passes_joint_development_gate": false,
+          "original_model_retained_if_zero": true,
+          "reason": "Nested CV and development-validation joint gate; no legacy target used",
+          "frozen_utc": "2026-11-08T05:31:42.924176+00:00"
+        },
+        "exploratory_legacy_reuse": true,
+        "experiment": "v5b_location_only_RF_residual_correction",
+        "v1": {
+          "legacy_evaluation": {
+            "rmse": 97.98476177522149,
+            "mae": 64.95975977733255,
+            "r2": 0.7317356492425571,
+            "bias": 19.098146715374178
+          },
+          "moran": {
+            "I": 0.2995772384796702,
+            "k": 8,
+            "p_two_sided": 0.0001,
+            "permutations": 9999
+          }
+        },
+        "v3": {
+          "legacy_evaluation": {
+            "rmse": 97.98476177522149,
+            "mae": 64.95975977733255,
+            "r2": 0.7317356492425571,
+            "bias": 19.098146715374174
+          },
+          "moran": {
+            "I": 0.2995772384796702,
+            "k": 8,
+            "p_two_sided": 0.0001,
+            "permutations": 9999
+          }
+        }
+      }
+    }
+  ]
+}

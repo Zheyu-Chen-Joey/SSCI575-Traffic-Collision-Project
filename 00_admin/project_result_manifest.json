@@ -1,246 +1,263 @@
 {
-  "version": "spatial_RF_v5",
-  "bundle_role": "selected spatial model and results; full raw snapshots and historical models remain in complete repository",
+  "version": "spatial_RF_v5_best_only",
+  "generated_utc": "2026-11-08T06:09:54.045829+00:00",
+  "trained_model_count": 1,
+  "retention": "selected model plus data, necessary verification and frozen references; original raw snapshots remain in full repository",
   "files": [
     {
-      "path": "00_admin\\latest_results.json",
-      "bytes": 921,
-      "sha256": "4cb48de96fc917276d53b06b4d0104445f9379968699b4f20ec45810fb9de97d"
+      "path": "00_admin/cleanup_manifest.json",
+      "bytes": 25943,
+      "sha256": "0428a710105e7e786820a3d3d9cf0f11597805da861cea5b6d7b68efc61bb114"
     },
     {
-      "path": "01_data\\processed\\pretraining_1km\\grid_1000.gpkg",
+      "path": "00_admin/latest_results.json",
+      "bytes": 1151,
+      "sha256": "ef1f1cda528a05f06deabb28f458b564184b76438ed96ecb4b7922083b87b44a"
+    },
+    {
+      "path": "01_data/processed/pretraining_1km/grid_1000.gpkg",
       "bytes": 675840,
       "sha256": "95aba28e2eaf45bdfc08dabe53c01f371941971fcc1e6e8c9c9f05f178162d39"
     },
     {
-      "path": "01_data\\processed\\pretraining_1km\\model_table_1000_final.csv",
+      "path": "01_data/processed/pretraining_1km/model_table_1000_final.csv",
       "bytes": 748081,
       "sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779"
     },
     {
-      "path": "02_config\\feature_design.json",
+      "path": "02_config/feature_design.json",
       "bytes": 2805,
       "sha256": "91030dba5d1dcdcfbba550bde0cef6e4adbe5bbe4329178603f3d25cbb22f404"
     },
     {
-      "path": "02_config\\spatial_extension_v5.json",
+      "path": "02_config/spatial_extension_v5.json",
       "bytes": 867,
       "sha256": "7907227c483ea736d5c26c1760ae54ae543efdecab7d6d92cf13ee777c86b610"
     },
     {
-      "path": "03_scripts\\pretraining\\export_rf_spatial_v5.py",
-      "bytes": 10085,
-      "sha256": "4e2fb4ad4b7781109994cdcd84cbc11036a2389548e373233ce793e4fc742d3c"
+      "path": "03_scripts/create_rf_spatial_v5_report.py",
+      "bytes": 10353,
+      "sha256": "fe295140144cbaa454d6d4261d85110398b5571ba2d0e34158e51f07a04097d6"
     },
     {
-      "path": "03_scripts\\pretraining\\pipeline_definition.py",
+      "path": "03_scripts/package_best_results.py",
+      "bytes": 3087,
+      "sha256": "ce989cbb156d43b9d4a795191fe598f4913c87d139ba589254b032323dd40bfb"
+    },
+    {
+      "path": "03_scripts/pretraining/export_rf_spatial_v5.py",
+      "bytes": 10142,
+      "sha256": "ebce53447528da35a020ee203e991b0f6e7e5660f3b3d2f99c4839df1437bd4c"
+    },
+    {
+      "path": "03_scripts/pretraining/pipeline_definition.py",
       "bytes": 2351,
       "sha256": "c23556183f0e36c72bb486a2bb1cf6e2c30635f8a175ed4852fa2ccf8b280c25"
     },
     {
-      "path": "03_scripts\\pretraining\\predict_spatial_rf_v5.py",
+      "path": "03_scripts/pretraining/predict_spatial_rf_v5.py",
       "bytes": 1600,
       "sha256": "e75f5de19381f6cc81fca6a87c46c39adc09b501d1e7da962f02d1f69a50a9c2"
     },
     {
-      "path": "03_scripts\\pretraining\\rf_coverage_scaled_model.py",
+      "path": "03_scripts/pretraining/rf_coverage_scaled_model.py",
       "bytes": 1828,
       "sha256": "36d79e8dd5310314b914c22044e57a111418674e64c4aaaa8208c8dc9b0e05db"
     },
     {
-      "path": "03_scripts\\pretraining\\rf_spatial_model.py",
+      "path": "03_scripts/pretraining/rf_spatial_model.py",
       "bytes": 2072,
       "sha256": "96f0d912ffb0dc1a743cd927179e5eae109be8f3b8732f9dd539960eaf244a68"
     },
     {
-      "path": "03_scripts\\pretraining\\train_rf_spatial_v5.py",
-      "bytes": 9978,
-      "sha256": "4cd0a62dbe753141dcb40be2dbc613b8c8a641dfbb16aeca9261a67d01979e08"
+      "path": "03_scripts/pretraining/train_best_spatial_rf.py",
+      "bytes": 1791,
+      "sha256": "37dac22298927862c8bdc7c33a787c4e09526e9fd0302fbc3a88762caa54d7c0"
     },
     {
-      "path": "03_scripts\\pretraining\\verify_coordinate_ablation_v5.py",
-      "bytes": 2550,
-      "sha256": "ac70404272fe005f98f3b5b8c00844fd58fae0945faea6e77c7c1de848b450dd"
-    },
-    {
-      "path": "04_outputs\\rf_spatial_v5\\aggregate_development_selection.json",
+      "path": "04_outputs/rf_spatial_v5/aggregate_development_selection.json",
       "bytes": 954,
       "sha256": "087142f412712f9945207749fe671e3d38a15fb059484e080a276630c97479e3"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\all_predictions.csv",
-      "bytes": 317140,
-      "sha256": "ba2d6997314f2603b867917914685f59cdc93c212b6aeb3b65fd544b35362317"
+      "path": "04_outputs/rf_spatial_v5/bootstrap_intervals.json",
+      "bytes": 423,
+      "sha256": "bd1ca4f64b300ae9fc5b78845fad8375afe84efba6f210fc11d61c69969f0ae0"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\bootstrap_intervals.json",
-      "bytes": 425,
-      "sha256": "9cb425d9dc8fb354bee679ad91b183bda6bee71c5fbdee94c2567ce6312f9fcb"
+      "path": "04_outputs/rf_spatial_v5/comparison_metrics.csv",
+      "bytes": 668,
+      "sha256": "576a665bc79228729b29496734e8d844fc2fff69a9133b941e86f4aa592e7863"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\comparison_metrics.csv",
-      "bytes": 663,
-      "sha256": "eb7765488ee180ea7079b0c2ad2d5a03605fbac38d12b30325115ad7dfa2ed26"
+      "path": "04_outputs/rf_spatial_v5/coverage_subgroup_diagnostics.csv",
+      "bytes": 596,
+      "sha256": "458965b2eba1966887d66bebf361f9274ffa9ed0f7f2d7be4f2206c2c087b500"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\coverage_subgroup_diagnostics.csv",
-      "bytes": 598,
-      "sha256": "3f13f2033e6effe76368bacc88e1e3193f9f626cac91e8d85ef8610b7b21d6e1"
-    },
-    {
-      "path": "04_outputs\\rf_spatial_v5\\cv_fold_ids.json",
+      "path": "04_outputs/rf_spatial_v5/cv_fold_ids.json",
       "bytes": 124308,
       "sha256": "e358863114f8e89b556f4becfdb9ef169b452b250d0f333b1c1c14f52699f578"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\cv_fold_scores.csv",
+      "path": "04_outputs/rf_spatial_v5/cv_fold_scores.csv",
       "bytes": 34908,
       "sha256": "31a819237c36da32a1dd536a897177a7959a665a7fcd1a657aa7f7f886ef3188"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\cv_scores.csv",
+      "path": "04_outputs/rf_spatial_v5/cv_scores.csv",
       "bytes": 11939,
       "sha256": "8a2da31c1891d1e04c780552c42c83582a2f4b644aa614eb5f7b972d43462172"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\evaluation.json",
+      "path": "04_outputs/rf_spatial_v5/evaluation.json",
       "bytes": 1297,
       "sha256": "4accb35ae338d7d383ad331926e630087d5c5ed5f995055482aba61755f96051"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\figures\\01_metric_comparison.png",
+      "path": "04_outputs/rf_spatial_v5/figures/01_metric_comparison.png",
       "bytes": 91186,
       "sha256": "5250c5f6e16cfd0be6c07b2fffe8dbc37994ee6361ce0b6c1360a4de6228ad82"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\figures\\02_legacy_residual_comparison.png",
+      "path": "04_outputs/rf_spatial_v5/figures/02_legacy_residual_comparison.png",
       "bytes": 97320,
       "sha256": "c623304b00be2dc570f1b22089b635a6149cd840a8b1b2b657ae089adbcbc748"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\figures\\03_full_city_comparison.png",
+      "path": "04_outputs/rf_spatial_v5/figures/03_full_city_comparison.png",
       "bytes": 154901,
       "sha256": "251a3c683abbb7fb05ecfe3386f1fea921e39f4ffc96e2df25841826da22c4af"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\figures\\04_coordinate_ablation.png",
+      "path": "04_outputs/rf_spatial_v5/figures/04_coordinate_ablation.png",
       "bytes": 57966,
       "sha256": "0f9f7dcdac0cf96cf9e107275706bd1b9e40a4c24def104d0986874f04bfa5b5"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\frozen_decision.json",
+      "path": "04_outputs/rf_spatial_v5/frozen_decision.json",
       "bytes": 560,
       "sha256": "1821387c1bf8a56e3201eb282953ab0f655e21391af29dd15e9475b4bda2a1f9"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\geographic_transfer_checks.csv",
+      "path": "04_outputs/rf_spatial_v5/geographic_transfer_checks.csv",
       "bytes": 625,
       "sha256": "9b26add0f03e81fa0ca51ae88a6e0979b8aa7ae9d5967ab091d6b06c429cb7d7"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\matched_ablation_oof.csv",
+      "path": "04_outputs/rf_spatial_v5/matched_ablation_oof.csv",
       "bytes": 56440,
       "sha256": "b458061c226c2031b65502e28f2cf54a3baf282798a562f5198f3910b2472091"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\matched_coordinate_ablation.csv",
+      "path": "04_outputs/rf_spatial_v5/matched_coordinate_ablation.csv",
       "bytes": 496,
       "sha256": "8f1461a817343ef6ad3b946c8c8b5d06aaa2a7735322e3311e6c126e85cf688e"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\moran_sensitivity.json",
-      "bytes": 1616,
-      "sha256": "c6947c36142081b6594962350471c47a40dab443d139d53bc5c22b739cf40608"
+      "path": "04_outputs/rf_spatial_v5/moran_sensitivity.json",
+      "bytes": 1615,
+      "sha256": "bf6bac69674f03499333aa080de96cddcc341719f5081a5e8471c3d23cacb924"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\oof_predictions.csv",
-      "bytes": 2352317,
-      "sha256": "6ee6b239e9769e9c61c9dc28cc3d67d4a531a7b989e8dcbc25bbbec9e0ee592e"
+      "path": "04_outputs/rf_spatial_v5/optimization_history_summary.json",
+      "bytes": 17553,
+      "sha256": "797cad233f601d977e44ddc708a4fdc1c548e2f927b257e008f775260a8b4ef4"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\paired_block_bootstrap.csv",
-      "bytes": 156940,
-      "sha256": "9f2c674cf298081a57f705f461ec65faa46a13794a3ec1f14c14a60bea46eb57"
-    },
-    {
-      "path": "04_outputs\\rf_spatial_v5\\protocol.json",
+      "path": "04_outputs/rf_spatial_v5/protocol.json",
       "bytes": 14987,
       "sha256": "d31a48ff2a4729fa412fc3fedab9d337ae7a218800734c6fd2611cb1cb99be89"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\spatial_predictions_1000.csv",
-      "bytes": 883842,
-      "sha256": "388db50df3c6cbe145eeb8763ff0797e84dfe92af2188a7c640fd96170e1ab0a"
+      "path": "04_outputs/rf_spatial_v5/reference_predictions.csv",
+      "bytes": 98714,
+      "sha256": "2fae74e2d83fd229b11b6b872a2c71578e8abd4052018889dee89b5bd2f72b46"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\spatial_predictions_1000.geojson",
-      "bytes": 3870614,
-      "sha256": "f01eb493f688e8011e4297289b480f73b1e93be406e350deb493a9213d09b352"
+      "path": "04_outputs/rf_spatial_v5/reference_predictions_metadata.json",
+      "bytes": 1302,
+      "sha256": "f0e9b0088da22a93e961b0ea7da7a72b320ce0537322edf74dd111d0610ca476"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\spatial_predictions_1000.gpkg",
+      "path": "04_outputs/rf_spatial_v5/spatial_predictions_1000.csv",
+      "bytes": 883857,
+      "sha256": "94cbd390c77906dcf91171686a23b1f4a76f8f7d8a410774decc3d7299b2848c"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/spatial_predictions_1000.geojson",
+      "bytes": 3870668,
+      "sha256": "1030e45a0b059a4c0f9a9af8dfe36d3bc393aadf4fd17d355deacf57160d06b5"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/spatial_predictions_1000.gpkg",
       "bytes": 1077248,
-      "sha256": "bc1a1e30a264eab4b684fda490337fd42c9e5225789d6fbc1bc4c7032ba111ed"
+      "sha256": "b77d72a45fbcdef26d46257260cf63d26ab2aa7861f4c3b5e3590bd2ee170b05"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\validation_predictions.csv",
-      "bytes": 109479,
-      "sha256": "7cd8c4c5f25a9a1ac0ad20857f259d03529ba9ee096d2288731a8e613dfe679a"
-    },
-    {
-      "path": "04_outputs\\rf_spatial_v5\\validation_scores.csv",
+      "path": "04_outputs/rf_spatial_v5/validation_scores.csv",
       "bytes": 1780,
       "sha256": "c1b1324f3d8907fc4937bfe8478f6892ce939bbcdf7d2bf83013977926ad7345"
     },
     {
-      "path": "04_outputs\\rf_spatial_v5\\verification.json",
-      "bytes": 505,
-      "sha256": "dec87a01c2fd7cc024adc970ab6d724b0e5c2b6189904e93315686bfaa29b7b4"
+      "path": "04_outputs/rf_spatial_v5/verification.json",
+      "bytes": 525,
+      "sha256": "c8d0d8c6a3caa433ac79c016ab6a788086545251017c25396518dbb39aa66a25"
     },
     {
-      "path": "05_models\\rf_project_v1\\requirements.txt",
-      "bytes": 129,
-      "sha256": "c0c0e8f7fd01c893952d9765dab90e7dbc902bb45aa83af7aee962764fac9ca5"
-    },
-    {
-      "path": "05_models\\rf_spatial_v5\\environment.json",
+      "path": "05_models/rf_spatial_v5/environment.json",
       "bytes": 249,
       "sha256": "983850f2394d759ab1f52cae392ee38b9c00eefa1fad045eee7ffbca640c3b6f"
     },
     {
-      "path": "05_models\\rf_spatial_v5\\input_contract.json",
+      "path": "05_models/rf_spatial_v5/input_contract.json",
       "bytes": 1203,
       "sha256": "d206c031982f772630812891add328145c18a277ae01a70400e7493d3fc45474"
     },
     {
-      "path": "05_models\\rf_spatial_v5\\spatial_frozen_rf.joblib",
+      "path": "05_models/rf_spatial_v5/requirements.txt",
+      "bytes": 129,
+      "sha256": "c0c0e8f7fd01c893952d9765dab90e7dbc902bb45aa83af7aee962764fac9ca5"
+    },
+    {
+      "path": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib",
       "bytes": 19720638,
       "sha256": "e0d0cb8433001ad548ff7d068d0d6d64d57f872d5edca4c26733ecd6f26bf6d8"
     },
     {
-      "path": "06_reports\\PROJECT_DELIVERABLES.txt",
-      "bytes": 2051,
-      "sha256": "aca5abde5112a0b694f1d7a5c2cee2e5a69aff6a66f0c7841f5269413c60a59b"
+      "path": "06_reports/grid_decision.md",
+      "bytes": 839,
+      "sha256": "ae0eea7dfa66b7b9dd615b64a302dc1752e5d4e24f7548217874459c9698d94e"
     },
     {
-      "path": "06_reports\\RF_Spatial_Extension_v5.docx",
-      "bytes": 413640,
-      "sha256": "0dd9abd6b41b80ea0550cb45f4efaa9ed11e97bdf45ad80e0bee536d01385097"
+      "path": "06_reports/presentations/SSCI575_Presentation2_Downloads_Minimal_Final.pptx",
+      "bytes": 2773252,
+      "sha256": "80ac15bb6bf75e447228361730c35e51e7c8986f5c1ef5c25daad28f2e076f60"
     },
     {
-      "path": "06_reports\\RF_Spatial_Extension_v5.txt",
-      "bytes": 6298,
-      "sha256": "3fb7f5aa404c323af645ecd282fe66781c7fb86425b121ec4dcc5636c67c9992"
+      "path": "06_reports/RF_Spatial_Extension_v5.docx",
+      "bytes": 413716,
+      "sha256": "f89783ec29ceb26f772b69ad6eaa4e82808f2cab18dca35b7b0f3982a0cff68d"
     },
     {
-      "path": "06_reports\\Signal_Source_Semantics_Clarification.txt",
+      "path": "06_reports/Signal_Source_Semantics_Clarification.txt",
       "bytes": 779,
       "sha256": "414ef4a9a6d6d10ef393b101baa962fcd1311f58fdfaa3f760ef7391ebd21caf"
     },
     {
+      "path": "06_reports/SSCI575_Presentation2_Speaking_Script.docx",
+      "bytes": 40952,
+      "sha256": "c4b2cdc21ce1f4ae6f60413d8d9efb52efd8ed8bae02de5e6c1a7a79ff2bb70c"
+    },
+    {
       "path": "README.md",
-      "bytes": 4237,
-      "sha256": "292679beecf863967d2f6df19d8edf9b74e5a16e43e817640a82405216160071"
+      "bytes": 4321,
+      "sha256": "d4b12a2efa3486bd1697c3e60829a932df0be7ae037930d449e4846b0730e386"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 184,
+      "sha256": "8570337a03bca2e2b9edd26bd6d21e3cdc1568a9db26cf3087b28aebeb6284dd"
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-11-08T06:01:13.678059+00:00",
+  "sha256": "2fae74e2d83fd229b11b6b872a2c71578e8abd4052018889dee89b5bd2f72b46",
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "rows": 1473,
+  "references": [
+    {
+      "label": "Original V1",
+      "original_model_path": "05_models/rf_project_v1/enhanced_optimized_rf.joblib",
+      "original_model_sha256": "01920dd1f0e483ee247113ef28dcef33f65c821fcc1fe7df1ac2ee641940f048",
+      "role": "frozen historical reference predictions; serialized candidate removed during best-only cleanup"
+    },
+    {
+      "label": "V4b blend",
+      "original_model_path": "05_models/rf_stability_blend_v4b/blend_frozen.joblib",
+      "original_model_sha256": "f59188b66537294ef1df9b8230be858d7995a23e27cd87ce5c37964b2250a72a",
+      "role": "frozen historical reference predictions; serialized candidate removed during best-only cleanup"
+    },
+    {
+      "label": "Matched no XY",
+      "original_model_path": "05_models/rf_spatial_v5/matched_position_False_rf.joblib",
+      "original_model_sha256": "1c58b1c03c66d686794f15b12edf4a53eac2f850353ebb6fe0c11164d8540efe",
+      "role": "frozen historical reference predictions; serialized candidate removed during best-only cleanup"
+    }
+  ]
+}

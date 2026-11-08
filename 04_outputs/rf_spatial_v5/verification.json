@@ -6,7 +6,7 @@
   "position_features_equal_fixed_EPSG26911_grid_centers": true,
   "no_target_HIN_or_id_feature": true,
   "three_forests_each_fit886development_rows": true,
-  "matched_ablation_position_model_reproduces_selected": true,
+  "historical_comparisons_recomputed_from_frozen_hash_verified_predictions": true,
   "metrics_reloaded_match": true,
   "GIS1473rows_count230536": true,
   "legacy_comparison_exploratory": true

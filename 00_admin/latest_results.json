@@ -25,5 +25,8 @@
     "matched-coordinate bufferedCV worsens",
     "east improves and north slightly worsens"
   ],
-  "original_plan_v1_preserved": true
+  "original_plan_v1_preserved": false,
+  "retention": "best model artifact only; historical model artifacts removed, references retained as frozen predictions",
+  "historical_versions_available_in_git": true,
+  "cleanup_manifest": "00_admin/cleanup_manifest.json"
 }
