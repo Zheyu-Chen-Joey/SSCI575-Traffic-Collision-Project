@@ -1,0 +1,77 @@
+[
+  {
+    "candidate": 6,
+    "boundary_pass": true,
+    "interior_per_region_pass": false,
+    "interior_pooled_pass": false,
+    "reference_interior": {
+      "rmse": 187.27664626103217,
+      "mae": 146.78655430297695,
+      "r2": 0.45170983049130586,
+      "bias": -123.4845998083348,
+      "p90_abs_error": 318.89719754238877,
+      "error_gt200_count": 10,
+      "moran_i": 0.17461975119170162
+    },
+    "candidate_interior": {
+      "rmse": 190.3430636822849,
+      "mae": 149.34986060744853,
+      "r2": 0.4336077229604265,
+      "bias": -126.6596375290039,
+      "p90_abs_error": 308.0646626022461,
+      "error_gt200_count": 10,
+      "moran_i": 0.1851970791725668
+    },
+    "pass": false
+  },
+  {
+    "candidate": 4,
+    "boundary_pass": true,
+    "interior_per_region_pass": false,
+    "interior_pooled_pass": false,
+    "reference_interior": {
+      "rmse": 187.27664626103217,
+      "mae": 146.78655430297695,
+      "r2": 0.45170983049130586,
+      "bias": -123.4845998083348,
+      "p90_abs_error": 318.89719754238877,
+      "error_gt200_count": 10,
+      "moran_i": 0.17461975119170162
+    },
+    "candidate_interior": {
+      "rmse": 190.3430636822849,
+      "mae": 149.34986060744853,
+      "r2": 0.4336077229604265,
+      "bias": -126.6596375290039,
+      "p90_abs_error": 308.0646626022461,
+      "error_gt200_count": 10,
+      "moran_i": 0.1851970791725668
+    },
+    "pass": false
+  },
+  {
+    "candidate": 2,
+    "boundary_pass": true,
+    "interior_per_region_pass": false,
+    "interior_pooled_pass": false,
+    "reference_interior": {
+      "rmse": 187.27664626103217,
+      "mae": 146.78655430297695,
+      "r2": 0.45170983049130586,
+      "bias": -123.4845998083348,
+      "p90_abs_error": 318.89719754238877,
+      "error_gt200_count": 10,
+      "moran_i": 0.17461975119170162
+    },
+    "candidate_interior": {
+      "rmse": 190.3430636822849,
+      "mae": 149.34986060744853,
+      "r2": 0.4336077229604265,
+      "bias": -126.6596375290039,
+      "p90_abs_error": 308.0646626022461,
+      "error_gt200_count": 10,
+      "moran_i": 0.1851970791725668
+    },
+    "pass": false
+  }
+]

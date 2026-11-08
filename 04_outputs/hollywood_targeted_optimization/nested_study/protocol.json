@@ -1,0 +1,112 @@
+{
+  "created_utc": "2026-11-08T19:15:26.391729+00:00",
+  "control_model_sha256": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357",
+  "source_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "base_settings": {
+    "landuse_mode": "raw",
+    "scale_mode": "signal_sqrt",
+    "rf_params": {
+      "rf__n_estimators": 500,
+      "rf__min_samples_split": 10,
+      "rf__min_samples_leaf": 5,
+      "rf__max_features": 0.5,
+      "rf__max_depth": 16,
+      "rf__criterion": "squared_error"
+    },
+    "include_position": true,
+    "bandwidth_m": 10000.0,
+    "anchor_spacing_m": 20000.0,
+    "local_strength": 0.75,
+    "local_trees": 200,
+    "min_effective_samples": 40,
+    "nearest_anchors": 3,
+    "orientation_angles": [
+      0,
+      45,
+      60
+    ],
+    "orientation_weights": [
+      0.25,
+      0.25,
+      0.5
+    ],
+    "seeds": [
+      7,
+      42,
+      99
+    ]
+  },
+  "residual_settings": [
+    {
+      "depth": 4,
+      "leaf": 20
+    },
+    {
+      "depth": 6,
+      "leaf": 30
+    },
+    {
+      "depth": 8,
+      "leaf": 15
+    }
+  ],
+  "configs": [
+    {
+      "candidate": 0,
+      "setting": 0,
+      "strength": 0.0
+    },
+    {
+      "candidate": 1,
+      "setting": 0,
+      "strength": 0.1
+    },
+    {
+      "candidate": 2,
+      "setting": 0,
+      "strength": 0.25
+    },
+    {
+      "candidate": 3,
+      "setting": 0,
+      "strength": 0.5
+    },
+    {
+      "candidate": 4,
+      "setting": 1,
+      "strength": 0.1
+    },
+    {
+      "candidate": 5,
+      "setting": 1,
+      "strength": 0.25
+    },
+    {
+      "candidate": 6,
+      "setting": 1,
+      "strength": 0.5
+    },
+    {
+      "candidate": 7,
+      "setting": 2,
+      "strength": 0.1
+    },
+    {
+      "candidate": 8,
+      "setting": 2,
+      "strength": 0.25
+    },
+    {
+      "candidate": 9,
+      "setting": 2,
+      "strength": 0.5
+    }
+  ],
+  "target": "Signedcountresidual learnedbyRF from original18inputs; nested3fold1km-gap FULLbaselineRF withsame500/200trees andall3seeds. Do not reuse lightweight residualweight labels.",
+  "guard": "Fixedhull2km andnearesttraining2to5km taper; alpha.1/.25/.5; clip predictedrawresidual to+-200beforealpha. No labels atprediction.",
+  "development_gate": "Original5fold1km-gap train720:meanRMSE+MAEstrictlower,p90+numbergt200+absMoran no worse. Validation166sameordinaryrules.",
+  "geographic_gate": "Boundarynorth/east no metric retreat. Hollywoodblock6_8 full24cells heldoutwith1kmgap:RMSE+MAEstrictlower,p90+numbergt200no worse andabsMoranstrictlower;atleastone tailmetriclower. I110block6_6:RMSE+MAE<=1.01ref,p90+numbergt200+absMoran no worse. Pooledinterior42cells all5metricsno worse.",
+  "selection": "EvaluateALLdevelopmentpassingconfigs on4regions. ChooseminHollywoodRMSE thenvalidationRMSE amongallpassing;freezebeforeanylegacy227comparison. Allregionsare reuseddeveloperdata, not independentconfirmation.",
+  "legacy_gate": "Oneexploratorycomparisononlyafterfreeze;RMSE+MAEstrictlower,p90+numbergt200+absMoran no worse andatleastone tailmetriclower. Neverreplacecontrolfile.",
+  "retention": "Keepcurrentcontrolunchanged;saveonlydevelopmentselectedcandidate separately ifallgeographicgates pass;recordexploratorylegacydecision."
+}

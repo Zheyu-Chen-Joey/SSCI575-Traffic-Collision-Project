@@ -1,0 +1,13 @@
+{
+  "holdout_block": "6_8",
+  "n": 24,
+  "control_underpredicted_cells": 19,
+  "previous_correction_wrong_direction_cells": 16,
+  "mean_observed": 544.9583333333334,
+  "mean_control_prediction": 423.1401234626093,
+  "mean_prior_change": -1.9346610226375607,
+  "mean_landuse_coverage": 0.7634143599264519,
+  "missing_landuse_cells": 0,
+  "observed_count_ge500": 11,
+  "limits": "Developerholdout diagnosis only; signed errors are not allowed as model input or as percellmanual corrections."
+}

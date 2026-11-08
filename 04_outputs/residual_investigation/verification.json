@@ -1,0 +1,16 @@
+{
+  "model_sha256_unchanged": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357",
+  "model_count": 1,
+  "correction_promoted": false,
+  "correction_reason": "Higher overall RMSE and MAE in exploratory reused region; no improvement in real missing-landuse RMSE",
+  "input_review_eligible_cells": 45,
+  "point_predictions_unchanged": true,
+  "labels_changed": false,
+  "source_snapshot_files_changed": false,
+  "flags_are_calibrated_uncertainty": false,
+  "created_utc": "2026-11-08T08:10:11.948287+00:00",
+  "prediction_interface1473_rows_unchanged": true,
+  "CSV_GIS_flags_match": true,
+  "GIS_coverage_numeric": true,
+  "report_rendered_inspected_pages": 5
+}

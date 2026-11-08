@@ -1,0 +1,13 @@
+{
+  "method": "2000paired2km-block resamples inside24developmentcells, seed575",
+  "blocks": 9,
+  "delta_RMSE_quantile95": [
+    -5.480564809775177,
+    -2.290520065477122
+  ],
+  "delta_MAE_quantile95": [
+    -7.028933250071184,
+    -1.4513444791579948
+  ],
+  "limitation": "Conditionalonfixedmodels andrepeatedlyviewed developerregion; excludesselection/retraining uncertainty, notindependentconfirmation"
+}

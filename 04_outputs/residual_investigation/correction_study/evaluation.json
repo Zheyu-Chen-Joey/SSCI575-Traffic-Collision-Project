@@ -1,0 +1,58 @@
+{
+  "decision": {
+    "candidate": 2,
+    "config": {
+      "name": "mask10",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "landuse_dropout": 0.1,
+        "mask_seed": 575
+      }
+    },
+    "frozen_utc": "2026-11-08T08:07:20.575174+00:00",
+    "development_validation_pass": true
+  },
+  "geographic_gate_pass": true,
+  "promote": false,
+  "legacy_evaluated": true,
+  "before": {
+    "rmse": 80.62533236979074,
+    "mae": 53.05394497363826,
+    "r2": 0.8183694418353425,
+    "bias": 10.29355068766047,
+    "p90_abs_error": 138.2102282148314
+  },
+  "after": {
+    "rmse": 81.83979064611877,
+    "mae": 53.70666989072383,
+    "r2": 0.8128564338161847,
+    "bias": 11.798170569560387,
+    "p90_abs_error": 134.92979093478493
+  }
+}

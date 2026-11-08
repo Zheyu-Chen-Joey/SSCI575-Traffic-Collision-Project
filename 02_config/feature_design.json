@@ -24,7 +24,7 @@
     "Baseline uses5 original groups after traffic removal, not the original6-group baseline."
   ],
   "research_questions": {
-    "RQ1": "How well do road network, population and land-use features predict recorded2017\u20132021 collision counts at1km?",
+    "RQ1": "How well do road network, population and land-use features predict recorded2017–2021 collision counts at1km?",
     "RQ2": "Do road sinuosity, functional-class shares and signal density improve prediction over the revised five-group baseline?",
     "RQ3": "What sensitivity and limitations do spatial scale diagnostics reveal for the practical1km working grid?"
   },
@@ -32,7 +32,7 @@
   "speed_limit_admission": {
     "status": "not_suitable_for_current_citywide_model",
     "audit": "04_outputs/speed_audit/speed_suitability.json",
-    "reason": "NHS-focused source: reported30m corridor coverage11.98%;2017\u20132021 speed effective dates unavailable."
+    "reason": "NHS-focused source: reported30m corridor coverage11.98%;2017–2021 speed effective dates unavailable."
   },
   "training_authorization": "User explicitly requested RF training, optimization and project completion on2026-11-07",
   "signal_source_semantics": {
@@ -62,5 +62,34 @@
       "nearest_anchors": 3
     },
     "current_optimization_request": "User requested reducing actual residual magnitudes, with unchanged color scales"
+  },
+  "previous_coordinate_blend_extension": {
+    "user_authorized_position_features": true,
+    "model_class": "rf_coordinate_blend_model.CoordinateBlendForest",
+    "original_input_columns_unchanged": 18,
+    "rotation_degrees": 60,
+    "rotated_weight": 0.5,
+    "grid_size_m_unchanged": 1000,
+    "decision": "04_outputs/rf_spatial_v5/frozen_decision.json",
+    "validation": "04_outputs/rf_spatial_v5/continued_optimization",
+    "independent_confirmation": false
+  },
+  "current_orientation_extension": {
+    "model_class": "rf_orientation_ensemble.OrientationEnsembleForest",
+    "original_input_count": 18,
+    "grid_side_m": 1000,
+    "orientation_angles": [
+      0,
+      45,
+      60
+    ],
+    "orientation_weights": [
+      0.25,
+      0.25,
+      0.5
+    ],
+    "decision": "04_outputs/rf_spatial_v5/frozen_decision.json",
+    "validation": "04_outputs/rf_spatial_v5/orientation_optimization",
+    "independent_confirmation": false
   }
 }

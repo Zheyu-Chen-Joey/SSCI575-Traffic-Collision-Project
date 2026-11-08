@@ -1,5 +1,5 @@
 {
-  "version": "best_local_weighted_spatial_RF",
+  "version": "multi_orientation_RF_v8",
   "created_utc": "2026-11-08T05:49:45.702009+00:00",
   "report": "06_reports/RF_Spatial_Extension_v5.docx",
   "model": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib",
@@ -8,36 +8,122 @@
   "evaluation_nature": "exploratory legacy-region reuse; no new independent validation",
   "performance": {
     "legacy_evaluation": {
-      "rmse": 83.50627461876863,
-      "mae": 54.57201386735293,
-      "r2": 0.8051573173864832,
-      "bias": 10.40245063564282
+      "rmse": 80.62533236979074,
+      "mae": 53.05394497363826,
+      "r2": 0.8183694418353425,
+      "bias": 10.293550687660472,
+      "p90_abs_error": 138.2102282148314
     },
     "moran": {
-      "I": 0.31336456947350627,
+      "I": 0.2808365412496716,
       "p_two_sided": 0.0001,
       "permutations": 9999,
       "k": 8
     }
   },
   "limits": [
-    "legacy region repeatedly reused and referenced in promotion",
+    "legacy and development regions repeatedly reused; adaptive selection",
     "residual Moran remains significant",
-    "north/east contiguous geographic checks worsen"
+    "improvement intervals include zero",
+    "median absolute error and positive bias worsened",
+    "covariate snapshot and reporting completeness limitations"
   ],
   "original_plan_v1_preserved": false,
-  "retention": "best model artifact only; historical model artifacts removed, references retained as frozen predictions",
+  "retention": "one retained orientation ensemble RF; research bundle removed by latest user request",
   "historical_versions_available_in_git": true,
   "cleanup_manifest": "00_admin/cleanup_manifest.json",
-  "method": "25pct global plus75pct Gaussian-weighted local RF; 10km bandwidth",
-  "updated_utc": "2026-11-08T06:43:06.344424+00:00",
+  "method": "25pct0degree plus25pct45degree plus50pct60degree local RF",
+  "updated_utc": "2026-11-08T07:31:10.039101+00:00",
   "latest_refinement": {
-    "date": "2026-11-07",
-    "candidate_count": 37,
+    "new_configurations": 12,
+    "baseline_evaluations": 1,
+    "promoted": true,
+    "selected": "25pct0degree plus25pct45degree plus50pct60degree local RF",
+    "evidence": "04_outputs/rf_spatial_v5/orientation_optimization",
+    "legacy_status": "adaptive exploratory reuse; not independent confirmation"
+  },
+  "orientation_settings": {
+    "orientation_angles": [
+      0,
+      45,
+      60
+    ],
+    "orientation_weights": [
+      0.25,
+      0.25,
+      0.5
+    ]
+  },
+  "latest_tree_structure_audit": {
+    "new_configurations": 8,
     "promoted": false,
-    "reason": "continuous north/east geographic stability gate failed",
-    "audit": "06_reports/RF_Refinement_20261107.txt",
-    "evidence": "04_outputs/rf_spatial_v5/refinement_20261107",
+    "reason": "验证区双指标或90分位门槛未通过",
+    "legacy_evaluated": false,
+    "report": "06_reports/RF_Tree_Structure_Validation.txt",
+    "evidence": "04_outputs/rf_spatial_v5/tree_structure_v8"
+  },
+  "residual_investigation": {
+    "report": "06_reports/RF_Residual_Hotspots_Investigation.docx",
+    "outputs": "04_outputs/residual_investigation",
+    "recount_errors_found": false,
+    "missingness_model_promoted": false,
+    "input_quality_flags_added": true,
+    "eligible_cells_flagged": 45,
+    "limits": "Descriptive associations, no causal attribution; original region remains exploratory"
+  },
+  "latest_scaling_audit": {
+    "new_configurations": 6,
+    "promoted": false,
+    "reason": "验证区双指标或90分位门槛未通过",
+    "legacy_evaluated": false,
+    "report": "06_reports/RF_Scaling_Validation.txt",
+    "evidence": "04_outputs/rf_spatial_v5/scaling_v8"
+  },
+  "latest_scaling_blend_audit": {
+    "new_configurations": 3,
+    "promoted": false,
+    "reason": "绝对误差90分位退步超过预设2%上限；RMSE和MAE虽下降仍不满足完整门槛",
+    "legacy_evaluated": true,
+    "report": "06_reports/RF_Scaling_Blend_Validation.txt",
+    "evidence": "04_outputs/rf_spatial_v5/scaling_blend_v8",
+    "tradeoff_summary": "04_outputs/rf_spatial_v5/scaling_blend_v8/tradeoff_summary.json",
+    "candidate_not_promoted_metrics": {
+      "rmse": 78.66685726880951,
+      "mae": 51.80059302643493,
+      "r2": 0.8270862686647151,
+      "bias": 9.66110075507564,
+      "p90_abs_error": 143.42452749071677
+    }
+  },
+  "cluster_targeted_optimization": {
+    "outputs": "04_outputs/cluster_targeted_optimization",
+    "report": "06_reports/RF_Cluster_Targeted_Optimization.docx",
+    "new_weight_configurations": 7,
+    "promoted": false,
+    "legacy_evaluated": false,
+    "validation_large_error_cells_before": 8,
+    "validation_large_error_cells_strong_local": 6,
+    "reason": "Failed geographic stability gates; retained current champion"
+  },
+  "support_protection_optimization": {
+    "report": "06_reports/RF_Support_Protection_Optimization.docx",
+    "outputs": "04_outputs/support_protection_optimization",
+    "new_configurations": 12,
+    "promoted": false,
+    "boundary_decline_removed_by_fallback": true,
+    "interior_joint_goals_pass": false,
     "legacy_evaluated": false
-  }
+  },
+  "hollywood_targeted_optimization": {
+    "report": "06_reports/RF_Hollywood_Validation.txt",
+    "outputs": "04_outputs/hollywood_targeted_optimization",
+    "hollywood_joint_goals_improved": true,
+    "formal_promoted": false,
+    "production_control_unchanged": true,
+    "legacy_evaluated": false,
+    "research_pair_retained": false
+  },
+  "model_artifacts_retained": 1,
+  "production_models_retained": 1,
+  "research_bundles_retained": 0
 }

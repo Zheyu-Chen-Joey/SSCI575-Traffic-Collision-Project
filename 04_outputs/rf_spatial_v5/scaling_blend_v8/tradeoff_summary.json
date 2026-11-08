@@ -1,0 +1,25 @@
+{
+  "candidate_promoted": false,
+  "reason": "p90 absolute error increased beyond preregistered2pct tolerance",
+  "legacy_region_reused_exploratory": true,
+  "rmse_reduction_pct": 2.4291063905307553,
+  "mae_reduction_pct": 2.3624104632107845,
+  "p90_increase_pct": 3.772730385612544,
+  "allowed_p90_limit": 140.974432779128,
+  "improved_cells": 114,
+  "worsened_cells": 113,
+  "retained": {
+    "rmse": 80.62533236979075,
+    "mae": 53.05394497363825,
+    "r2": 0.8183694418353424,
+    "bias": 10.293550687660469,
+    "p90_abs_error": 138.21022821483137
+  },
+  "rejected_candidate": {
+    "rmse": 78.66685726880951,
+    "mae": 51.80059302643493,
+    "r2": 0.8270862686647151,
+    "bias": 9.66110075507564,
+    "p90_abs_error": 143.42452749071677
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "candidate": 0,
+  "config": {
+    "candidate": 0,
+    "setting": 0,
+    "strength": 0.0
+  },
+  "setting": {
+    "depth": 4,
+    "leaf": 20
+  },
+  "frozen_utc": "2026-11-08T19:18:06.435278+00:00",
+  "all_development_gates_pass": false
+}

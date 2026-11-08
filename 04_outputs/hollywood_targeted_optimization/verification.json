@@ -1,0 +1,17 @@
+{
+  "control_sha256_unchanged": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357",
+  "research_bundle_sha256": "6759da5c8887191bd03216d96536cc9309cfcee281082b10e9fa4478ca32eefc",
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "source_count_total": 230536,
+  "production_model_files": 1,
+  "research_comparison_bundles": 0,
+  "holdout_and_buffer_excluded_from_pair_training": true,
+  "pair_reloaded_predictions_match_diagnostic": true,
+  "legacy_not_evaluated_this_round": true,
+  "created_utc": "2026-11-08T19:29:11.192794+00:00",
+  "research_prediction_cli_matches": true,
+  "report_rendered_pages": 5,
+  "all_report_pages_visually_reviewed": true,
+  "research_bundle_retained": false,
+  "retention_update": "Removed by latest user request; metrics and hashes below describe historical diagnostic execution only"
+}

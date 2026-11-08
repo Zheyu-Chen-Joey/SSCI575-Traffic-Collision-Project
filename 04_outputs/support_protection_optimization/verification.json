@@ -1,0 +1,15 @@
+{
+  "model_sha256_unchanged": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357",
+  "input_sha256_unchanged": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "model_count": 1,
+  "boundary_gates_all_zero": true,
+  "boundary_reference_predictions_equal_candidate": true,
+  "legacy_region_not_evaluated_this_round": true,
+  "no_source_snapshots_changed": true,
+  "created_utc": "2026-11-08T09:29:52.912209+00:00",
+  "independent_refit_vs_cached_prediction_max_difference": 1.1368683772161603e-13,
+  "prediction_reuse_exact_on_independently_refitted_outer_fold": true,
+  "outside_support_predicts_exact_original_RF": true,
+  "retained1473_predictions_unchanged": true,
+  "report_rendered_and_visually_inspected_pages": 5
+}

@@ -1,0 +1,306 @@
+{
+  "created_utc": "2026-11-08T07:46:35.103925+00:00",
+  "reference_sha256": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357",
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "seeds": [
+    7,
+    42,
+    99
+  ],
+  "configs": [
+    {
+      "name": "champion",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "leaf3_depth20",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 6,
+          "rf__min_samples_leaf": 3,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 20,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "leaf4",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 8,
+          "rf__min_samples_leaf": 4,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "leaf6",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 12,
+          "rf__min_samples_leaf": 6,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "features65",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.65,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "features80",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.8,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "depth12",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 12,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "bootstrap80",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error",
+          "rf__max_samples": 0.8
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "more_trees",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 1000,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 400,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    }
+  ],
+  "selection": "Fixed 5fold1km-gap CV on720training rows. Require both meanfoldRMSE andMAE lower than champion. Shortlist3 byRMSE. Fit720 and select validation166 winner lowering bothRMSE andMAE andp90<=1.02champion. Freeze before geographic gate.",
+  "geographic_gate": "North/east20pct of886development rows; >1km-square gap. Require each region RMSE andMAE ratio<=1.05 and meanratio<=1.01 for bothmetrics. These are reused development diagnostics, not independent tests.",
+  "legacy_gate": "Only if geographic gate passes, fit886; evaluate frozen candidate once on reused227region. Replace only ifRMSE+MAE lower andp90<=1.02champion. Exploratory adaptive acceptance, not independent validation.",
+  "features": "Same18 columns; no neighboring target inputs; no raw modifications; model type remains RF",
+  "retention": "One production champion, no unsuccessful candidate model files"
+}

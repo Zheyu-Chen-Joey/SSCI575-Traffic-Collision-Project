@@ -1,0 +1,48 @@
+{
+  "decision": {
+    "candidate": 2,
+    "config": {
+      "name": "blend_0.5",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "rotation_degrees": 60.0,
+        "rotated_weight": 0.5
+      }
+    },
+    "frozen_utc": "2026-11-08T07:13:49.524888+00:00",
+    "development_validation_pass": true
+  },
+  "geographic_gate_pass": true,
+  "promote": true,
+  "legacy_evaluated": true,
+  "before": {
+    "rmse": 83.50627461876861,
+    "mae": 54.57201386735292,
+    "r2": 0.8051573173864833,
+    "bias": 10.40245063564282,
+    "p90_abs_error": 149.26306552503735
+  },
+  "after": {
+    "rmse": 81.01835081954331,
+    "mae": 53.2416164869381,
+    "r2": 0.8165943633610127,
+    "bias": 9.785483019591496,
+    "p90_abs_error": 140.49557081375656
+  }
+}

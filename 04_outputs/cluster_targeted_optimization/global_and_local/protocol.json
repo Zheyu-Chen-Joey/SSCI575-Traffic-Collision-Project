@@ -1,0 +1,186 @@
+{
+  "created_utc": "2026-11-08T08:42:41.525545+00:00",
+  "reference_sha256": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357",
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "seeds": [
+    7,
+    42,
+    99
+  ],
+  "configs": [
+    {
+      "name": "champion",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "cluster025",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "error_weight_strength": 0.25,
+        "cluster_emphasis": true
+      }
+    },
+    {
+      "name": "cluster050",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "error_weight_strength": 0.5,
+        "cluster_emphasis": true
+      }
+    },
+    {
+      "name": "cluster100",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "error_weight_strength": 1.0,
+        "cluster_emphasis": true
+      }
+    },
+    {
+      "name": "hard050",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "error_weight_strength": 0.5,
+        "cluster_emphasis": false
+      }
+    }
+  ],
+  "selection": "Train720 fixed5fold with1km-square-gap. Weight estimation NESTED inside each fit subset:3fold GroupKFold, same1km-gap, lightweight RF seed42 global200/local100. No outer eval labels used. Require CV meanRMSE+MAE lower, pooledp90 andnumberabsError>200 no worse, absoluteMoranI no worse. Shortlist3 byRMSE. Validation166 requiresRMSE+MAE lower,p90<=1.02ref,numberabsError>200 andabsMoran no worse. Freeze before geography.",
+  "geographic_gate": "North/east20pct of886development rows; >1km-square gap. Require each region RMSE andMAE ratio<=1.05 and meanratio<=1.01 for bothmetrics. These are reused development diagnostics, not independent tests.",
+  "legacy_gate": "Only aftergeography, fit886; once exploratory reused227 comparison. RequireRMSE+MAE lower,p90<=1.02ref,numberabsError>200 andabsoluteMoranI no worse. Not independent validation.",
+  "weight_method": "w=min(1+strength*hard_score*(.5+.5*same_sign_neighbor_fraction),3), normalized mean1; hardscore=clip(absinnerOOFresidual/q90,0,2); same-sign fraction within1500m amongtrainingOOF residuals, >=2neighbors. Hard-only variant omits cluster multiplier. Weight construction never used at inference.",
+  "features": "Same18 columns; no neighboring target inputs; no raw modifications; model type remains RF",
+  "retention": "One production champion, no unsuccessful candidate model files"
+}

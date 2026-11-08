@@ -1,0 +1,14 @@
+{
+  "decision": {
+    "candidate": 0,
+    "config": {
+      "candidate": 0,
+      "max_distance_m": null,
+      "strength": 0.0
+    },
+    "frozen_utc": "2026-11-08T09:25:04.665103+00:00",
+    "all_development_gates_pass": false
+  },
+  "legacy_evaluated": false,
+  "promote": false
+}

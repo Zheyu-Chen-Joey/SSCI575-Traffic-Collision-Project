@@ -1,0 +1,211 @@
+{
+  "created_utc": "2026-11-08T07:26:57.208447+00:00",
+  "reference_sha256": "fe5057d5a2fd68ab7c5c4073744242974b2f874c9580f01bb924d646196cd749",
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "base_settings": {
+    "landuse_mode": "raw",
+    "scale_mode": "signal_sqrt",
+    "rf_params": {
+      "rf__n_estimators": 500,
+      "rf__min_samples_split": 10,
+      "rf__min_samples_leaf": 5,
+      "rf__max_features": 0.5,
+      "rf__max_depth": 16,
+      "rf__criterion": "squared_error"
+    },
+    "include_position": true,
+    "bandwidth_m": 10000.0,
+    "anchor_spacing_m": 20000.0,
+    "local_strength": 0.75,
+    "local_trees": 200,
+    "min_effective_samples": 40,
+    "nearest_anchors": 3
+  },
+  "seeds": [
+    7,
+    42,
+    99
+  ],
+  "configs": [
+    {
+      "candidate": 0,
+      "angles": [
+        0,
+        60
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "candidate": 1,
+      "angles": [
+        0,
+        45,
+        60
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "candidate": 2,
+      "angles": [
+        0,
+        60,
+        75
+      ],
+      "weights": [
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "candidate": 3,
+      "angles": [
+        0,
+        45,
+        75
+      ],
+      "weights": [
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "candidate": 4,
+      "angles": [
+        0,
+        30,
+        60
+      ],
+      "weights": [
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "candidate": 5,
+      "angles": [
+        0,
+        45,
+        60,
+        75
+      ],
+      "weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "candidate": 6,
+      "angles": [
+        0,
+        30,
+        45,
+        60,
+        75
+      ],
+      "weights": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "candidate": 7,
+      "angles": [
+        0,
+        60,
+        75
+      ],
+      "weights": [
+        0.25,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "candidate": 8,
+      "angles": [
+        0,
+        45,
+        60
+      ],
+      "weights": [
+        0.25,
+        0.25,
+        0.5
+      ]
+    },
+    {
+      "candidate": 9,
+      "angles": [
+        0,
+        30,
+        60
+      ],
+      "weights": [
+        0.25,
+        0.25,
+        0.5
+      ]
+    },
+    {
+      "candidate": 10,
+      "angles": [
+        0,
+        45,
+        75
+      ],
+      "weights": [
+        0.25,
+        0.375,
+        0.375
+      ]
+    },
+    {
+      "candidate": 11,
+      "angles": [
+        0,
+        60,
+        75
+      ],
+      "weights": [
+        0.6,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "candidate": 12,
+      "angles": [
+        0,
+        45,
+        60,
+        75
+      ],
+      "weights": [
+        0.5,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666
+      ]
+    }
+  ],
+  "selection": "Fixed 5fold1km-square-gap CV on train720. Both meanfoldRMSE andMAE must lower than champion; shortlist3 bymeanRMSE. Fittrain720 and evaluate166validation; require bothRMSE+MAE lower andp90<=1.02champion; choose lowestRMSE thenMAE. Freeze before geographic check.",
+  "geographic_gate": "Development886 north/east20pct contiguous holdouts with>1km-square-gap. EveryregionRMSE+MAE ratio<=1.05; mean regionratio<=1.01 forbothmetrics. These repeatedly viewed checks are development only.",
+  "legacy_gate": "After geographic pass only, frozen model fit886 and evaluated once on reused227region; promote only ifRMSE+MAE lower andp90<=1.02champion. Adaptive exploratory acceptance, not independent testing.",
+  "features": "Existing18 only, zero change to1km grid orraw records; basis models fit only foldtraining; no neighboring outcome atprediction",
+  "cost": "Basis forests shared across convex combinations within same training subset; no sharing between training folds"
+}

@@ -1,0 +1,53 @@
+{
+  "new_configurations": 12,
+  "production_model_promoted": false,
+  "legacy_evaluated_this_round": false,
+  "outer_boundary_decline_eliminated_by_fallback": true,
+  "outer_extrapolation_improved": false,
+  "all_interior_gates_pass": false,
+  "representative_not_adopted_config": {
+    "hull_taper_m": 2000,
+    "distance_taper_start_m": 2000,
+    "max_training_distance_m": 5000,
+    "correction_strength": 1
+  },
+  "reference_interior": {
+    "rmse": 187.27664626103217,
+    "mae": 146.78655430297695,
+    "r2": 0.45170983049130586,
+    "bias": -123.4845998083348,
+    "p90_abs_error": 318.89719754238877,
+    "error_gt200_count": 10,
+    "moran_i": 0.17461975119170162
+  },
+  "candidate_interior": {
+    "rmse": 188.43492528482687,
+    "mae": 148.10149943715507,
+    "r2": 0.4449066659490474,
+    "bias": -124.6600053498026,
+    "p90_abs_error": 311.05598452697114,
+    "error_gt200_count": 10,
+    "moran_i": 0.1796326290640407
+  },
+  "validation_reference": {
+    "rmse": 82.47282757627316,
+    "mae": 52.07011646522618,
+    "r2": 0.9228239413976463,
+    "bias": 10.247257420521592,
+    "p90_abs_error": 126.58507097296871,
+    "error_gt200_count": 8.0,
+    "moran_i": 0.055365312971901635,
+    "active_gate_fraction": 0.0
+  },
+  "validation_candidate": {
+    "rmse": 81.03604429558692,
+    "mae": 51.49464495795888,
+    "r2": 0.9254895317869509,
+    "bias": 11.871852459969396,
+    "p90_abs_error": 122.3217925200654,
+    "error_gt200_count": 6.0,
+    "moran_i": 0.038075364791852306,
+    "active_gate_fraction": 0.8614457831325302
+  },
+  "selection_limit": "All regions are repeatedly used developer checks. Interior blocks chosen from prior trainingOOF diagnostics. No independent confirmation."
+}

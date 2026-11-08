@@ -1,5 +1,5 @@
 {
-  "model_id": "local_weighted_RF_10km_075",
+  "model_id": "orientation_RF_0_45_60_025_025_050",
   "candidate": 17,
   "seed_mode": "ensemble",
   "settings": {
@@ -16,9 +16,9 @@
     "include_position": true
   },
   "development_joint_gate_pass": true,
-  "frozen_utc": "2026-11-08T05:32:07.749960+00:00",
+  "frozen_utc": "2026-11-08T07:28:18.552398+00:00",
   "legacy_target_for_selection": false,
-  "model_class": "rf_local_weighted_model.LocalWeightedSpatialForest",
+  "model_class": "rf_orientation_ensemble.OrientationEnsembleForest",
   "local_weighting_settings": {
     "bandwidth_m": 10000.0,
     "anchor_spacing_m": 20000.0,
@@ -29,5 +29,19 @@
   },
   "base_selection_model_id": "17_ensemble",
   "local_selection": "04_outputs/rf_spatial_v5/local_rf_frozen_decision.json",
-  "exploratory_promotion_after_legacy_gate": true
+  "exploratory_promotion_after_legacy_gate": true,
+  "comparison_anchor_label": "Previous coordinate RF",
+  "optimization_audit": "04_outputs/rf_spatial_v5/orientation_optimization",
+  "orientation_settings": {
+    "orientation_angles": [
+      0,
+      45,
+      60
+    ],
+    "orientation_weights": [
+      0.25,
+      0.25,
+      0.5
+    ]
+  }
 }

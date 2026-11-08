@@ -1,0 +1,42 @@
+{
+  "decision": {
+    "candidate": 0,
+    "config": {
+      "name": "champion",
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      }
+    },
+    "frozen_utc": "2026-11-08T08:23:45.436659+00:00",
+    "development_validation_pass": false
+  },
+  "geographic_gate_pass": false,
+  "promote": false,
+  "legacy_evaluated": false
+}

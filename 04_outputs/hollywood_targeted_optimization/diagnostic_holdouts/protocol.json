@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-08T19:20:21.245992+00:00",
+  "control_sha256": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357",
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "candidate": 5,
+  "residual_depth": 6,
+  "residual_leaf": 30,
+  "correction_strength": 0.25,
+  "purpose": "Diagnostic follow-up foruser-requestedHollywoodfocus despitevalidationRMSEgatefailure. CandidatepickedonlybyCV, no posthocHollywoodtuning. Notpromotion, notindependentconfirmation.",
+  "no_legacy_evaluation": true,
+  "training": "Residualtargets are3fold1km-gap FULLbaselineRF OOF within eachregionfit subset; Hollywood24labels never used for its training."
+}

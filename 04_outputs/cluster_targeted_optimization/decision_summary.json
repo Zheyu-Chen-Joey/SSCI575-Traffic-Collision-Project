@@ -1,0 +1,164 @@
+{
+  "new_weight_configurations": 7,
+  "additional_conservative_check": "already tested weaklocal.25, frozen before its geographic check; canonical train-then-validation order",
+  "model_promoted": false,
+  "legacy_region_evaluated_this_round": false,
+  "training_large_error_cells": 41,
+  "FDR_significant_training_cells": 21,
+  "validation_reference": {
+    "name": "champion",
+    "rmse": 82.47282757627316,
+    "mae": 52.07011646522619,
+    "r2": 0.9228239413976463,
+    "bias": 10.247257420521587,
+    "p90_abs_error": 126.58507097296862,
+    "error_gt200_count": 8,
+    "moran_i": 0.05536531297190165
+  },
+  "validation_strong_local": {
+    "name": "cluster100",
+    "rmse": 81.33246237272883,
+    "mae": 51.61914186275048,
+    "r2": 0.92494343790852,
+    "bias": 11.806769581820204,
+    "p90_abs_error": 122.3217925200654,
+    "error_gt200_count": 6,
+    "moran_i": 0.036625182498963856
+  },
+  "retained_metrics": {
+    "rmse": 80.62533236979074,
+    "mae": 53.05394497363826,
+    "r2": 0.8183694418353425,
+    "moran_i": 0.280837
+  },
+  "reason": "No candidate passed both per-region and mean regional stability gates. All diagnostic improvements are development evidence.",
+  "phases": {
+    "global_and_local": {
+      "decision": {
+        "candidate": 3,
+        "config": {
+          "name": "cluster100",
+          "params": {
+            "landuse_mode": "raw",
+            "scale_mode": "signal_sqrt",
+            "rf_params": {
+              "rf__n_estimators": 500,
+              "rf__min_samples_split": 10,
+              "rf__min_samples_leaf": 5,
+              "rf__max_features": 0.5,
+              "rf__max_depth": 16,
+              "rf__criterion": "squared_error"
+            },
+            "include_position": true,
+            "bandwidth_m": 10000.0,
+            "anchor_spacing_m": 20000.0,
+            "local_strength": 0.75,
+            "local_trees": 200,
+            "min_effective_samples": 40,
+            "nearest_anchors": 3,
+            "orientation_angles": [
+              0,
+              45,
+              60
+            ],
+            "orientation_weights": [
+              0.25,
+              0.25,
+              0.5
+            ],
+            "error_weight_strength": 1.0,
+            "cluster_emphasis": true
+          }
+        },
+        "frozen_utc": "2026-11-08T08:47:51.388340+00:00",
+        "development_validation_pass": true
+      },
+      "geographic_gate_pass": false,
+      "promote": false,
+      "legacy_evaluated": false
+    },
+    "local_only": {
+      "decision": {
+        "candidate": 3,
+        "config": {
+          "name": "cluster100",
+          "params": {
+            "landuse_mode": "raw",
+            "scale_mode": "signal_sqrt",
+            "rf_params": {
+              "rf__n_estimators": 500,
+              "rf__min_samples_split": 10,
+              "rf__min_samples_leaf": 5,
+              "rf__max_features": 0.5,
+              "rf__max_depth": 16,
+              "rf__criterion": "squared_error"
+            },
+            "include_position": true,
+            "bandwidth_m": 10000.0,
+            "anchor_spacing_m": 20000.0,
+            "local_strength": 0.75,
+            "local_trees": 200,
+            "min_effective_samples": 40,
+            "nearest_anchors": 3,
+            "orientation_angles": [
+              0,
+              45,
+              60
+            ],
+            "orientation_weights": [
+              0.25,
+              0.25,
+              0.5
+            ],
+            "error_weight_strength": 1.0,
+            "cluster_emphasis": true,
+            "weight_global": false
+          }
+        },
+        "frozen_utc": "2026-11-08T08:55:50.464465+00:00",
+        "development_validation_pass": true
+      },
+      "geographic_gate_pass": false,
+      "promote": false,
+      "legacy_evaluated": false
+    },
+    "weak_local_025": {
+      "geographic_gate_pass": false,
+      "legacy_evaluated": false,
+      "promote": false,
+      "params": {
+        "landuse_mode": "raw",
+        "scale_mode": "signal_sqrt",
+        "rf_params": {
+          "rf__n_estimators": 500,
+          "rf__min_samples_split": 10,
+          "rf__min_samples_leaf": 5,
+          "rf__max_features": 0.5,
+          "rf__max_depth": 16,
+          "rf__criterion": "squared_error"
+        },
+        "include_position": true,
+        "bandwidth_m": 10000.0,
+        "anchor_spacing_m": 20000.0,
+        "local_strength": 0.75,
+        "local_trees": 200,
+        "min_effective_samples": 40,
+        "nearest_anchors": 3,
+        "orientation_angles": [
+          0,
+          45,
+          60
+        ],
+        "orientation_weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "error_weight_strength": 0.25,
+        "cluster_emphasis": true,
+        "weight_global": false
+      },
+      "decision_uses_development_checks": true
+    }
+  }
+}

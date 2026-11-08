@@ -1,8 +1,11 @@
 {
   "version": "spatial_RF_v5_best_only",
-  "generated_utc": "2026-11-08T07:01:00.272636+00:00",
+  "generated_utc": "2026-11-08T20:12:32.270770+00:00",
   "trained_model_count": 1,
-  "retention": "selected model plus data, necessary verification and frozen references; original raw snapshots remain in full repository",
+  "production_model_count": 1,
+  "research_comparison_bundle_count": 0,
+  "serialized_model_file_count": 1,
+  "retention": "one retained production RF; research candidate entities removed; historical validation evidence retained",
   "files": [
     {
       "path": "00_admin/cleanup_manifest.json",
@@ -11,8 +14,8 @@
     },
     {
       "path": "00_admin/latest_results.json",
-      "bytes": 1675,
-      "sha256": "4d3d616dfec6211edcdcc0aa9a6417cd8a5c41dfb09d5f2e82800b5c5f84ccdd"
+      "bytes": 4947,
+      "sha256": "683f8d8eb4b0c642cb43b7b327ea7eed39e5543081a216f4bf8d2f336bc1fd87"
     },
     {
       "path": "01_data/processed/pretraining_1km/grid_1000.gpkg",
@@ -26,33 +29,113 @@
     },
     {
       "path": "02_config/feature_design.json",
-      "bytes": 3169,
-      "sha256": "4a83a8008113a0a99d9b16c7e26cd2c20c5e17043fdf6a3d7375bd7a88222c2a"
+      "bytes": 4141,
+      "sha256": "a1844582a093f8a653c691c32a4576b1a73a4d975fca8f80b01ad630dfd9a9d0"
     },
     {
       "path": "02_config/spatial_extension_v5.json",
-      "bytes": 1216,
-      "sha256": "71e28f23ac984c13ad84a311ef8eeee520a4e7a3d1a3bcfd1836272db0ab72bf"
+      "bytes": 2194,
+      "sha256": "239136680c1c543fae36404082c97c72cff52f2af0b3c5eac8eaef1576bdc0f9"
+    },
+    {
+      "path": "03_scripts/create_cluster_targeted_report.py",
+      "bytes": 10141,
+      "sha256": "d9824b7ff2966be999938cf0278eaa8838c25df6838c680dc2a9e143f9a34b5b"
+    },
+    {
+      "path": "03_scripts/create_coordinate_rf_report.py",
+      "bytes": 9601,
+      "sha256": "052ee336ebab66620a1a3ea2f168d3ca1700b9d0d299db43a07b7e4f751204f9"
+    },
+    {
+      "path": "03_scripts/create_residual_investigation_report.py",
+      "bytes": 10326,
+      "sha256": "5cd1dce18c236c3a66c933034c10e9cc4045c4f5773f700fb5a8786da898aacb"
     },
     {
       "path": "03_scripts/create_rf_spatial_v5_report.py",
-      "bytes": 10178,
-      "sha256": "e922367c0f4bbfde57e145e71eeb4f770896c42beaf2f20960ded425a71e40ae"
+      "bytes": 208,
+      "sha256": "d0fcef348aee3ad1e57a3848311c724c6be285d5b756716161e46cfd88db683b"
+    },
+    {
+      "path": "03_scripts/create_support_protection_report.py",
+      "bytes": 9760,
+      "sha256": "f8fd0ca75357fc50712f5d42a3b4f263569118ee2e17625ee0e56e28d4043aa2"
     },
     {
       "path": "03_scripts/package_best_results.py",
-      "bytes": 3340,
-      "sha256": "d27c7126042008e1b732af3c01c52f7b042a4db0bb8282aa5d5a6cee9550b934"
+      "bytes": 6620,
+      "sha256": "7598003e99d7a9d715ccffb606eaf7b131e49e8dbe834f40e36e72b9a7d6f227"
+    },
+    {
+      "path": "03_scripts/pretraining/archive_scaling_audit.py",
+      "bytes": 4319,
+      "sha256": "9becb55be0d835ab9beac1b7d30c51c19c5d53210358decd6ff326da8cea5da8"
+    },
+    {
+      "path": "03_scripts/pretraining/archive_scaling_blend_audit.py",
+      "bytes": 4976,
+      "sha256": "455bfc77f07100ece22bba43cd8b8472a1e0bd0ef11f5a0939fa049f944e6cef"
+    },
+    {
+      "path": "03_scripts/pretraining/archive_tree_structure_audit.py",
+      "bytes": 4340,
+      "sha256": "a92511ac7ab0e970c56e6b987db43314c8bd7e26c09a14708ea619e9391cb004"
+    },
+    {
+      "path": "03_scripts/pretraining/build_cluster_evidence.py",
+      "bytes": 3174,
+      "sha256": "b6b47518e4772321b4d50dc2d4abbfc539208462b93ca922ab3f33986549cf73"
+    },
+    {
+      "path": "03_scripts/pretraining/check_conservative_cluster_candidate.py",
+      "bytes": 6098,
+      "sha256": "36821ddc37ecac594d932c47cc4aa3e76f5a218279e387ef2a426efcaf059178"
+    },
+    {
+      "path": "03_scripts/pretraining/complete_residual_audit.py",
+      "bytes": 5320,
+      "sha256": "39bc533306f239cb438b209e9c5857f5bcf4a574599715c2443f39d1b0e7c48f"
+    },
+    {
+      "path": "03_scripts/pretraining/diagnose_development_clusters.py",
+      "bytes": 6152,
+      "sha256": "fd6a9804aab113c1afec26ce93ce9d713f8046fe6f4caee3481cb7add35fe2dd"
+    },
+    {
+      "path": "03_scripts/pretraining/diagnose_hollywood_residual_candidate.py",
+      "bytes": 5929,
+      "sha256": "6844f263c475f57afa30adb6100d103dc3dce95e0a9def98913c96be0afbdbb7"
     },
     {
       "path": "03_scripts/pretraining/export_rf_spatial_v5.py",
-      "bytes": 11343,
-      "sha256": "d2b5ecc3716850e2ad9e74c4ec92664d4caa3f9ab3c939b70da693922b22d60f"
+      "bytes": 12658,
+      "sha256": "055f7f6c81b02b2def03d299098c29a07e0965009fa2389a229851383325d306"
+    },
+    {
+      "path": "03_scripts/pretraining/finalize_cluster_targeted_audit.py",
+      "bytes": 6280,
+      "sha256": "9880f81267fc94bbf6fa81212aa027643d9cbd6fbe47ccb3ce4651f0ea6b262f"
+    },
+    {
+      "path": "03_scripts/pretraining/finalize_hollywood_audit.py",
+      "bytes": 10104,
+      "sha256": "3155bf6ae65baf12ff93ee0ccca5b213c565a4ce0679da713c50c1a33254ba47"
     },
     {
       "path": "03_scripts/pretraining/finalize_refinement_audit.py",
       "bytes": 5763,
       "sha256": "bcfc40e05084c435e05efe6a786e587346bf8c27d69b920414cb7f2b431f875d"
+    },
+    {
+      "path": "03_scripts/pretraining/finalize_support_protection_audit.py",
+      "bytes": 8183,
+      "sha256": "4580ef0e53fbf4c3ac73901d94e9a284d4e00493a4182eff465b203b22a655fe"
+    },
+    {
+      "path": "03_scripts/pretraining/investigate_residual_hotspots.py",
+      "bytes": 12494,
+      "sha256": "982644aad95d10404803dfdcd3414ba9e0778ee9e3cbd07909c13bd3a65074d5"
     },
     {
       "path": "03_scripts/pretraining/pipeline_definition.py",
@@ -61,8 +144,8 @@
     },
     {
       "path": "03_scripts/pretraining/predict_spatial_rf_v5.py",
-      "bytes": 1600,
-      "sha256": "e75f5de19381f6cc81fca6a87c46c39adc09b501d1e7da962f02d1f69a50a9c2"
+      "bytes": 1743,
+      "sha256": "125870a162a7e01db4e1721cd5d038cf38331fbf4cc370bb45c68c36ec2337e2"
     },
     {
       "path": "03_scripts/pretraining/refine_local_rf.py",
@@ -70,9 +153,34 @@
       "sha256": "03eff559e0c6fd538ddce1ce964d183bfb3e0e2970f2c59c6fcdd4651a1509c1"
     },
     {
+      "path": "03_scripts/pretraining/render_scaling_tradeoff.py",
+      "bytes": 1811,
+      "sha256": "fadc69d3f7da3541c2206bda791a4d175ad7a6ee344fdf3ac7f2df862b9de9f9"
+    },
+    {
+      "path": "03_scripts/pretraining/rf_cluster_weighted_model.py",
+      "bytes": 5950,
+      "sha256": "40a2ac7af74e1eb92eb9496779718256dd676a3579a764a919fa3d353d336e92"
+    },
+    {
+      "path": "03_scripts/pretraining/rf_coordinate_blend_model.py",
+      "bytes": 1278,
+      "sha256": "456ce10f15e65f71b46567c956dc0383593b930878fc2513e1a7a748963f685d"
+    },
+    {
       "path": "03_scripts/pretraining/rf_coverage_scaled_model.py",
-      "bytes": 1828,
-      "sha256": "36d79e8dd5310314b914c22044e57a111418674e64c4aaaa8208c8dc9b0e05db"
+      "bytes": 2058,
+      "sha256": "df833775ffd0976eff5470752a442ca6778af07948062c9a06ffc6d122972dbb"
+    },
+    {
+      "path": "03_scripts/pretraining/rf_crossfit_residual_model.py",
+      "bytes": 3436,
+      "sha256": "cca95c6c7faa96fbb874aebc5da39901c551b9e2d5ab1da0709723228c8f991b"
+    },
+    {
+      "path": "03_scripts/pretraining/rf_input_quality.py",
+      "bytes": 973,
+      "sha256": "ecca0e38865fb17676203c9e0c23dac25242b84327c9432c845ebae6e500bbd6"
     },
     {
       "path": "03_scripts/pretraining/rf_local_weighted_model.py",
@@ -80,19 +188,729 @@
       "sha256": "eafc2577f74c041cd47471ee319c9d3ba487e7997661a8fa8230cab42decebe2"
     },
     {
+      "path": "03_scripts/pretraining/rf_missingness_robust_model.py",
+      "bytes": 1585,
+      "sha256": "1822d947049e1e08390f665ecfec7f3a83af143a22478f41f460d5eee963db07"
+    },
+    {
+      "path": "03_scripts/pretraining/rf_orientation_ensemble.py",
+      "bytes": 1619,
+      "sha256": "a6d2062d9a01132fac2be48046ff39cfafa632735bd6fa205125249fb877bf9a"
+    },
+    {
       "path": "03_scripts/pretraining/rf_refined_local_model.py",
       "bytes": 2939,
       "sha256": "ee84d28a7d0296cd701acc1e20770cbfecf6dc70da1f1cde49f9e112dee83d8d"
     },
     {
+      "path": "03_scripts/pretraining/rf_rotated_local_model.py",
+      "bytes": 1001,
+      "sha256": "be2394e02de46d8ee2a3e39765f6d204d3e1cc7d196202cfeae779ced056289a"
+    },
+    {
+      "path": "03_scripts/pretraining/rf_scaling_blend_model.py",
+      "bytes": 1495,
+      "sha256": "5b50ee49c6e023d4500700b06a3dfb48ecc6e943b4de10a0e03a38d978775128"
+    },
+    {
       "path": "03_scripts/pretraining/rf_spatial_model.py",
-      "bytes": 2072,
-      "sha256": "96f0d912ffb0dc1a743cd927179e5eae109be8f3b8732f9dd539960eaf244a68"
+      "bytes": 2166,
+      "sha256": "e81e624e75344dde1d445bdd1ce050ebf7e9be3dc8cd624de20948954b73bef3"
+    },
+    {
+      "path": "03_scripts/pretraining/rf_supported_cluster_model.py",
+      "bytes": 3245,
+      "sha256": "42c0e0587304a7b27e0881ce18d28cd1c0f4a42f89043bf345766f8d6b1b1ad9"
+    },
+    {
+      "path": "03_scripts/pretraining/robust_local_rf.py",
+      "bytes": 8684,
+      "sha256": "dbe3d856419069ac10eccc6ac6948ab293e7fd6081acf12838e02c4f210d13a5"
+    },
+    {
+      "path": "03_scripts/pretraining/study_distance_supported_rf.py",
+      "bytes": 10431,
+      "sha256": "5d1f2d0d26d99d3579575d4ce3e2305e2725feff7c85112bba53df2f61de3601"
+    },
+    {
+      "path": "03_scripts/pretraining/study_hollywood_residual_rf.py",
+      "bytes": 11912,
+      "sha256": "9ab1b2760943d21e038d9e56f7f67f808e6a53d85f30d4572b6e171ffa36d046"
+    },
+    {
+      "path": "03_scripts/pretraining/study_missingness_correction.py",
+      "bytes": 8262,
+      "sha256": "7005b477a5f25d567216de6f88cca8ceab95cfb7cd00e16f35b486d09ce4b585"
+    },
+    {
+      "path": "03_scripts/pretraining/study_orientation_ensemble.py",
+      "bytes": 7658,
+      "sha256": "52efba5bdc717e132f2ab5ffa4f4230c36dfb8469430e15581cda947cb950767"
+    },
+    {
+      "path": "03_scripts/pretraining/study_rf_cluster_weighting.py",
+      "bytes": 9165,
+      "sha256": "46b48f66f187b7d4e4be416977bc6ce4b0d07d9ec7ba24c64dd318ab82c41848"
+    },
+    {
+      "path": "03_scripts/pretraining/study_rf_local_cluster_weighting.py",
+      "bytes": 10556,
+      "sha256": "0a138b5942d850312c94554a68c3dec6330615d8b145a695b950a5eb36e5c2e5"
+    },
+    {
+      "path": "03_scripts/pretraining/study_rf_scaling.py",
+      "bytes": 7254,
+      "sha256": "90fada71ecc4a5bad798e57b17749ddefe53d9f0f32670c4c1d80c6608ee141f"
+    },
+    {
+      "path": "03_scripts/pretraining/study_rf_scaling_blend.py",
+      "bytes": 7533,
+      "sha256": "0e06bc8ca244bd5a3ae2986ea18d52e9a5492e944b6c4479ac62c4c346e5c431"
+    },
+    {
+      "path": "03_scripts/pretraining/study_rf_tree_structure.py",
+      "bytes": 7405,
+      "sha256": "2a4e917446bd594f403c57f5a894aad9866e0162473c572ce0d4c5c3e6133be1"
+    },
+    {
+      "path": "03_scripts/pretraining/study_supported_cluster_rf.py",
+      "bytes": 12491,
+      "sha256": "bcddf0492fd20e81d086c8d1676326c51ae7611f9a1e1451b6f173576ccd4d61"
     },
     {
       "path": "03_scripts/pretraining/train_best_spatial_rf.py",
-      "bytes": 2005,
-      "sha256": "b2fc6cac798472c5e36d2bd3c18f8241598d5058663129bb0f571d986ae8a3b1"
+      "bytes": 2363,
+      "sha256": "b9786e9c4e3ac2493eefd45906f4b674fd17e7929a474be3d34cc7bab7916632"
+    },
+    {
+      "path": "03_scripts/retain_single_release.py",
+      "bytes": 3527,
+      "sha256": "5386802628601a9c1e9485571eaeeed3f87253188749108387e351eaf7265e93"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/cluster_diagnostic_protocol.json",
+      "bytes": 1086,
+      "sha256": "4c41944c23b2b5739996df75c0004ed67b1a4beed6205030b75cde1b473ae45d"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/cluster_road_context.csv",
+      "bytes": 274,
+      "sha256": "40bd9f67d7d5745f9c0cd5ac428fafac1d4bdcf6e14de2ac7d6742ff7b39ad8a"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/decision_summary.json",
+      "bytes": 5001,
+      "sha256": "a3cffc409f9c481fa954c3fa4f49474c9b225f04e74c6409b5c284374523da98"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/cv_fold_scores.csv",
+      "bytes": 2824,
+      "sha256": "e6607f21b51dfafd7e8b416bcd0988b43c5c68c65be5c781bf3f295c66ad8b23"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/cv_scores.csv",
+      "bytes": 923,
+      "sha256": "984674abc0658f7810199984e64f17193b5d32ec332dd651bb6cbb40098175bb"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/evaluation.json",
+      "bytes": 1135,
+      "sha256": "02ffab41c139ef57eb3bde8bf9f34f23e5e304a04c57512b8498c3cd2690ecf5"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/frozen_decision.json",
+      "bytes": 954,
+      "sha256": "d2e15a628cf03d5aad2473d85eb71caa1aff6367eff2386dcac6fdf55bffce42"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/geographic_gate.csv",
+      "bytes": 546,
+      "sha256": "b3cf73ca3efa66a064b9472da5ca275c3fde0abc6c71bc56986ce6e5efef3086"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/geographic_ratios.json",
+      "bytes": 192,
+      "sha256": "b046cdf11073216934e697ebd5e7c71cb9fa8743f848e1bae15474816010f48e"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/inner_diagnostics_452_4.csv",
+      "bytes": 25943,
+      "sha256": "e2a3bf2ee2281bed8db7af27727b68814e2ede02e8dae80befa48e98c8e9ce66"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/inner_diagnostics_455_3.csv",
+      "bytes": 25834,
+      "sha256": "0644ce8c59b6f11edfce0c23237d09453bcd2ceae58addbf55804334abbe9240"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/inner_diagnostics_466_1.csv",
+      "bytes": 26456,
+      "sha256": "f52316fdbbcd3457069b909aadf7e56fdfd55b5894c08815b34c285f5f5e6192"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/inner_diagnostics_477_2.csv",
+      "bytes": 27012,
+      "sha256": "f44ecd2d2cc375c83c5c4a414134c8ad821982684d756eec162aade05733a0d8"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/inner_diagnostics_481_0.csv",
+      "bytes": 27480,
+      "sha256": "8cf5df16ea8b649e2125a6b286d17835cdc5d525c5a3a6cc354076b7714e2ef2"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/inner_diagnostics_641_6.csv",
+      "bytes": 36541,
+      "sha256": "5243bd8fd8bc5870feec011882fc85f43be294eccdd45207dbb4113af08d1788"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/inner_diagnostics_645_7.csv",
+      "bytes": 36782,
+      "sha256": "4099430a11b60b94d1370d1d5dcad59a01b8ffb4e2f9428e018929cc11de0537"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/inner_diagnostics_720_5.csv",
+      "bytes": 41100,
+      "sha256": "5b7f4e51e15bd7677d73f16365f09cd7cea4f3c04c7500eac36d89faa2766b33"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/protocol.json",
+      "bytes": 6081,
+      "sha256": "66d34575ba3d64992318521a71e9b88b98ceb92ce1daab5cb4666a39f3265dde"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/global_and_local/validation_scores.csv",
+      "bytes": 588,
+      "sha256": "0fe583e6c8d5158a1ca5b550f633b4d112728b254d06e087bd368e089c5497fa"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cached_weights_452.json",
+      "bytes": 221,
+      "sha256": "233ce338f2c4a0e9e64543de90bfc1b67cca24fc1b55b3dee31d8e5544c1d2dd"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cached_weights_455.json",
+      "bytes": 221,
+      "sha256": "6034f4077e866bc1b429e387f31c9ce18da909226114df81cb3c2874a17b2793"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cached_weights_466.json",
+      "bytes": 221,
+      "sha256": "3cf197815db29d909efee6531adabb6c30ea06cfc565998a81815987a69e94e8"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cached_weights_477.json",
+      "bytes": 221,
+      "sha256": "e7aba29f5046a002e43a2142235290850cfb58d3fe2dfe1abf6cd916273719d1"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cached_weights_481.json",
+      "bytes": 221,
+      "sha256": "a278acd6031ffa63b6ddda60e0c0d3bd2029e482b933c9cdbd37369a51172501"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cached_weights_641.json",
+      "bytes": 221,
+      "sha256": "9fb134f7205204f99fe291ba5cebea908b306ee094347d0f3352db17f49798a3"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cached_weights_645.json",
+      "bytes": 221,
+      "sha256": "1f8558259e8c337a11dbbff09aff84b834c60df384a7acf773ec4591a9175aed"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cached_weights_720.json",
+      "bytes": 221,
+      "sha256": "ad7583f279eea729db53bab87a36c2947cded37d9efe92334393e63a4c8fd739"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cv_fold_scores.csv",
+      "bytes": 2274,
+      "sha256": "03a04bc1bd7985c174143cff604de66e9b6f407929aaa5c48c57329e052bdfa7"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/cv_scores.csv",
+      "bytes": 766,
+      "sha256": "cd7c6234f10cf2a108ee78b0e0b3e0708100a11f32046dbbb6560dab86273613"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/evaluation.json",
+      "bytes": 1168,
+      "sha256": "4adbe915a9809a2b899e007c58ebcb2b07699c2cd397f384f7de1dcb0fbb28a5"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/frozen_decision.json",
+      "bytes": 985,
+      "sha256": "ec8d170fa31c50883206de75ed30bef6b7afa4c96abf47c4d25843a1e5d2c1c0"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/geographic_gate.csv",
+      "bytes": 546,
+      "sha256": "3a428bedaf21e3919a3cc1649c73a3eb9ff8ec8b206c20bf5ff8ea6f52590265"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/geographic_ratios.json",
+      "bytes": 192,
+      "sha256": "ec6c5e03de336c1aadee46a7ca51d93943b8d8e707c0be687760b0468e4b260f"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/inner_diagnostics_452_4.csv",
+      "bytes": 25943,
+      "sha256": "e2a3bf2ee2281bed8db7af27727b68814e2ede02e8dae80befa48e98c8e9ce66"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/inner_diagnostics_455_3.csv",
+      "bytes": 25834,
+      "sha256": "0644ce8c59b6f11edfce0c23237d09453bcd2ceae58addbf55804334abbe9240"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/inner_diagnostics_466_1.csv",
+      "bytes": 26456,
+      "sha256": "f52316fdbbcd3457069b909aadf7e56fdfd55b5894c08815b34c285f5f5e6192"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/inner_diagnostics_477_2.csv",
+      "bytes": 27012,
+      "sha256": "f44ecd2d2cc375c83c5c4a414134c8ad821982684d756eec162aade05733a0d8"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/inner_diagnostics_481_0.csv",
+      "bytes": 27480,
+      "sha256": "8cf5df16ea8b649e2125a6b286d17835cdc5d525c5a3a6cc354076b7714e2ef2"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/inner_diagnostics_641_6.csv",
+      "bytes": 36541,
+      "sha256": "5243bd8fd8bc5870feec011882fc85f43be294eccdd45207dbb4113af08d1788"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/inner_diagnostics_645_7.csv",
+      "bytes": 36782,
+      "sha256": "4099430a11b60b94d1370d1d5dcad59a01b8ffb4e2f9428e018929cc11de0537"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/inner_diagnostics_720_5.csv",
+      "bytes": 41100,
+      "sha256": "5b7f4e51e15bd7677d73f16365f09cd7cea4f3c04c7500eac36d89faa2766b33"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/protocol.json",
+      "bytes": 5525,
+      "sha256": "158568ab9df0ea0ef026680c2a271e3c77dbd9a1e044c8941c4bdaa5dc2654f7"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/local_only/validation_scores.csv",
+      "bytes": 456,
+      "sha256": "3cdf9cff6ab85c5057269e64e3e82d566abd09f856d1036ca33f814a861b6c79"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/nested_training_weights.csv",
+      "bytes": 136786,
+      "sha256": "2ac585296d810a55a4c8ced256806450d01eee93f56b430b879e5c5a2651db0b"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/residual_scale_sensitivity.json",
+      "bytes": 295,
+      "sha256": "5dc56fd774d08e821f4d6abba51e190fbf6690ccad58555155c4dc2e0851fb32"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/training_cells_with_weight_audit.csv",
+      "bytes": 474145,
+      "sha256": "383569762bf2d852c429f1e79c3b85b41028755602b2af3593bd13b08a0f306c"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/training_cluster_diagnostics.gpkg",
+      "bytes": 532480,
+      "sha256": "39553c0814de377e1871a9620c10da6ca13e3860a629e37fd706b0503e421eda"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/training_cluster_summary.csv",
+      "bytes": 1416,
+      "sha256": "39e7916da7e30f517af99325bdc8d2b21152829774d7ef35283095a93d49a5aa"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/training_oof_cluster_cells.csv",
+      "bytes": 459098,
+      "sha256": "6be11d7f5a4fed54184ff3c042cc85357b4474a4d8786525b3eb9eb8632dc56e"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/training_residual_clusters.png",
+      "bytes": 143833,
+      "sha256": "15083b0bcc5861569cb7e28e257980b3912b018cb09cf5a776d370103ff76610"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/validation_comparison.csv",
+      "bytes": 621,
+      "sha256": "64deb8f6b46e2e3c239dab500a537221df86d7036a961a4895bc08775ae49a2b"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/validation_targeted_comparison.png",
+      "bytes": 148794,
+      "sha256": "ad9b693aa115272551058a5ffd906a8286b832e71fc7227217272914858ac9de"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/verification.json",
+      "bytes": 915,
+      "sha256": "52d3962cb2d93b4f202bb89e85b78a7b2934d1504de9f7ac89018e58a5b4de1c"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/weak_local_025/evaluation.json",
+      "bytes": 893,
+      "sha256": "79ee95d0e9703de90ec0e5af2fc400095e19ad3c2a1c008b4cd0ed82ec1a8957"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/weak_local_025/frozen_decision.json",
+      "bytes": 835,
+      "sha256": "54c9884df32e76c0267c98a8f265e8945c1bebc002b432c2fc20cb70d8911666"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/weak_local_025/geographic_gate.csv",
+      "bytes": 588,
+      "sha256": "4e271e30ee4ccb14de4e5244f715f9fb7c7a7872489ae1b6488baa5e28f4f21d"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/weak_local_025/geographic_ratios.json",
+      "bytes": 191,
+      "sha256": "4d179623cafe567db42ecff06400d7088778558abf09e1082009e55dc45b312e"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/weak_local_025/protocol.json",
+      "bytes": 1587,
+      "sha256": "3f0832a7b590305dd7f4712c520f702218c3d891ffd786ab6013ef3ba9cae3d8"
+    },
+    {
+      "path": "04_outputs/cluster_targeted_optimization/weights_by_diagnostic_cluster.csv",
+      "bytes": 219,
+      "sha256": "4b496a39206c62b58935d1027ee19e7bcbde3375f2e899174e6c9083ba29a1f6"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/conditional_bootstrap.json",
+      "bytes": 420,
+      "sha256": "1d0244b393b6738a5283a9b6d6be7320c8e2f403f59b9c2aabfd96aeb5ac5830"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/decision_summary.json",
+      "bytes": 1651,
+      "sha256": "0b9a9bf46e5c034c65d3f853805f1f712cc92ee4f78311acf3df0028511828e6"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/diagnostic_holdouts/evaluation.json",
+      "bytes": 911,
+      "sha256": "4408a1a3c3d23d023c4a7afaea5c77b6c036614b9eecf9a234d145d6628b8b77"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/diagnostic_holdouts/geographic_predictions.csv",
+      "bytes": 41444,
+      "sha256": "72263389c4a2129ccfa359ca216f5058a459eff87848dded44306b730abb79b4"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/diagnostic_holdouts/geographic_scores.csv",
+      "bytes": 1287,
+      "sha256": "75d4620d425ef6301d6293baa67fc675d497bbefb2d7ce18bc172d4dfdc324f8"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/diagnostic_holdouts/inner_folds_interior_6_6.json",
+      "bytes": 109404,
+      "sha256": "f54a58c80b1f992e08b6a64ad6bb2088114bec336f3c457b90ad29b0071d2e0d"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/diagnostic_holdouts/inner_folds_interior_6_8.json",
+      "bytes": 105300,
+      "sha256": "d811837d532a3095c3e4c9aad9566254e9b9a706ace71f34d8200607fe6451de"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/diagnostic_holdouts/inner_oof_interior_6_6.csv",
+      "bytes": 44026,
+      "sha256": "dcb01fc11b4de8303d098c6c97f8154747a1643e9c62b5e267666676e28e7318"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/diagnostic_holdouts/inner_oof_interior_6_8.csv",
+      "bytes": 43891,
+      "sha256": "3e6e932b2126013ff78f0e37a5a3e5f352b8c12868477f7f02784b0e0d1aae8c"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/diagnostic_holdouts/protocol.json",
+      "bytes": 708,
+      "sha256": "1b12b2882230e742f2c3d6eaf8209acdcebd0d69ab1cf2b6dc37dad92a0700a6"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/hollywood_diagnostic_summary.json",
+      "bytes": 503,
+      "sha256": "01ade23e4c62db9eb053ff253954a3a56db6833c7f9585273685a6ef82464f9a"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/hollywood_holdout_comparison.gpkg",
+      "bytes": 118784,
+      "sha256": "1b53f249890dc04e139a660ee4303c2cc16179eefb024be3639ece865d3a2a0a"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/hollywood_holdout_comparison.png",
+      "bytes": 113534,
+      "sha256": "7b05af6ac900ac510a31d8f96885c4120f4a48a69f36b59ed21709df373706c7"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/hollywood_metrics.png",
+      "bytes": 73314,
+      "sha256": "e35ec44659513e144c2fe6c7c4d57cd97ef0fc8f87659f7c2d50c7ea344f0b76"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/hollywood_per_grid_comparison.csv",
+      "bytes": 18733,
+      "sha256": "0dee3d40d210bbd5d19afe0603149f574922da886763b43f0dd81ae2bb6f1fc7"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/hollywood_retreat_diagnosis.csv",
+      "bytes": 15594,
+      "sha256": "3f546db3fc2e31a127603d9d332119cfcbd0019b0dbaf97e962c72fa1e172b8c"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/cv_fold_scores.csv",
+      "bytes": 6060,
+      "sha256": "36e0c78e81d75a451d8e6365834adc8a1e4db33ed6e4547d33c305680f464e6f"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/cv_scores.csv",
+      "bytes": 1638,
+      "sha256": "c4d53a455e397fe881be785b7ef4fadb61f830c7c896f5d768d4d28d83f96741"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/evaluation.json",
+      "bytes": 379,
+      "sha256": "8edc5d1d8b854ee2120d1fa3d378c1af1ff405d356eafb30aa604001d5d451a6"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/frozen_decision.json",
+      "bytes": 252,
+      "sha256": "82f9f6ff964518a481b79a67714f998a5cdf85873ed57d6139cd6d755ea2587d"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/geographic_gates.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_folds_outer0.json",
+      "bytes": 65457,
+      "sha256": "ad5c532ec3876a0f237c4bebd329987512506e670c51073ceeecfafc7e08622e"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_folds_outer1.json",
+      "bytes": 69789,
+      "sha256": "0afee1f06a212dd573814556829f6fc32fe2d69a02cd0758d0e4e3e2625a6778"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_folds_outer2.json",
+      "bytes": 65058,
+      "sha256": "a07091cc1c95e6ad4639db67e4e266eb35ce61748c7809f843c25e7a84fef271"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_folds_outer3.json",
+      "bytes": 66483,
+      "sha256": "3e0bc1dc4881ff97bed4ab5a20b0a9ed3bb0660cd46b48f7680a7cbf6d86b588"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_folds_outer4.json",
+      "bytes": 62379,
+      "sha256": "20f43e038d91c62888dec88bda643d75d898c5be69782ad6ae9e273206729c5b"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_folds_validation.json",
+      "bytes": 95211,
+      "sha256": "7953e94ebb5281eb10d5eab032a7a3743888dfdb10470d9245a8b9ddc0dc43df"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_oof_outer0.csv",
+      "bytes": 25396,
+      "sha256": "bd105b8e1897fb4e21504f8c4082a84a724537bd4c5c44f6b4ae94cd07446452"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_oof_outer1.csv",
+      "bytes": 24549,
+      "sha256": "048d9b933f3fef7778effc792f98d55cb3cfd5869f6df8dde7eea91910f10269"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_oof_outer2.csv",
+      "bytes": 25126,
+      "sha256": "9b343d3f2e781f8196b25f1604bea86267e27382dedac50d12478decf9d2975e"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_oof_outer3.csv",
+      "bytes": 24005,
+      "sha256": "7356e41687b0afe556bffb34ee8a8f6613ea3c6418311507a77069c89bac785e"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_oof_outer4.csv",
+      "bytes": 23860,
+      "sha256": "204b3b450e85f1a20ed1dc497566758e84439c643031448298833f9fe53c763d"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/inner_oof_validation.csv",
+      "bytes": 37937,
+      "sha256": "1ebc120fe4496edd193eee0a156a2a23492209b9f3c25b451700d2c1b030be47"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/oof_predictions.csv",
+      "bytes": 141237,
+      "sha256": "03a1147bef17497af29d2f489fd38ebf028f41781b5f7b31794f603a3ade6f0f"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/protocol.json",
+      "bytes": 3344,
+      "sha256": "b8d065a1935d808272a482242b97c1aba4b604fdb8a4e20f911a1cfa7031bff0"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/validation_predictions.csv",
+      "bytes": 8087,
+      "sha256": "5abf91e11b7fde74c7b3f47fc920daa9b0f9ea728037eeac704451bac8ef539a"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/nested_study/validation_scores.csv",
+      "bytes": 305,
+      "sha256": "18e5f2daaac4df3d98e0e3d2d3701d6581d4c449400d6fb9d35dad611fdd8ee1"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/regional_metrics.csv",
+      "bytes": 1287,
+      "sha256": "75d4620d425ef6301d6293baa67fc675d497bbefb2d7ce18bc172d4dfdc324f8"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/threshold_sensitivity.csv",
+      "bytes": 93,
+      "sha256": "6b84e36127e4b79092931b7164dab3f3e1cde32bdde95e78f976bc3a3f161c2d"
+    },
+    {
+      "path": "04_outputs/hollywood_targeted_optimization/verification.json",
+      "bytes": 889,
+      "sha256": "18bfe38866538e37f8fb0c7c82012597d3f443ff80f8b8181b7398eb7c267b83"
+    },
+    {
+      "path": "04_outputs/residual_investigation/case_road_context.csv",
+      "bytes": 922,
+      "sha256": "c3ee1b0d48add487dc891a21239195a4eddf4e96eeb3ba1706bf6c552777512a"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/cv_fold_scores.csv",
+      "bytes": 2166,
+      "sha256": "479745d8be630e1c992046c71a110ca4f8e8b55acdec4030c0ecdce5ef234073"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/cv_scores.csv",
+      "bytes": 637,
+      "sha256": "af74c9293011e1d991f1531803bd94c6dde546cfc2040abae0bb621db2400948"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/evaluation.json",
+      "bytes": 1490,
+      "sha256": "7a99f033c77600aee0bbae9e17d46d84a2d1005a20548700ba9aaac69a8d7d5d"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/frozen_decision.json",
+      "bytes": 936,
+      "sha256": "de91fd6c1ce77cc915470344e39defbb910497529f6e55508ca6db22665dbb7a"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/geographic_gate.csv",
+      "bytes": 517,
+      "sha256": "9749cf7821a4cbc07ee55905eeabe251fc693cea672319512ad5fce85bc0e6d3"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/geographic_ratios.json",
+      "bytes": 192,
+      "sha256": "6936072254993a3e6bd17c06f72e197df9350bbd3777e098fce2e2dc9aee59f5"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/legacy_comparison.csv",
+      "bytes": 11905,
+      "sha256": "6cdc07c62d4ac6b60d17a85cd303cab25f48e7c446b35c1f8c969b3630a8dd43"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/protocol.json",
+      "bytes": 4945,
+      "sha256": "db43f8ecece1984d0c8b7ec522c5728005658e4217088757e268097797b1c2c4"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/stress_cv_fold_scores.csv",
+      "bytes": 2157,
+      "sha256": "79b07bc94ceb7dd6d6e070cdf09dbc8138a872c82c42b41403958b2613fed12b"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/stress_cv_scores.csv",
+      "bytes": 433,
+      "sha256": "7716afee46e44bdf24f50cd17fb5418f53156a5a9a63d608bbc5bcf9f8b7a21d"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/stress_validation_scores.csv",
+      "bytes": 357,
+      "sha256": "139bdb76068e590053b8c184a8e06b551205eac2ca67641624b2ba987be4522d"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_study/validation_scores.csv",
+      "bytes": 355,
+      "sha256": "207c114ebf3dec71f5e06ebb26d34c323136785a0963ebf9fa0d5b4297f4fc08"
+    },
+    {
+      "path": "04_outputs/residual_investigation/correction_subgroup_results.csv",
+      "bytes": 539,
+      "sha256": "9d81786f983da9f1a7b6b1d83319658a0cadaad75b86122109c57ee549ff6a3d"
+    },
+    {
+      "path": "04_outputs/residual_investigation/descriptive_associations.csv",
+      "bytes": 1810,
+      "sha256": "5adb6827265bd85808bdf58a3a7673aa6c00e1ed7fb8099d3cfee1b3596a4407"
+    },
+    {
+      "path": "04_outputs/residual_investigation/error_hotspots_and_coverage.png",
+      "bytes": 152262,
+      "sha256": "741d6a37e4e82ffead0b17791851f3c88ad900ef413a095d1557f49245993afd"
+    },
+    {
+      "path": "04_outputs/residual_investigation/input_quality_flags.csv",
+      "bytes": 92940,
+      "sha256": "ef39dc2d389f9e64ad4dedcef800246a2b9c733214ab690e732c417442f76d51"
+    },
+    {
+      "path": "04_outputs/residual_investigation/landuse_download_audit.json",
+      "bytes": 881,
+      "sha256": "7b38f11f1293944793d23ca8b770812a7b78fc70cd4b6575cec17d609a00055a"
+    },
+    {
+      "path": "04_outputs/residual_investigation/orientation_disagreement.csv",
+      "bytes": 126258,
+      "sha256": "d144ab5ebe1f21622a6e2fd56bd609c45f37151e046a344247f82f38df647a68"
+    },
+    {
+      "path": "04_outputs/residual_investigation/per_grid_diagnostics.csv",
+      "bytes": 1182140,
+      "sha256": "bcb112f10a0ea17d276cad6e83d2a97182805a0d58410c72e22e87b2c8e69c70"
+    },
+    {
+      "path": "04_outputs/residual_investigation/residual_diagnostics.gpkg",
+      "bytes": 1236992,
+      "sha256": "a5249fc5825b734dc52b7ac7b478e7ff5e6ca7492d7fb84a023d7cf222ea358f"
+    },
+    {
+      "path": "04_outputs/residual_investigation/source_audit.json",
+      "bytes": 1026,
+      "sha256": "33c54f11c849b49c8bd25bb9a937b05703aaff6d81dda2bcc6b58a521771352e"
+    },
+    {
+      "path": "04_outputs/residual_investigation/subgroup_diagnostics.csv",
+      "bytes": 2721,
+      "sha256": "ec8cec2fc007b67c8e0c4eb6cb11c72a628e19b87a57a2e7ed3c3fb760664c46"
+    },
+    {
+      "path": "04_outputs/residual_investigation/top20_development_cells.csv",
+      "bytes": 19662,
+      "sha256": "e2d24dcbece046f8e7ec498b4013a153d799f1a9c5637050241271d63d0b5193"
+    },
+    {
+      "path": "04_outputs/residual_investigation/top20_legacy_cells.csv",
+      "bytes": 17769,
+      "sha256": "e188ba05f63625cd16ea001bcfb7b763a8d215d74f327a9ef1a3d94c768af5d3"
+    },
+    {
+      "path": "04_outputs/residual_investigation/verification.json",
+      "bytes": 690,
+      "sha256": "b9fb4789c417564f267e4154fd122217eade2252a95257aaad338647575e14c7"
     },
     {
       "path": "04_outputs/rf_spatial_v5/aggregate_development_selection.json",
@@ -101,18 +919,138 @@
     },
     {
       "path": "04_outputs/rf_spatial_v5/bootstrap_intervals.json",
-      "bytes": 653,
-      "sha256": "7bbfc0a529fe3b56fc2e3fbfa2814967e022ed5ef1f20580531fcb6886702923"
+      "bytes": 658,
+      "sha256": "eb0a0edc3de27afc3e1038f10b4ac18c4caceff930fdc76701582a92bf809045"
     },
     {
       "path": "04_outputs/rf_spatial_v5/comparison_metrics.csv",
-      "bytes": 830,
-      "sha256": "c73bdffb396ce89ec8171c006613a7206bf4d2d3940be38d77bef4b7d872ffb1"
+      "bytes": 1150,
+      "sha256": "7abba9dd59ff381615559087cba38324e3fa5e5b042a50133e83e5615b7866d6"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/coordinate_blend/cv_fold_scores.csv",
+      "bytes": 2217,
+      "sha256": "c210058dc62c82fd7f7eae241102f98edb1e003f6cc78bf535119663c6d914a7"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/coordinate_blend/cv_scores.csv",
+      "bytes": 642,
+      "sha256": "6d390dfa4f86fd2e8d6b5e47c4954ec0ce93dcd4580d92b10c869ffd35b7370f"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/coordinate_blend/evaluation.json",
+      "bytes": 1315,
+      "sha256": "23f3bcce283e838425a01556407cb809653999ccc91a0be5ecbdce97a683579b"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/coordinate_blend/frozen_decision.json",
+      "bytes": 783,
+      "sha256": "1529acb73086b643c8a1ba014d9166a64a282737011ea9fc80af9484450c4fcc"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/coordinate_blend/geographic_gate.csv",
+      "bytes": 515,
+      "sha256": "f97758aec6bf919fa9238e177be9103926ee12649dcdc7f9e39b5c59b2b98853"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/coordinate_blend/geographic_ratios.json",
+      "bytes": 192,
+      "sha256": "4d05aac8484e48072e60688a5d87ecb863db5247dfb37263ceb87113a219a0f8"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/coordinate_blend/legacy_comparison.csv",
+      "bytes": 11909,
+      "sha256": "236b81165110e8e040182a8ab03da415aa38504ac42cd9cc6c7b2de097082326"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/coordinate_blend/protocol.json",
+      "bytes": 3933,
+      "sha256": "5c133ad24390ae26050fa0e05f6ff7f5977c49623344e59fe04194532e2cce53"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/coordinate_blend/validation_scores.csv",
+      "bytes": 361,
+      "sha256": "3dc866cb312889a7272b238db4dc9b5b0d6f8939bc0a99fe895e69614cdef117"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/improvement_summary.json",
+      "bytes": 211,
+      "sha256": "5a9c8561cb33466e6abc156d74b266a544ecf9507d4351786c240ea6f82d1192"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/per_grid_improvement.csv",
+      "bytes": 24715,
+      "sha256": "ac58a2d41619408900856432a7ba9072d6e01077bc598ecc9f643f0fc26db548"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/promotion_verification.json",
+      "bytes": 883,
+      "sha256": "cd71fc94e3dd94218f9bc8fea641955d51b7c37863194766b92656c3eb53ac00"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/robust_local/cv_fold_scores.csv",
+      "bytes": 6172,
+      "sha256": "3b3490511fc36f28b597ab6abe8ec5c1b982d3e3dbf45a79c88ed2a89a40dff2"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/robust_local/cv_scores.csv",
+      "bytes": 1689,
+      "sha256": "17e4e135ff1520048d79364c2dd6138b70e98f1761e43e146d44d53203ce6a2c"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/robust_local/evaluation.json",
+      "bytes": 877,
+      "sha256": "74f0b6a8083e313a4b5ec7e17de78f694b0bcd2375f86ce0bf2c8158c01f759f"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/robust_local/frozen_decision.json",
+      "bytes": 720,
+      "sha256": "f4708f90dfa89bb8eb82bdb0bd37a0c0ccdde4b9b9efe8a8ef9d1016390a2d1a"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/robust_local/protocol.json",
+      "bytes": 8201,
+      "sha256": "4825b910247a4f6f9be2646fc6e3b1cfa63efd571713c639bab7cc86207127dd"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/robust_local/validation_scores.csv",
+      "bytes": 252,
+      "sha256": "4229de1cc44f28ae8fedfd96838a37bc3a861111fe6c5fac31fb68101012607d"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/rotated_local/cv_fold_scores.csv",
+      "bytes": 3333,
+      "sha256": "9b4394f414dcbf227206b0d3cf9b298122311fc061d2152dd340ac60d8ccac60"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/rotated_local/cv_scores.csv",
+      "bytes": 938,
+      "sha256": "9cbf68abeb2d95899b7027562fee145b9db90a5979bc6a592c1fab48b993945a"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/rotated_local/evaluation.json",
+      "bytes": 877,
+      "sha256": "71813eaddf7b5c4b3e2fd532eed5852f3e2a4c161e791aad0a4050151b7daf65"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/rotated_local/frozen_decision.json",
+      "bytes": 720,
+      "sha256": "0155e052800c082ca7b6ae456fe78afd23177bf42a68c37ef63363d60a3786e2"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/rotated_local/protocol.json",
+      "bytes": 5191,
+      "sha256": "e14788b86710fe542751fcebe31a8e1e41b2aca1a862df07d10d56f40a25672b"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/continued_optimization/rotated_local/validation_scores.csv",
+      "bytes": 365,
+      "sha256": "903a28118919ce5047a274c971f914d7c5723870a68e241b2bdb3aa851a7630a"
     },
     {
       "path": "04_outputs/rf_spatial_v5/coverage_subgroup_diagnostics.csv",
-      "bytes": 764,
-      "sha256": "0c710d9ec56fb53d7fd63cf900936529df0ad09bc951d2ec0e7f0f9eca19eca1"
+      "bytes": 1089,
+      "sha256": "991310e93bfbc193a750a2310dab60c036b357612f5616e158cfa421b3817c16"
     },
     {
       "path": "04_outputs/rf_spatial_v5/cv_fold_ids.json",
@@ -131,8 +1069,8 @@
     },
     {
       "path": "04_outputs/rf_spatial_v5/evaluation.json",
-      "bytes": 2254,
-      "sha256": "0259f56534617a8b21c360a006483f4152683f3c843873a8d06e56b11576a510"
+      "bytes": 4891,
+      "sha256": "3620ceb966ea6c0f4968a7ca2e1d1f7e62b7995629737741795cd81824953fbc"
     },
     {
       "path": "04_outputs/rf_spatial_v5/figure_color_scale.json",
@@ -141,18 +1079,18 @@
     },
     {
       "path": "04_outputs/rf_spatial_v5/figures/01_metric_comparison.png",
-      "bytes": 79296,
-      "sha256": "67c3c766df87fc46c2a3e00fc5e4e231f6689df5da3a26a8059c04fc9ec7277d"
+      "bytes": 80000,
+      "sha256": "2e7a736c93b1eb1a2185771a4ebad8ca4611f3e36e0539a1e3cc0c71dd7d03ae"
     },
     {
       "path": "04_outputs/rf_spatial_v5/figures/02_legacy_residual_comparison.png",
-      "bytes": 97957,
-      "sha256": "a3a6dca69992bc23a9b64512c63374475197befed95a5b885eb0d332f37554b2"
+      "bytes": 97786,
+      "sha256": "946d6aa7d01443cf2bf25c96c44854dbb63de78a0ac376a601538dc4ab0e37fa"
     },
     {
       "path": "04_outputs/rf_spatial_v5/figures/03_full_city_comparison.png",
-      "bytes": 154445,
-      "sha256": "1bd33f0ed13c88bc625183b494e2eb5832a0904ca2d05125020bac7aa1734503"
+      "bytes": 154313,
+      "sha256": "ac653f472bd0600cdc64244ef4bdeec128010484ec691d62a91d9fdbfcff31fa"
     },
     {
       "path": "04_outputs/rf_spatial_v5/figures/04_coordinate_ablation.png",
@@ -161,8 +1099,8 @@
     },
     {
       "path": "04_outputs/rf_spatial_v5/frozen_decision.json",
-      "bytes": 1040,
-      "sha256": "b49033b88fc31efe9b48f1e76c23cdd9c002282648b5ba31aad860161d2ca6b4"
+      "bytes": 1358,
+      "sha256": "cafb5e65fb6e1394410d7b97674574472fa96d0a72cf347679071564c1e23959"
     },
     {
       "path": "04_outputs/rf_spatial_v5/geographic_transfer_checks.csv",
@@ -241,13 +1179,83 @@
     },
     {
       "path": "04_outputs/rf_spatial_v5/moran_sensitivity.json",
-      "bytes": 2031,
-      "sha256": "e7f5ce4a12222289aa78a2b1310072ca1647f6e382908437fda24ef8ffbf446a"
+      "bytes": 2857,
+      "sha256": "09599be60bf50089037fd547fe1db7a7c048a88884f8aa486f741607c136585d"
     },
     {
       "path": "04_outputs/rf_spatial_v5/optimization_history_summary.json",
       "bytes": 17553,
       "sha256": "797cad233f601d977e44ddc708a4fdc1c548e2f927b257e008f775260a8b4ef4"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/improvement_summary.json",
+      "bytes": 214,
+      "sha256": "57460169796448a407f537df2bfa730e429602d119f0f6cb8c8ad6affc1114a9"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/cv_fold_scores.csv",
+      "bytes": 6425,
+      "sha256": "b0c9fa75738c7503db0cc4955b61a4afebefd83316780768f7aace5951a14ffa"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/cv_scores.csv",
+      "bytes": 1788,
+      "sha256": "34c8f3f1c7f21747652fdaa251ac2fbb7a3089ab57c2663c1e345860c240821b"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/evaluation.json",
+      "bytes": 706,
+      "sha256": "91835608bb5105221442487c46be9af79a7a586bd62e2b0b147dbac9ae45a7d9"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/frozen_decision.json",
+      "bytes": 202,
+      "sha256": "7d69981b33c6aef3df946de670092a7bac8631b0d192ac5f59750148f8699f62"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/geographic_gate.csv",
+      "bytes": 517,
+      "sha256": "09d3cb5fa9722d6f5ed98cdcd390dce38b5c609f381614733094a390b914dc88"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/geographic_ratios.json",
+      "bytes": 192,
+      "sha256": "c47a089395da6bba74ccab93058901256370d63dddc375c3637f6859c9bdb0db"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/legacy_comparison.csv",
+      "bytes": 11897,
+      "sha256": "6e1c0460d87f0016c5e1c07484cffb6c4bc6ea5f34068bd3fc7a1faef186c342"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/oof_predictions.csv",
+      "bytes": 180968,
+      "sha256": "032426d4cb63b8a0e8f0ad49b3baf71e08a28cb9290a294f0e7166eb9c53da47"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/protocol.json",
+      "bytes": 4281,
+      "sha256": "d72b897393ea8890f3cf9be92ad24a9e68e12581d852c90a4f3fb5d8e54b05a5"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/validation_predictions.csv",
+      "bytes": 14176,
+      "sha256": "cee9402c2a609b65addaaf4bef471e181357f8b9a5875287c278b6bcc22a9f73"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/orientation_ensemble/validation_scores.csv",
+      "bytes": 422,
+      "sha256": "e241129593cdce18737af6c16a580806e1692b3fcef3dec03b1b20b961b93b4b"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/per_grid_improvement.csv",
+      "bytes": 24774,
+      "sha256": "4c25ca15175006b3e8b88aa3100a64f80d913ba12898ecdb47da64767e4312f2"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/orientation_optimization/promotion_verification.json",
+      "bytes": 742,
+      "sha256": "08882137cf31f43f6b69a406eedd78f397a522bdccbc3570fe852d8c6391d970"
     },
     {
       "path": "04_outputs/rf_spatial_v5/protocol.json",
@@ -256,13 +1264,13 @@
     },
     {
       "path": "04_outputs/rf_spatial_v5/reference_predictions.csv",
-      "bytes": 125828,
-      "sha256": "eeba9c3c45a3b24c534d165bfe831ab17b38a0f52f8622580eb6dd5014f0c423"
+      "bytes": 180111,
+      "sha256": "c1afab83321a1f530b8d79c375c93c92ffa2b6cb6bc0cd101183f2cdc3b68386"
     },
     {
       "path": "04_outputs/rf_spatial_v5/reference_predictions_metadata.json",
-      "bytes": 1639,
-      "sha256": "636467020823906e8ab0ae5a5b7d5262f69dd2494eedcd58a3403431feb9e752"
+      "bytes": 2148,
+      "sha256": "3f9c555da5ddd3aa2be30f48fc46804790fed9d69d835d0859a01d7aaa788459"
     },
     {
       "path": "04_outputs/rf_spatial_v5/refinement_20261107/cv_fold_scores.csv",
@@ -305,19 +1313,154 @@
       "sha256": "0dbd811727be49640c1c6d67a57e2407f2aa9d0dd3899b506dc89e9ff9cc5fd5"
     },
     {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/cv_fold_scores.csv",
+      "bytes": 2269,
+      "sha256": "b7a600eb83ccf391f9ce08c5896adea6f5b4e1fa2bb8b2b5acf0c1a03307e5b7"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/cv_scores.csv",
+      "bytes": 660,
+      "sha256": "875ea7c4614c5b6d2f0593e33eef5df837fe9aaf0b215c7e165f6e0624e8abc1"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/error_tradeoff.png",
+      "bytes": 91467,
+      "sha256": "62b32b370601d659c42fb7ff82434abe8f522893dcef5e2323d3000ec85b3487"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/evaluation.json",
+      "bytes": 1518,
+      "sha256": "4c1fb7603d894a7cea50e599bcba8110dbd9017ee08db14d10a71c4b4d981385"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/frozen_decision.json",
+      "bytes": 964,
+      "sha256": "82a9e9a5dce7083cc3dfefeea4f3ab32e7453954f8b249d6387dcd74a22af147"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/geographic_gate.csv",
+      "bytes": 517,
+      "sha256": "bcef213964802fa3a780decb309b2bbfb1cd6a6e1b0a3edf4f2e9fc3bd2f2d5c"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/geographic_ratios.json",
+      "bytes": 192,
+      "sha256": "6d6dd8f1b9d1f037796930db91a562e99836bf6d49f5f0648e54f9459a082bb9"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/legacy_comparison.csv",
+      "bytes": 11903,
+      "sha256": "81b62bcf7aa985c5e6c02edf5dbe4405cba4de71fa2879cf1e4cfe23b0c1f173"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/per_grid_tradeoff.csv",
+      "bytes": 24723,
+      "sha256": "46954cd0d04b43fc4f6d393067131c042f3bc68c0e84656ea7eb2dee4aa19d29"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/protocol.json",
+      "bytes": 5075,
+      "sha256": "8e64573368267034beaca691d9a3b25922376b6970c92dba3d724067b51c18fe"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/tradeoff_summary.json",
+      "bytes": 775,
+      "sha256": "e99ff08a3e09498783959123028cb47d3ca55a7e10da5473d2ff9f5b28c42f18"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/validation_scores.csv",
+      "bytes": 483,
+      "sha256": "073ca23256f559edf86b867ea7e361410fd0bee292c285783a6ee04945871608"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_blend_v8/verification.json",
+      "bytes": 347,
+      "sha256": "e0a631768036da765254df62c99b489ee621878c59ca329b5a7768ef8021ae1f"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_v8/cv_fold_scores.csv",
+      "bytes": 3842,
+      "sha256": "67e518a4fadd55a21005014ca600f2dd4ec8f87f746773c7a9c9c9937b72ca78"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_v8/cv_scores.csv",
+      "bytes": 1075,
+      "sha256": "e593af5bfd0945cb9939aa234caf197ae4c63dd044f1fe7f914800bc5e6c5932"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_v8/evaluation.json",
+      "bytes": 1060,
+      "sha256": "280078538c04eaef495ae9a57178123ae41b0dd43f1011758a903db46d8a6a92"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_v8/frozen_decision.json",
+      "bytes": 883,
+      "sha256": "def28a3d469530e7eae05013899580532bbcbd3771b89acce2b6644667343ab7"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_v8/protocol.json",
+      "bytes": 7197,
+      "sha256": "296f295fc327feebe1582759efaae599a92254f63c1ae79c96da9506264894e1"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_v8/validation_scores.csv",
+      "bytes": 362,
+      "sha256": "3d2eaeaa61dddc89cd074de6bce6bf59e0a45406f4f30384b50e39bb9ab21335"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/scaling_v8/verification.json",
+      "bytes": 348,
+      "sha256": "1d2b8b9478a6a1faf855d090c54766dd05e04a5912a6ada5d745f1b9bb337c3e"
+    },
+    {
       "path": "04_outputs/rf_spatial_v5/spatial_predictions_1000.csv",
-      "bytes": 939177,
-      "sha256": "19f6e8c7dd92d8d569204ba973675194829ce690e93de0d9d688783e89594d9f"
+      "bytes": 997269,
+      "sha256": "c0f6f943832e3160622abade07c2a51e432b39c6854fb56586fa57c64e828635"
     },
     {
       "path": "04_outputs/rf_spatial_v5/spatial_predictions_1000.geojson",
-      "bytes": 3981936,
-      "sha256": "f2143e768b4af1a3bd1da20dd308fc0cc90b99d358870c5d189d14259fe300e8"
+      "bytes": 4165027,
+      "sha256": "c0c42d4eafae5e6d8953c80b20cfb4c36e755e853ae16b28f1e673fa9e96fb91"
     },
     {
       "path": "04_outputs/rf_spatial_v5/spatial_predictions_1000.gpkg",
-      "bytes": 1114112,
-      "sha256": "d4495ec06dfb81f4da6d5d1f82e3fb6e66ece4a0b518a70cd8e1a3779c4f0d2c"
+      "bytes": 1167360,
+      "sha256": "3c9c84b9292353dc53e8e2c739c8612eebed2a3ee3095e655632543e466e7d0b"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/tree_structure_v8/cv_fold_scores.csv",
+      "bytes": 4895,
+      "sha256": "a94713f26651c7057bc166544c3fbdfe68d9511333a473ab0a964541b566e1e4"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/tree_structure_v8/cv_scores.csv",
+      "bytes": 1349,
+      "sha256": "7051691520c45de63bd783ee8c6a4dd08e15e117693a91ae925ffa8df2f8d33a"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/tree_structure_v8/evaluation.json",
+      "bytes": 1060,
+      "sha256": "be5169c721fbe10fa399cb24f9a392f01fdec402299da881d483ccc89b51cf73"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/tree_structure_v8/frozen_decision.json",
+      "bytes": 883,
+      "sha256": "9778aef8ec0494682fd3f887f8fcfe6002a696746ad6a2861feabf0b0c55e942"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/tree_structure_v8/protocol.json",
+      "bytes": 8625,
+      "sha256": "3086c91b44594d1578f3782f6d89c2892afe5b6e7828bbaaf5b0d9470213e6aa"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/tree_structure_v8/validation_scores.csv",
+      "bytes": 354,
+      "sha256": "0a8b4def685f4c30123a56e6e972ec588a7abcf6015171392cd0b83966a873b7"
+    },
+    {
+      "path": "04_outputs/rf_spatial_v5/tree_structure_v8/verification.json",
+      "bytes": 348,
+      "sha256": "3cbdb5ba2f0c2bdbc07aea09c0ec4d54949bd081fc4f57cad6a614c083a6a42b"
     },
     {
       "path": "04_outputs/rf_spatial_v5/validation_scores.csv",
@@ -330,14 +1473,159 @@
       "sha256": "fcbd857379e80bb35be346abb06441186c1f98ecc901dc27f9611798238bd5cd"
     },
     {
+      "path": "04_outputs/support_protection_optimization/decision_summary.json",
+      "bytes": 1758,
+      "sha256": "ca10eb930d07b703d73d2137cfacfef982027d972e06cb8180c0b911c9c9b5fd"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/development_support_gate_map.png",
+      "bytes": 128089,
+      "sha256": "0288f6a2babdb16a5ec23d0cb35616cc17af68497612d9bdab377bc7a78e2ac8"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/development_support_gates.gpkg",
+      "bytes": 221184,
+      "sha256": "5a102f7582c325f7905b4030c17a2c0317c26ccd6d23f899af6b3fb0c6ffdf56"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/cv_fold_scores.csv",
+      "bytes": 4828,
+      "sha256": "a4ceafab24092f0446f25cffb7650c41ad265132a53e210d8248e987a50f6a95"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/cv_scores.csv",
+      "bytes": 1178,
+      "sha256": "195b2e07110a999bb6683eec18614660307556fbf5f67d834b1ddfa091d74acb"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/evaluation.json",
+      "bytes": 296,
+      "sha256": "bc073a2f0e748e3ab8fb13f089f9f37ddbc69fe65d439d8ceaad107f7ad355ef"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/frozen_decision.json",
+      "bytes": 207,
+      "sha256": "622fe7c741ed1dda5893ccdec516ad82d94402bcc935c826125cd8bbc1ec9c41"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/geographic_gates.json",
+      "bytes": 1462,
+      "sha256": "c5dc389cda5b8f5d01a4d89d8a304487b0c65dabc2c15926d2e87823d50d22fa"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/geographic_predictions.csv",
+      "bytes": 101012,
+      "sha256": "d1be8e58202cd997c667546d9b07f383abec7f6f97d12abd8879b48d738b3b11"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/geographic_scores.csv",
+      "bytes": 2084,
+      "sha256": "82da2c6a8a8c6b5faddc5f711708856d26830c3123eb8be1137938748d55d0bb"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/oof_predictions.csv",
+      "bytes": 101492,
+      "sha256": "dea79273ef80255b3039879c540209c0f999bf8db281bf13da98e27fc139f3b3"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/protocol.json",
+      "bytes": 2872,
+      "sha256": "c4d8b7b7d2d180b0caf6ab911baf41a288de3ddf5dad740231fb2e0d54a4bca9"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/validation_predictions.csv",
+      "bytes": 11136,
+      "sha256": "f75a3ed98c70650a14d2ea6bab2c0ba8fc58c61ced9fbd9b1becaa774dd63391"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/distance_guard/validation_scores.csv",
+      "bytes": 484,
+      "sha256": "51413e8d89d9c174feb6a5b427d09e72d984a55d563d8d8f01f468db57321f8c"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/cv_fold_scores.csv",
+      "bytes": 4870,
+      "sha256": "a35b3fa8b23014898821f5d7772c51b9830787b6428a7d8b6b7bfe872c90960e"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/cv_scores.csv",
+      "bytes": 1319,
+      "sha256": "8b627a1e1482eb6ee54dd27e40487b8ac7226f6e63a9353585827e0403b8ffca"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/evaluation.json",
+      "bytes": 293,
+      "sha256": "bb6d061dc51b5775df81cb38f9a6afa57feb09a55d3215ec595134168c5490a2"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/frozen_decision.json",
+      "bytes": 204,
+      "sha256": "38227b2cb3646b7938c98f14aa2438460c942618da43bc6e6dbe34fb60ea60bc"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/geographic_gates.json",
+      "bytes": 2190,
+      "sha256": "ee390bd88238694e4ea5fd9eb12a0e4ebc50bbedc244d68449ebd32e7e767440"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/geographic_predictions.csv",
+      "bytes": 133168,
+      "sha256": "b57edf084db7a320424ba086636fa62b755f98ce448dd9de5827bfe6a7e862bb"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/geographic_scores.csv",
+      "bytes": 2619,
+      "sha256": "de51b399e59b76c7c55ddd2f14194cda6a8269b35ad39507a6ef017e142e913f"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/oof_predictions.csv",
+      "bytes": 101363,
+      "sha256": "07dcf7148434eb8d02945e8a7cd0deb1a091fdbb9c5de49d173cf8e3bc90f609"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/protocol.json",
+      "bytes": 3299,
+      "sha256": "c31b8c2651b64c2689640923dbb1c79a432af31c90610c7743327895fe230d3b"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/validation_predictions.csv",
+      "bytes": 14175,
+      "sha256": "8638cc52d31fe7cec6d78dbcf4ff01b736bccedf2dd573c51e1e3b207e0932fe"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/hull_only/validation_scores.csv",
+      "bytes": 621,
+      "sha256": "539659f1b213e22ab6fb3b178d57e030def53d0acd080978101fd1e3c14cf9a5"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/regional_comparison.csv",
+      "bytes": 1004,
+      "sha256": "a7732e105722e7014f659b4a63fd367ce7dc81fa96e9159426783efd4979a611"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/validation_comparison.csv",
+      "bytes": 249,
+      "sha256": "83168782aab87c2d2ec2179e55c8e3fed87cce23c454ffaf3dab33c7a30fd011"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/validation_support_comparison.png",
+      "bytes": 89295,
+      "sha256": "ec3ca453ec29cc685684238221a79d3470e07fb878c1c75425a09e736c7c5fa2"
+    },
+    {
+      "path": "04_outputs/support_protection_optimization/verification.json",
+      "bytes": 770,
+      "sha256": "6b16f0133a3c0c9fef5590862f041e44ce3d900bf41e3a33d2977bd85bfc9abb"
+    },
+    {
       "path": "05_models/rf_spatial_v5/environment.json",
       "bytes": 249,
       "sha256": "983850f2394d759ab1f52cae392ee38b9c00eefa1fad045eee7ffbca640c3b6f"
     },
     {
       "path": "05_models/rf_spatial_v5/input_contract.json",
-      "bytes": 1846,
-      "sha256": "98404836c92a15f609f2ef8af1eb0fef3e5448ffe3faf971130b1bad5dc62c48"
+      "bytes": 2466,
+      "sha256": "073a8fa12a591194743b75079cdc9ec46b430cdb7cac373583087c168f361bc0"
     },
     {
       "path": "05_models/rf_spatial_v5/requirements.txt",
@@ -346,8 +1634,8 @@
     },
     {
       "path": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib",
-      "bytes": 34135875,
-      "sha256": "06d3a830d589f96e4c37bacc52646424fb6f61d97c8460172edfc461f3b81ea1"
+      "bytes": 102614202,
+      "sha256": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357"
     },
     {
       "path": "06_reports/grid_decision.md",
@@ -360,14 +1648,49 @@
       "sha256": "80ac15bb6bf75e447228361730c35e51e7c8986f5c1ef5c25daad28f2e076f60"
     },
     {
+      "path": "06_reports/RF_Cluster_Targeted_Optimization.docx",
+      "bytes": 620823,
+      "sha256": "431e19c09d32a97c127867f95f3625d8f9f1a7b0d8e066d7e6d8812f660e8d08"
+    },
+    {
+      "path": "06_reports/RF_Hollywood_Validation.txt",
+      "bytes": 555,
+      "sha256": "c55ddca3117323cba7aed5dc0696846e306b544abc46ab9dd7d8520d17335653"
+    },
+    {
       "path": "06_reports/RF_Refinement_20261107.txt",
       "bytes": 2992,
       "sha256": "8c6bb8020d249966ce4c13678efc5d1226b8011911c9cc6cd67159fccb3acf89"
     },
     {
+      "path": "06_reports/RF_Residual_Hotspots_Investigation.docx",
+      "bytes": 496540,
+      "sha256": "d63f7a0a4fad4df315e75cf2091456894e1254d1bfcba547c740c128dab26795"
+    },
+    {
+      "path": "06_reports/RF_Scaling_Blend_Validation.txt",
+      "bytes": 2052,
+      "sha256": "a01d3b4b1fcc054bfc307a0570cfe57160ddc710f0daed78eb87526c07ef33d2"
+    },
+    {
+      "path": "06_reports/RF_Scaling_Validation.txt",
+      "bytes": 1802,
+      "sha256": "8bd4348c587887b197638fce833984bf1b9b5f3cf15bae7918d48593ed5fe710"
+    },
+    {
       "path": "06_reports/RF_Spatial_Extension_v5.docx",
-      "bytes": 350593,
-      "sha256": "c22b07626bc202a911da7bab027bd1d000a9aafd0940185608d37eed1e7720d9"
+      "bytes": 350671,
+      "sha256": "37fdbd267b41d56325c31c29e76226e9c34a4ed2e886d34541f8ccba41f99bb7"
+    },
+    {
+      "path": "06_reports/RF_Support_Protection_Optimization.docx",
+      "bytes": 552374,
+      "sha256": "e04604387a79dddf82bd77327c925ae93c38d94fbbe4d11c97a9f1ecf1b0ca40"
+    },
+    {
+      "path": "06_reports/RF_Tree_Structure_Validation.txt",
+      "bytes": 1826,
+      "sha256": "efd62572abae31f56ea88c4bb35ea1cd4946af8eb94e7a9fdbb89370058205a0"
     },
     {
       "path": "06_reports/Signal_Source_Semantics_Clarification.txt",
@@ -381,8 +1704,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5034,
-      "sha256": "1fade8d340b39762a65aae81d3dcba38e53185151947112eac51269aa2c4224a"
+      "bytes": 9614,
+      "sha256": "ad09ad58ce2da613609c23e6759dd59f7b5d6a7a2e8d907e68cf67b8e2d73d31"
     },
     {
       "path": "requirements.txt",

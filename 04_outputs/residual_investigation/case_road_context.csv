@@ -1,0 +1,13 @@
+grid_id,reference_road_names,road_names_are_location_context_not_causes
+1000_38_41,W Sunset Blvd; N Alvarado St; State Rte 2; Glendale Blvd,True
+1000_23_30,W Jefferson Blvd; Marina Fwy; State Rte 90; W Runway Rd,True
+1000_36_43,W Sunset Blvd; Sunset Blvd; N Hoover St; Fountain Ave,True
+1000_35_43,Fountain Ave; N Mariposa Ave; N Vermont Ave; W Sunset Blvd,True
+1000_25_26,World Way; S Sepulveda Blvd; State Rte 1; Center Way,True
+1000_38_40,Hollywood Fwy; US Hwy 101; W Court St; W Temple St,True
+1000_40_35,Santa Monica Fwy; I- 10; E 15th St; E Washington Blvd,True
+1000_21_55,Sherman Way; Valerio St; Van Nuys Blvd; Tyrone Ave,True
+1000_28_51,N Vineland Ave; W Chandler Blvd; Lankershim Blvd; Magnolia Blvd,True
+1000_43_35,I- 5; Santa Ana Fwy; State Rte 60; Pomona Fwy,True
+1000_40_38,E 2nd St; US Hwy 101; Hollywood Fwy; E 1st St,True
+1000_35_40,W 4th St; S Normandie Ave; W 3rd St; S Alexandria Ave,True

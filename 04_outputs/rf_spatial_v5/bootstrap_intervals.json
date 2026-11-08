@@ -1,26 +1,26 @@
 {
   "Original V1_delta_rmse": {
-    "lower": -22.265553869925018,
-    "upper": -6.326426517132487
+    "lower": -26.982264113076344,
+    "upper": -7.566298857204213
   },
   "Original V1_delta_mae": {
-    "lower": -16.62355710484173,
-    "upper": -5.282638176118937
+    "lower": -19.749737497050592,
+    "upper": -5.384693999103637
   },
   "Matched no XY_delta_rmse": {
-    "lower": -20.544895498759143,
-    "upper": -3.1059298191942797
+    "lower": -25.092125089406203,
+    "upper": -4.537570018522906
   },
   "Matched no XY_delta_mae": {
-    "lower": -13.543562574943588,
-    "upper": -2.3771648124879157
+    "lower": -16.691215243556226,
+    "upper": -2.6434851452883588
   },
-  "Previous Spatial V5_delta_rmse": {
-    "lower": -16.210330891260387,
-    "upper": -2.1019059829582694
+  "Previous coordinate RF_delta_rmse": {
+    "lower": -1.1130606721863674,
+    "upper": 0.4435662864941262
   },
-  "Previous Spatial V5_delta_mae": {
-    "lower": -10.003265459654413,
-    "upper": -1.3298150185956756
+  "Previous coordinate RF_delta_mae": {
+    "lower": -0.6193379049772041,
+    "upper": 0.22594409887572198
   }
 }

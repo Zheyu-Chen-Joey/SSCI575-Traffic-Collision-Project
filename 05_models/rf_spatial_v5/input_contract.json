@@ -38,9 +38,9 @@
   ],
   "tree_count_per_seed": 500,
   "target": "recorded2017\u20132021collision count, not future risk",
-  "caveat": "Legacy evaluation reused; local version improves interpolation errors but geographic holdouts worsen; requires fresh confirmation.",
-  "model_class": "rf_local_weighted_model.LocalWeightedSpatialForest",
-  "model_version": "local_weighted_RF_v6",
+  "caveat": "Reused development checks and exploratory legacy acceptance; improvements are not independent confirmation.",
+  "model_class": "rf_orientation_ensemble.OrientationEnsembleForest",
+  "model_version": "multi_orientation_RF_v8",
   "local_anchor_count": 10,
   "local_effective_sample_sizes": [
     235.08790209734792,
@@ -61,5 +61,24 @@
     "local_trees": 200,
     "min_effective_samples": 40,
     "nearest_anchors": 3
-  }
+  },
+  "prediction_quality_flags": {
+    "module": "rf_input_quality.input_quality_flags",
+    "note": "Observable input limitations only; not calibrated confidence or uncertainty intervals; no flag does not guarantee accuracy."
+  },
+  "orientation_settings": {
+    "orientation_angles": [
+      0,
+      45,
+      60
+    ],
+    "orientation_weights": [
+      0.25,
+      0.25,
+      0.5
+    ]
+  },
+  "coordinate_blend_settings": {},
+  "comparison_anchor_label": "Previous coordinate RF",
+  "position_transforms": "Original metric XY and explicitly recorded fixed rotations in separate RF components; analysis grid unchanged"
 }

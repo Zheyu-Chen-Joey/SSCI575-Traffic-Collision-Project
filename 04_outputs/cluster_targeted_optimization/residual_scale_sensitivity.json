@@ -1,0 +1,8 @@
+{
+  "MoranI_queen1500m": {
+    "raw_residual": 0.3837053576634583,
+    "count_scale_standardized_diagnostic": 0.32687981621018836
+  },
+  "standardization": "residual/sqrt(max(prediction,1)), sensitivity only, not verified Poisson uncertainty",
+  "not_used_for_candidate_selection": true
+}

@@ -1,0 +1,20 @@
+{
+  "data_scope": "720 training cells only, frozen original fivefold1km-gap OOF predictions for retainedv8",
+  "legacy_and_validation_targets_used": false,
+  "adjacency": "existing training grid centers within1500m; 8queen neighbors on1km grid",
+  "local_statistic": "standardized residual * row-standardized neighboring residual lag",
+  "permutation": "9999 global residual-label permutations; two-sided deviations around permutation-null expected localI -1/(n-1)",
+  "multiple_testing": "Benjamini-Hochberg across720 local tests q<=.05",
+  "seed": 575,
+  "large_error_threshold_collisions": 200,
+  "large_error_cells": 41,
+  "FDR_significant_cells": 21,
+  "significant_types": {
+    "not_significant": 699,
+    "HH_underprediction": 19,
+    "LL_overprediction": 2
+  },
+  "connected_HH_LL_components": 7,
+  "source_input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "limitation": "Exploratory diagnostics on repeatedly used development data. Significant association is not a cause; permutation assumes exchangeability under null."
+}

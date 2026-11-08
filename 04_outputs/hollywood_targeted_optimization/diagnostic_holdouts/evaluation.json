@@ -1,0 +1,33 @@
+{
+  "hollywood_joint_goals_pass": true,
+  "formal_promoted": false,
+  "validation_gate_already_failed": true,
+  "legacy_evaluated": false,
+  "control_unchanged": true,
+  "hollywood_control": {
+    "region": "interior_6_8",
+    "model": "control",
+    "n_fit": 834,
+    "n_eval": 24,
+    "rmse": 196.15634991553955,
+    "mae": 150.20955756590942,
+    "r2": 0.5182147854573235,
+    "bias": -121.81820987072405,
+    "p90_abs_error": 311.41346867332476,
+    "error_gt200_count": 7,
+    "moran_i": 0.24294375493097578
+  },
+  "hollywood_candidate": {
+    "region": "interior_6_8",
+    "model": "research_candidate",
+    "n_fit": 834,
+    "n_eval": 24,
+    "rmse": 192.35504766869784,
+    "mae": 146.22741457189434,
+    "r2": 0.5367068283072063,
+    "bias": -117.13222513619455,
+    "p90_abs_error": 307.9396131149672,
+    "error_gt200_count": 6,
+    "moran_i": 0.2406767448184283
+  }
+}

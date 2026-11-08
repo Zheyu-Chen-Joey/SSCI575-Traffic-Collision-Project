@@ -1,0 +1,18 @@
+{
+  "source_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "previous_model_sha256": "06d3a830d589f96e4c37bacc52646424fb6f61d97c8460172edfc461f3b81ea1",
+  "new_model_sha256": "fe5057d5a2fd68ab7c5c4073744242974b2f874c9580f01bb924d646196cd749",
+  "development_rows": 886,
+  "legacy_rows": 227,
+  "both_components_global_and_local_root_weights_match886": true,
+  "finite_nonnegative1473predictions": true,
+  "reloaded_metrics_match": true,
+  "grid_count_conserved": 230536,
+  "production_model_count": 1,
+  "promoted_utc": "2026-11-08T07:15:23.347773+00:00",
+  "fixed_trainer_reproduces_all1473_predictions": true,
+  "cli_matches_exported1473_predictions": true,
+  "report_rendered_and_inspected_pages": 5,
+  "raw_snapshots_not_modified": true,
+  "source_input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779"
+}

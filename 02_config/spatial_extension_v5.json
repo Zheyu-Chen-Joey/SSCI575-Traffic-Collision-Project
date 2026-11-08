@@ -13,5 +13,34 @@
     "protocol": "04_outputs/rf_spatial_v5/local_rf_protocol.json",
     "frozen_decision": "04_outputs/rf_spatial_v5/local_rf_frozen_decision.json",
     "reuse_acceptance": "Frozen candidate retained only after lower legacy RMSE andMAE; adaptive exploratory promotion, not independent confirmation"
+  },
+  "previous_coordinate_blend_extension": {
+    "user_authorized_position_features": true,
+    "model_class": "rf_coordinate_blend_model.CoordinateBlendForest",
+    "original_input_columns_unchanged": 18,
+    "rotation_degrees": 60,
+    "rotated_weight": 0.5,
+    "grid_size_m_unchanged": 1000,
+    "decision": "04_outputs/rf_spatial_v5/frozen_decision.json",
+    "validation": "04_outputs/rf_spatial_v5/continued_optimization",
+    "independent_confirmation": false
+  },
+  "current_orientation_extension": {
+    "model_class": "rf_orientation_ensemble.OrientationEnsembleForest",
+    "original_input_count": 18,
+    "grid_side_m": 1000,
+    "orientation_angles": [
+      0,
+      45,
+      60
+    ],
+    "orientation_weights": [
+      0.25,
+      0.25,
+      0.5
+    ],
+    "decision": "04_outputs/rf_spatial_v5/frozen_decision.json",
+    "validation": "04_outputs/rf_spatial_v5/orientation_optimization",
+    "independent_confirmation": false
   }
 }

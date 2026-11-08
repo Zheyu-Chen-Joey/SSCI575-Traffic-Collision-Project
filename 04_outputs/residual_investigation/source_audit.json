@@ -1,0 +1,31 @@
+{
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "model_sha256": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357",
+  "collision_rows": 230536,
+  "unique_collision_ids": 230536,
+  "target_total": 230536,
+  "total_recount_abs_difference": 0.0,
+  "annual_recount_abs_differences": {
+    "2017": 0,
+    "2018": 0,
+    "2019": 0,
+    "2020": 0,
+    "2021": 0
+  },
+  "signal_recount_abs_difference": 0.0,
+  "intersection_recount_abs_difference": 0.0,
+  "road_length_crosswalk_max_abs_diff_m": 0.0,
+  "population_crosswalk_max_abs_diff": 0.0,
+  "density_checks": {
+    "population": true,
+    "signals": true,
+    "intersections": true
+  },
+  "road_density_check": true,
+  "legacy_top23_share_squared_error": 0.6469836123488361,
+  "legacy_top23_share_abs_error": 0.3795555659998402,
+  "legacy_all_missing_landuse_n": 14,
+  "train_all_missing_landuse_n": 0,
+  "validation_all_missing_landuse_n": 2,
+  "no_confirmed_recount_or_join_error": true
+}

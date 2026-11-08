@@ -1,0 +1,16 @@
+{
+  "source_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "previous_model_sha256": "fe5057d5a2fd68ab7c5c4073744242974b2f874c9580f01bb924d646196cd749",
+  "new_model_sha256": "9378d2b1ced357e6b0e2329a9c485aa62475a2041077caee201d2b22dc150357",
+  "development_rows": 886,
+  "legacy_rows": 227,
+  "finite_nonnegative1473predictions": true,
+  "reloaded_metrics_match": true,
+  "grid_count_conserved": 230536,
+  "production_model_count": 1,
+  "promoted_utc": "2026-11-08T07:29:25.447333+00:00",
+  "all_three_components_global_and_local_root_weights_match886": true,
+  "fixed_trainer_reproduces1473_predictions": true,
+  "cli_matches_GIS1473_predictions": true,
+  "report_rendered_inspected_pages": 5
+}

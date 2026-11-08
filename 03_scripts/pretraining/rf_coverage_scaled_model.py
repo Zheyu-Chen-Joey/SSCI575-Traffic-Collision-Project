@@ -13,7 +13,7 @@ class CoverageScaledForest(RegressorMixin,BaseEstimator):
   return z
  def _scale(self,X):
   if self.scale_mode=='none':return np.ones(len(X))
-  field,power,unit={'road_sqrt':('road_density_km_per_km2',.5,1),'road':('road_density_km_per_km2',1,1),'signal_sqrt':('signal_density_snapshot_km2',.5,1),'signal':('signal_density_snapshot_km2',1,1),'population_quarter':('population_density_km2',.25,1000),'population_sqrt':('population_density_km2',.5,1000)}[self.scale_mode]
+  field,power,unit={'road_sqrt':('road_density_km_per_km2',.5,1),'road':('road_density_km_per_km2',1,1),'signal_sqrt':('signal_density_snapshot_km2',.5,1),'signal_quarter':('signal_density_snapshot_km2',.25,1),'signal_035':('signal_density_snapshot_km2',.35,1),'signal_065':('signal_density_snapshot_km2',.65,1),'signal_075':('signal_density_snapshot_km2',.75,1),'signal':('signal_density_snapshot_km2',1,1),'population_quarter':('population_density_km2',.25,1000),'population_sqrt':('population_density_km2',.5,1000)}[self.scale_mode]
   values=X[field].fillna(self.factor_medians_[field]).clip(lower=0).to_numpy();return (1+values/unit)**power
  def fit(self,X,y):
   self.factor_medians_={c:float(X[c].median())for c in ['road_density_km_per_km2','signal_density_snapshot_km2','population_density_km2']};z=self._X(X);self.forests_=[];target=np.asarray(y)/self._scale(X)

@@ -1,0 +1,29 @@
+{
+  "expected_snapshot_objects": 50644,
+  "downloaded_objects": 50644,
+  "duplicate_object_ids": 0,
+  "missing_object_ids": 0,
+  "unexpected_object_ids": 0,
+  "error_or_transfer_limit_batches": [],
+  "processed_city_features": 50643,
+  "eligible_all_missing_landuse_grid_count": 16,
+  "processed_polygon_intersections_at_missing_cells": {
+    "1000_38_37": 0,
+    "1000_39_37": 0,
+    "1000_40_36": 0,
+    "1000_40_37": 0,
+    "1000_40_38": 0,
+    "1000_40_39": 0,
+    "1000_41_35": 0,
+    "1000_41_36": 0,
+    "1000_41_37": 0,
+    "1000_42_36": 0,
+    "1000_42_37": 0,
+    "1000_43_36": 0,
+    "1000_43_37": 0,
+    "1000_44_35": 0,
+    "1000_44_36": 0,
+    "1000_44_37": 0
+  },
+  "interpretation": "Matches recorded ID snapshot; no evidence of download truncation relative to that snapshot. Does not prove source completeness or historical validity."
+}

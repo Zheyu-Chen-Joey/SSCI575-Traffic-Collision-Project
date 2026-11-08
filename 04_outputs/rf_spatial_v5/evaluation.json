@@ -1,6 +1,6 @@
 {
   "decision": {
-    "model_id": "local_weighted_RF_10km_075",
+    "model_id": "orientation_RF_0_45_60_025_025_050",
     "candidate": 17,
     "seed_mode": "ensemble",
     "settings": {
@@ -17,9 +17,9 @@
       "include_position": true
     },
     "development_joint_gate_pass": true,
-    "frozen_utc": "2026-11-08T05:32:07.749960+00:00",
+    "frozen_utc": "2026-11-08T07:28:18.552398+00:00",
     "legacy_target_for_selection": false,
-    "model_class": "rf_local_weighted_model.LocalWeightedSpatialForest",
+    "model_class": "rf_orientation_ensemble.OrientationEnsembleForest",
     "local_weighting_settings": {
       "bandwidth_m": 10000.0,
       "anchor_spacing_m": 20000.0,
@@ -30,7 +30,21 @@
     },
     "base_selection_model_id": "17_ensemble",
     "local_selection": "04_outputs/rf_spatial_v5/local_rf_frozen_decision.json",
-    "exploratory_promotion_after_legacy_gate": true
+    "exploratory_promotion_after_legacy_gate": true,
+    "comparison_anchor_label": "Previous coordinate RF",
+    "optimization_audit": "04_outputs/rf_spatial_v5/orientation_optimization",
+    "orientation_settings": {
+      "orientation_angles": [
+        0,
+        45,
+        60
+      ],
+      "orientation_weights": [
+        0.25,
+        0.25,
+        0.5
+      ]
+    }
   },
   "legacy_reuse_is_exploratory": true,
   "v1": {
@@ -49,13 +63,14 @@
   },
   "spatial_v5": {
     "legacy_evaluation": {
-      "rmse": 83.50627461876863,
-      "mae": 54.57201386735293,
-      "r2": 0.8051573173864832,
-      "bias": 10.40245063564282
+      "rmse": 80.62533236979074,
+      "mae": 53.05394497363826,
+      "r2": 0.8183694418353425,
+      "bias": 10.293550687660472,
+      "p90_abs_error": 138.2102282148314
     },
     "moran": {
-      "I": 0.31336456947350627,
+      "I": 0.28083654124967167,
       "p_two_sided": 0.0001,
       "permutations": 9999,
       "k": 8
@@ -76,5 +91,87 @@
     }
   },
   "current_method": "local_weighted_spatial_RF",
-  "local_study": "04_outputs/rf_spatial_v5/local_rf_evaluation.json"
+  "local_study": "04_outputs/rf_spatial_v5/local_rf_evaluation.json",
+  "coordinate_blend_study": {
+    "decision": {
+      "candidate": 2,
+      "config": {
+        "name": "blend_0.5",
+        "params": {
+          "landuse_mode": "raw",
+          "scale_mode": "signal_sqrt",
+          "rf_params": {
+            "rf__n_estimators": 500,
+            "rf__min_samples_split": 10,
+            "rf__min_samples_leaf": 5,
+            "rf__max_features": 0.5,
+            "rf__max_depth": 16,
+            "rf__criterion": "squared_error"
+          },
+          "include_position": true,
+          "bandwidth_m": 10000.0,
+          "anchor_spacing_m": 20000.0,
+          "local_strength": 0.75,
+          "local_trees": 200,
+          "min_effective_samples": 40,
+          "nearest_anchors": 3,
+          "rotation_degrees": 60.0,
+          "rotated_weight": 0.5
+        }
+      },
+      "frozen_utc": "2026-11-08T07:13:49.524888+00:00",
+      "development_validation_pass": true
+    },
+    "geographic_gate_pass": true,
+    "promote": true,
+    "legacy_evaluated": true,
+    "before": {
+      "rmse": 83.50627461876861,
+      "mae": 54.57201386735292,
+      "r2": 0.8051573173864833,
+      "bias": 10.40245063564282,
+      "p90_abs_error": 149.26306552503735
+    },
+    "after": {
+      "rmse": 81.01835081954331,
+      "mae": 53.2416164869381,
+      "r2": 0.8165943633610127,
+      "bias": 9.785483019591496,
+      "p90_abs_error": 140.49557081375656
+    }
+  },
+  "orientation_ensemble_study": {
+    "decision": {
+      "candidate": 8,
+      "angles": [
+        0,
+        45,
+        60
+      ],
+      "weights": [
+        0.25,
+        0.25,
+        0.5
+      ],
+      "frozen_utc": "2026-11-08T07:28:18.552398+00:00",
+      "validation_pass": true
+    },
+    "geographic_gate_pass": true,
+    "legacy_evaluated": true,
+    "promote": true,
+    "before": {
+      "rmse": 81.01835081954331,
+      "mae": 53.2416164869381,
+      "r2": 0.8165943633610127,
+      "bias": 9.785483019591497,
+      "p90_abs_error": 140.49557081375653
+    },
+    "after": {
+      "rmse": 80.62533236979074,
+      "mae": 53.05394497363826,
+      "r2": 0.8183694418353425,
+      "bias": 10.293550687660472,
+      "p90_abs_error": 138.2102282148314
+    }
+  }
 }

@@ -1,0 +1,8 @@
+{
+  "improved_cells": 123,
+  "worsened_cells": 104,
+  "unchanged_cells": 0,
+  "rmse_reduction_pct": 0.4850980620772716,
+  "mae_reduction_pct": 0.35249026172201603,
+  "p90_reduction_pct": 1.6266296408408598
+}
