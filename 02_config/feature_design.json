@@ -34,5 +34,24 @@
     "audit": "04_outputs/speed_audit/speed_suitability.json",
     "reason": "NHS-focused source: reported30m corridor coverage11.98%;2017\u20132021 speed effective dates unavailable."
   },
-  "training_authorization": "User explicitly requested RF training, optimization and project completion on2026-11-07"
+  "training_authorization": "User explicitly requested RF training, optimization and project completion on2026-11-07",
+  "signal_source_semantics": {
+    "field": "signal_density_snapshot_km2",
+    "interpretation": "Mixed signal/control and speed-feedback-sign location density proxy; no verified pure historical signal-intersection inventory",
+    "metadata": "01_data/raw/signal_locations_metadata.json",
+    "clarification": "06_reports/Signal_Source_Semantics_Clarification.txt"
+  },
+  "authorized_spatial_extension": {
+    "authorization": "User explicitly allowed grid-center coordinates and continued spatial validation",
+    "original_enhanced_fields_unchanged": true,
+    "additional_input_fields": [
+      "cx",
+      "cy"
+    ],
+    "crs": "EPSG26911",
+    "factory": "rf_spatial_model.SpatialCoverageForest",
+    "protocol": "02_config/spatial_extension_v5.json",
+    "model": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib",
+    "interpretation": "spatial trend extension, not causal effect; legacy evaluation exploratory; buffered coordinate ablation not uniformly improved"
+  }
 }

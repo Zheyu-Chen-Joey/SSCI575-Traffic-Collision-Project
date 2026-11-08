@@ -1,0 +1,44 @@
+{
+  "decision": {
+    "selected_candidate": 0,
+    "candidate_spec": {
+      "setting": null,
+      "strength": 0
+    },
+    "correction_params": null,
+    "passes_joint_development_gate": false,
+    "original_model_retained_if_zero": true,
+    "reason": "Nested CV and development-validation joint gate; no legacy target used",
+    "frozen_utc": "2026-11-08T05:31:42.924176+00:00"
+  },
+  "exploratory_legacy_reuse": true,
+  "experiment": "v5b_location_only_RF_residual_correction",
+  "v1": {
+    "legacy_evaluation": {
+      "rmse": 97.98476177522149,
+      "mae": 64.95975977733255,
+      "r2": 0.7317356492425571,
+      "bias": 19.098146715374178
+    },
+    "moran": {
+      "I": 0.2995772384796702,
+      "k": 8,
+      "p_two_sided": 0.0001,
+      "permutations": 9999
+    }
+  },
+  "v3": {
+    "legacy_evaluation": {
+      "rmse": 97.98476177522149,
+      "mae": 64.95975977733255,
+      "r2": 0.7317356492425571,
+      "bias": 19.098146715374174
+    },
+    "moran": {
+      "I": 0.2995772384796702,
+      "k": 8,
+      "p_two_sided": 0.0001,
+      "permutations": 9999
+    }
+  }
+}

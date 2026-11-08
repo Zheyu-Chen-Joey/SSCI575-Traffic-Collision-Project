@@ -1,0 +1,12 @@
+{
+  "authorization": "User explicitly allowed grid-center positions and continued spatial validation",
+  "original_plan_extension": true,
+  "feature_coordinates": "EPSG26911 grid centers in km relative to fixed origin",
+  "frameworks": [
+    "RF with direct coordinate predictors",
+    "original-covariate RF plus position-only RF residual correction trained on inner OOF errors"
+  ],
+  "aggregate_recommendation_rule": "Among each framework frozen developmental choice, require validation RMSE,MAE andabsMoran no worse than original, withRMSE strict improvement. Choose minimum validation RMSE/anchorRMSE+0.15absI/absAnchorI. Do not read legacy metric into selection.",
+  "legacy_evaluation_status": "Previously observed region, all v5 results exploratory. Do not claim new independent confirmation.",
+  "created_utc": "2026-11-08T05:31:51.869508+00:00"
+}

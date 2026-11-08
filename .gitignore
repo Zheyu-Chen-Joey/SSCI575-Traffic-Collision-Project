@@ -9,3 +9,5 @@ AGENTS.md
 *.log
 
 04_outputs/rf_project_v1/prediction_cli_check.csv
+
+04_outputs/**/cli_predictions_check.csv

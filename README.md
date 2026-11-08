@@ -1,70 +1,56 @@
-残差优化后续试验：新增24组RF开发候选，v2在旧测试区Moran略降但RMSE变差，属于取舍而非全面改善。正式v1模型与报告保留；见06_reports/Residual_Refinement_v2.txt及04_outputs/rf_residual_refinement_v2。旧测试再次使用是探索性对照。
+# SSCI575 Traffic Collision Project
 
-# 当前项目结果 2026年11月7日
+## 当前版本 空间位置扩展 RF v5
 
-用户已明确授权训练与优化。已在1000米工作网格完成基础/增强RF训练、空间CV调参、冻结选择及一次性保留测试评估。模型未部署在线服务。
+研究 City of Los Angeles 2017–2021 年公开记录的交通事故负担，使用固定1km网格。当前扩展候选在原16字段之外加入已获用户授权的网格中心坐标，使用3个随机种子的RF平均。原模型及全部优化实验保留作对照。
 
-推荐增强RF：测试R²=0.7317，RMSE=97.9848起/格，MAE=64.9598起/格。初始基础RF的RMSE=118.9641；调参基础RF反而变差，完整保留。残差Moran I=0.2996、p=0.0001；成对空间块bootstrap的RMSE差异95%区间跨0，不能宣称所有地区稳定优于基础。
+### 最新交付
 
-报告：06_reports/SSCI575_Final_Project_Report.docx。模型：05_models/rf_project_v1。数据、图、GIS预测与残差、协议和校验：04_outputs/rf_project_v1。操作说明：06_reports/PROJECT_DELIVERABLES.txt。
+- [空间扩展与验证报告 Word](06_reports/RF_Spatial_Extension_v5.docx)
+- [最新结果包](06_reports/SSCI575_Project_Results.zip)
+- [操作与复现说明](06_reports/PROJECT_DELIVERABLES.txt)
+- [全市实际值 预测值与残差图](04_outputs/rf_spatial_v5/figures/03_full_city_comparison.png)
+- [同参数坐标消融](04_outputs/rf_spatial_v5/figures/04_coordinate_ablation.png)
+- [当前空间模型](05_models/rf_spatial_v5/spatial_frozen_rf.joblib)
+- [模型输入契约](05_models/rf_spatial_v5/input_contract.json)
+- [GIS预测结果](04_outputs/rf_spatial_v5/spatial_predictions_1000.gpkg)
 
-沿用已确认的1km实践尺度与变量排除，未恢复不合适的交通流量、限速、视距或rurality。目标为公开记录的2017–2021事故总负担，不是未来预测、因果效果或暴露调整风险。最终测试区未参与模型选择或拟合。
+### 当前比较结果
 
-以下是训练前及尺度研究的历史状态，不能当作当前尚未训练。
+下表为已多次查看的原227个测试格上的**探索性复用比较**，不是全新独立验证。
 
----
+| 模型 | RMSE 起/格 | MAE 起/格 | R² | 残差 Moran I |
+|---|---:|---:|---:|---:|
+| 原RF v1 | 97.98 | 64.96 | 0.732 | 0.2996 |
+| 保守RF组合 v4b | 97.53 | 63.84 | 0.734 | 0.3189 |
+| 同参数无坐标对照 | 95.49 | 61.90 | 0.745 | 0.3259 |
+| 空间扩展 v5 | 92.89 | 59.86 | 0.759 | 0.3317 |
 
-限速审计更新：FHWA NHS限速已下载；30m直接上报潜在道路覆盖11.98%，历史有效期未核实，暂不纳入增强模型。见06_reports/speed_limit_audit_20261107.txt。未训练模型。
+v5较原RF的RMSE降低5.20%、MAE降低7.86%，但残差空间聚集没有下降。相同参数下，加入坐标的模型在实际1km网格间隔的训练折外验证中退步（RMSE96.43→99.61）；开发区东侧地域留出改善，北侧略有退步。不可把当前误差下降解释为普遍空间泛化改善。需要新的时空外部验证。
 
-# 2026年11月7日训练前准备
+### 运行当前离线模型
 
-当前工作网格已按用户决定固定为1000米，属于实践选择。1km统计已经单独计算，未沿用1100米结果。本次明确不训练模型。
-
-当前建模表：01_data/processed/pretraining_1km/model_table_1000_final.csv及GPKG。1473个市界相交格，1113个合格格；固定训练/验证/测试为720/166/227格。人口、道路、拓扑路口、土地利用、信号和功能分类特征已完成。
-
-用户已确认暂时移除交通流量。当前baseline使用道路密度、交叉口密度、道路类型、人口密度、土地利用五类特征；enhanced增加道路设计特征。所选输入无整列缺失，readiness已通过。人口分配、历史快照及2021事故覆盖等研究限制仍须保留。
-
-详细状态：06_reports/pretraining_status_20261107.txt。检查项：04_outputs/pretraining/readiness.json与verification.json。数据字典：04_outputs/pretraining/data_dictionary.csv。
-
-检查而不训练：
-```powershell
-python 03_scripts/pretraining/prepare_training.py --check-only
-python 03_scripts/pretraining/verify_inputs.py
-```
-
-有效设计以02_config/feature_design.json为准。交通数据和缺失字段保留供审计，但不进入baseline或enhanced的X文件，不参与插补。研究预测公开记录的事故负担，不计算暴露调整事故率。未来重新纳入交通流量需要单独修订设计。train_rf.py默认不会拟合，本次不执行训练。
-
-以下内容保留早期1100米候选诊断记录，其当时的数据缺口和尺度状态不代表当前状态。
-
----
-
-# 洛杉矶交通事故项目
-
-本文件夹已按原始资料 → 下载 → 清理 → 尺度诊断 → 特征构建 → 模型 → 报告建立目录。
-
-运行环境：Windows Python 3.13；依赖隔离安装到 .runtime，不修改系统依赖。脚本从本项目根目录运行。
+在项目根目录、已安装记录依赖的Python环境中运行：
 
 ```powershell
-python 03_scripts/01_download.py
-python 03_scripts/03_download_predictors.py
-python 03_scripts/02_clean_and_grid.py
-python 03_scripts/04_clean_predictors.py
-python 03_scripts/05_sensitivity.py
+$env:PYTHONUTF8='1'
+python 03_scripts/pretraining/predict_spatial_rf_v5.py --input 01_data/processed/pretraining_1km/model_table_1000_final.csv --output spatial_predictions_new.csv
 ```
 
-当前31个网格均已生成，事故总量守恒检查通过。1,100m 是球状模型的首个候选局部低点，尚不能当作确认的最佳尺度。最终决定和未完成事项见06_reports/grid_decision.md。运行下载时需要网络；人口接口目前返回 Missing Key，不能当作成功数据。
+输出路径须为新文件。输入必须包含原16个聚合字段及cx/cy，后两列为EPSG:26911固定1km网格中心的米制坐标，不是经纬度。该模型估计历史记录事故总数，不预测未来年份。环境版本见05_models/rf_spatial_v5/environment.json；依赖列表见05_models/rf_project_v1/requirements.txt。Git LFS保存模型、GPKG、GeoJSON与ZIP，克隆后需完成LFS下载。
 
-01_download.py 是初始下载脚本，人口接口失败将停止后续步骤；已下载的原始快照仍保留。后续修复见07_agents/tasks/data.md。不要反复下载已存在的大型文件。
+### 验证与数据契约
 
-完整本地重现（原始下载已在）：
-```powershell
-python 03_scripts/02_clean_and_grid.py
-python 03_scripts/04_clean_predictors.py
-python 03_scripts/05_sensitivity.py
-python 03_scripts/07_origin_sensitivity.py
-python 03_scripts/08_finalize.py
-python 03_scripts/09_verify.py
-```
-最终报告说明了人口数值与交通报告数值尚未完成。不要将当前文件夹视为已经可以直接训练模型的完整特征表。
+- 固定EPSG:26911，原点E345000/N3730000；1473个市界相交格，1113个合格格；230536条有效事故守恒，零事故格保留。
+- 训练/验证/原测试为720/166/227格。最终空间模型只拟合886个开发格。
+- 选模采用开发区空间CV及验证；实际完整方格距离不超过1km的训练格从缓冲CV中排除。没有邻格真实事故数、HIN或测试目标预测变量。
+- [训练协议](04_outputs/rf_spatial_v5/protocol.json)、[同参数消融](04_outputs/rf_spatial_v5/matched_coordinate_ablation.csv)、[地域留出](04_outputs/rf_spatial_v5/geographic_transfer_checks.csv)、[独立校验](04_outputs/rf_spatial_v5/verification.json)完整保留。
+- 无数据不冒充0。人口面积分配、土地利用缺失、2021记录数下降与历史快照一致性仍有限制。
+- 信号字段实际为含速度反馈标志的混合设施点密度代理，见[语义更正](06_reports/Signal_Source_Semantics_Clarification.txt)。不能称为纯历史信号交叉口清单，也不作因果解释。
+- 1km为用户选择的实践尺度，不宣称唯一NSR最优。交通流量、限速、视距及人口衍生rurality未纳入。
 
-Range补充验证：python 03_scripts/10_validate_range.py；解释见06_reports/range_validation.md。该验证不训练RF、不改网格，也不使用预留测试区域。
+### 历史与审计
+
+原方案训练报告保留在06_reports/SSCI575_Final_Project_Report.docx；v1、v2、v3、v4、v4b及位置残差分支均保留，不用新的更好分数覆盖失败实验。旧v1结果包保存在06_reports/archive/SSCI575_Project_Results_v1.zip。当前ZIP以v5为主，不包含全部原始下载或本地运行环境；完整重现与原始快照校验请使用完整仓库及其数据。
+
+Agent脚手架、本地.runtime和临时检查文件不发布。

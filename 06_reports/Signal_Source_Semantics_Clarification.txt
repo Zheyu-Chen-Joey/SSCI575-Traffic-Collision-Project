@@ -1,0 +1,3 @@
+信号设施来源语义更正
+官方LADOT MapServer30的图层名为Signal Locations，但描述为LADOT Signals and Speed Feedback Sign locations。字段仅ID/ST1/ST2/ST3/lat/lon/Shape，未提供可据以完整区分设施类型的字段。因此现有signal_density_snapshot_km2应解释为该混合设施点快照的密度代理，不能称为已核验的纯信号交叉口密度。0.1m坐标去重只处理重合点，不验证设施类型。模型数值、原始快照和既有结果均未改动；旧报告的变量解释需连同本说明阅读。此项不是事故目标泄漏，但限制道路设计解释，尤其不能把置换重要性归因为信号安装的因果影响。
+官方来源：https://maps.lacity.org/lahub/rest/services/LADOT/MapServer/30?f=pjson

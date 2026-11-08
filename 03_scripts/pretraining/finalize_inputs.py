@@ -44,7 +44,7 @@ dictionary={
  'road_sinuosity_length_weighted':('enhanced','dimensionless ratio','2021 TIGER Roads','Length / endpoint distance proxy averaged by clipped road length. Closed/endpoints<=1m missing. Depends on segmentation.'),
  'freeway_share_functional':('enhanced','fraction','Caltrans Functional Classification current snapshot','Classes1,2 length / all functional network length.'),
  'arterial_share_functional':('enhanced','fraction','Caltrans Functional Classification current snapshot','Classes3,4 length / all functional network length.'),
- 'signal_density_snapshot_km2':('enhanced','unique signal points/city km2','LADOT Signal Locations current snapshot','0.1m coordinate deduplication. Does not establish historic installation coverage.'),
+ 'signal_density_snapshot_km2':('enhanced','unique signal points/city km2','LADOT mixed signal and speed-feedback locations snapshot','0.1m coordinate deduplication; metadata includes speed feedback signs and has no facility-type field. Mixed facility proxy, not audited pure historic signal intersections.'),
  'landuse_uncovered_fraction':('baseline','fraction','General Plan Land Use current snapshot','1 - union category area / city area. Includes unmapped roads/water; not inferred category.'),
  'split':('partition','train/validation/test','fixed5km hash blocks','Test keeps prior rule; train-side validation separate hash. Not chosen by targets.'),
  'eligible':('partition','boolean','city area fraction','>=80% of original1km square lies within city. Full cells table still retains boundary fragments.'),

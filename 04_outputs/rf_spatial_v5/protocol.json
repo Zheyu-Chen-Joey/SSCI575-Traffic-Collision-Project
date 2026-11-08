@@ -1,0 +1,510 @@
+{
+  "created_utc": "2026-11-08T05:29:43.696676+00:00",
+  "authorization": "User explicitly allowed grid-center coordinate extension and continued spatial validation",
+  "original_plan_extension": true,
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "crs": "EPSG26911",
+  "position_fields": "(cx-345000)/1000,(cy-3730000)/1000 in km; fixed transformations, no target-derived coordinates",
+  "input_features": [
+    "road_density_km_per_km2",
+    "intersection_density_km2",
+    "population_density_km2",
+    "landuse_share_residential",
+    "landuse_share_commercial",
+    "landuse_share_industrial",
+    "landuse_share_open_space_public_facilities",
+    "landuse_share_lax_airport",
+    "landuse_share_port_of_la",
+    "landuse_share_parking",
+    "landuse_uncovered_fraction",
+    "road_sinuosity_length_weighted",
+    "freeway_share_functional",
+    "arterial_share_functional",
+    "signal_density_snapshot_km2",
+    "road_type_dominant",
+    "cx",
+    "cy"
+  ],
+  "candidates": [
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.7,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": false
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.7,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": false
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.7,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": false
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.7,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": false
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.7,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 10,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 16,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 1.0,
+        "rf__max_depth": null,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 10,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 8,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 1.0,
+        "rf__max_depth": 8,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 16,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 3,
+        "rf__max_features": 1.0,
+        "rf__max_depth": 12,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.7,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 10,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 16,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 1.0,
+        "rf__max_depth": null,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 10,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 8,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 1.0,
+        "rf__max_depth": 8,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 16,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 3,
+        "rf__max_features": 1.0,
+        "rf__max_depth": 12,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.7,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 10,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 16,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 1.0,
+        "rf__max_depth": null,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 10,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 8,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 1.0,
+        "rf__max_depth": 8,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 16,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 3,
+        "rf__max_features": 1.0,
+        "rf__max_depth": 12,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "none",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.7,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 10,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 16,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 1.0,
+        "rf__max_depth": null,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 10,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 8,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 1.0,
+        "rf__max_depth": 8,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 16,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 3,
+        "rf__max_features": 1.0,
+        "rf__max_depth": 12,
+        "rf__criterion": "poisson"
+      },
+      "include_position": true
+    },
+    {
+      "landuse_mode": "conditional",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 8,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    }
+  ],
+  "CV": "training720 only; fixed5km GroupKFold5; both ordinary and square-to-square gap strictly >1000m buffered fit rows",
+  "selection": "buffered5fold mean RMSE <=no-position anchor, mean MAE<=1.02anchor; rank RMSE/anchor +0.15abs(pooledOOF I)/abs(anchorI). Validate at most5 shortlisted plus matched no-position controls; single seed42 and fixed mean seeds7/42/99. Validation RMSE<original,MAE<=original,absI<=original. Choose min RMSE/anchor+0.15absI/anchor; freeze before legacy comparison.",
+  "additional_checks": "development-only north20pct/east20pct contiguous holdouts with1000m polygon gap; no refit based on legacy scores",
+  "legacy_region": "repeatedly observed, all comparisons exploratory, NOT new independent validation",
+  "no_predictors": [
+    "neighbor outcome",
+    "HIN",
+    "traffic volume",
+    "speed limit"
+  ],
+  "interpretation": "position improves spatial interpolation if supported; not causal explanation or guaranteed new-region/time forecasting",
+  "signal_proxy": "mixed signal/control and speed-feedback locations, not a pure historical signal inventory"
+}

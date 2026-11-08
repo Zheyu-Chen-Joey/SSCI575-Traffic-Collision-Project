@@ -1,0 +1,42 @@
+{
+  "model": "spatial_frozen_rf.joblib",
+  "features": [
+    "road_density_km_per_km2",
+    "intersection_density_km2",
+    "population_density_km2",
+    "landuse_share_residential",
+    "landuse_share_commercial",
+    "landuse_share_industrial",
+    "landuse_share_open_space_public_facilities",
+    "landuse_share_lax_airport",
+    "landuse_share_port_of_la",
+    "landuse_share_parking",
+    "landuse_uncovered_fraction",
+    "road_sinuosity_length_weighted",
+    "freeway_share_functional",
+    "arterial_share_functional",
+    "signal_density_snapshot_km2",
+    "road_type_dominant",
+    "cx",
+    "cy"
+  ],
+  "position_crs": "EPSG26911, meters",
+  "grid_side_m": 1000,
+  "origin_m": [
+    345000,
+    3730000
+  ],
+  "transformed_position_features": [
+    "position_east_km",
+    "position_north_km"
+  ],
+  "original_plan_extension_user_authorized": true,
+  "RF_seed_ensemble": [
+    7,
+    42,
+    99
+  ],
+  "tree_count_per_seed": 500,
+  "target": "recorded2017\u20132021collision count, not future risk",
+  "caveat": "Location trend may exploit local interpolation; matched bufferedCV and north holdout did not improve. Needs fresh external validation."
+}

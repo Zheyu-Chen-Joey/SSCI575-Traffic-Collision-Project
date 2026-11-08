@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-11-08T05:31:21.628704+00:00",
+  "method": "Original16covariate RF base plus location-only RF correction from inner spatial-out-of-fold residuals. User explicitly authorized positions.",
+  "algorithm_change": "two-stage RF composition, not an additional ML algorithm; exploratory extension to original single-forest model",
+  "feature_names": [
+    "road_density_km_per_km2",
+    "intersection_density_km2",
+    "population_density_km2",
+    "landuse_share_residential",
+    "landuse_share_commercial",
+    "landuse_share_industrial",
+    "landuse_share_open_space_public_facilities",
+    "landuse_share_lax_airport",
+    "landuse_share_port_of_la",
+    "landuse_share_parking",
+    "landuse_uncovered_fraction",
+    "road_sinuosity_length_weighted",
+    "freeway_share_functional",
+    "arterial_share_functional",
+    "signal_density_snapshot_km2",
+    "road_type_dominant",
+    "cx",
+    "cy"
+  ],
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "base_params": {
+    "rf__n_estimators": 500,
+    "rf__min_samples_split": 10,
+    "rf__min_samples_leaf": 5,
+    "rf__max_features": 0.7,
+    "rf__max_depth": 8,
+    "rf__criterion": "squared_error"
+  },
+  "correction_settings": [
+    {
+      "rf__max_depth": 3,
+      "rf__min_samples_leaf": 5,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": 3,
+      "rf__min_samples_leaf": 10,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": 3,
+      "rf__min_samples_leaf": 20,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": 5,
+      "rf__min_samples_leaf": 5,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": 5,
+      "rf__min_samples_leaf": 10,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": 5,
+      "rf__min_samples_leaf": 20,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": 8,
+      "rf__min_samples_leaf": 5,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": 8,
+      "rf__min_samples_leaf": 10,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": 8,
+      "rf__min_samples_leaf": 20,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": null,
+      "rf__min_samples_leaf": 5,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": null,
+      "rf__min_samples_leaf": 10,
+      "rf__max_features": 1.0
+    },
+    {
+      "rf__max_depth": null,
+      "rf__min_samples_leaf": 20,
+      "rf__max_features": 1.0
+    }
+  ],
+  "strengths": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "candidate_count": 49,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "selection_rule": "CV pooled RMSE<=anchor, MAE<=anchor,abs(Moran)<=anchor; rank RMSE/anchor +0.25*abs(I)/anchor. Validate at most4 shortlisted candidates. Validation must improve RMSE and not worsen MAE orabs(I); choose min validation RMSE, Moran tie-break. If no pass keep anchor. Freeze before legacy region comparison.",
+  "legacy_test": "previously examined in v1/v2; all later comparisons exploratory; no legacy rows for fit or selection",
+  "no_leakage": "outer evaluation targets excluded from base fit and inner residual labels. No neighbor outcome or HIN. Outer fitting squares have >1000m distance to evaluation squares. Coordinates authorized as correction predictors; no outcome smoothing."
+}

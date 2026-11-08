@@ -1,0 +1,10 @@
+{
+  "selected_candidate": 1,
+  "weights": [
+    0.5,
+    0,
+    0.5
+  ],
+  "frozen_utc": "2026-11-08T04:10:32.257207+00:00",
+  "development_gate_pass": true
+}

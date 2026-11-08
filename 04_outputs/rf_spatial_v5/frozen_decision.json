@@ -1,0 +1,21 @@
+{
+  "model_id": "17_ensemble",
+  "candidate": 17,
+  "seed_mode": "ensemble",
+  "settings": {
+    "landuse_mode": "raw",
+    "scale_mode": "signal_sqrt",
+    "rf_params": {
+      "rf__n_estimators": 500,
+      "rf__min_samples_split": 10,
+      "rf__min_samples_leaf": 5,
+      "rf__max_features": 0.5,
+      "rf__max_depth": 16,
+      "rf__criterion": "squared_error"
+    },
+    "include_position": true
+  },
+  "development_joint_gate_pass": true,
+  "frozen_utc": "2026-11-08T05:32:07.749960+00:00",
+  "legacy_target_for_selection": false
+}

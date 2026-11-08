@@ -1,0 +1,16 @@
+{
+  "selected_candidate": 36,
+  "candidate_spec": {
+    "setting": 8,
+    "strength": 1.0
+  },
+  "correction_params": {
+    "rf__max_depth": 5,
+    "rf__min_samples_leaf": 15,
+    "rf__max_features": 0.7
+  },
+  "passes_joint_development_gate": true,
+  "original_model_retained_if_zero": false,
+  "reason": "Nested CV and development-validation joint gate; no legacy target used",
+  "frozen_utc": "2026-11-08T03:58:39.605561+00:00"
+}

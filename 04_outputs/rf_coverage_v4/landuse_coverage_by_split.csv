@@ -1,0 +1,10 @@
+split,coverage_group,grid_count
+test,under50pct,22
+test,50to80pct,109
+test,80pctplus,96
+train,under50pct,11
+train,50to80pct,322
+train,80pctplus,387
+validation,under50pct,8
+validation,50to80pct,59
+validation,80pctplus,99

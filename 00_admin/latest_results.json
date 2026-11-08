@@ -1,0 +1,29 @@
+{
+  "version": "spatial_RF_v5",
+  "created_utc": "2026-11-08T05:49:45.702009+00:00",
+  "report": "06_reports/RF_Spatial_Extension_v5.docx",
+  "model": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib",
+  "outputs": "04_outputs/rf_spatial_v5",
+  "input_contract": "05_models/rf_spatial_v5/input_contract.json",
+  "evaluation_nature": "exploratory legacy-region reuse; no new independent validation",
+  "performance": {
+    "legacy_evaluation": {
+      "rmse": 92.89041345528099,
+      "mae": 59.855464752557246,
+      "r2": 0.7589052943945258,
+      "bias": 9.47231530856152
+    },
+    "moran": {
+      "I": 0.3317333457573139,
+      "k": 8,
+      "p_two_sided": 0.0001,
+      "permutations": 9999
+    }
+  },
+  "limits": [
+    "residual Moran not improved",
+    "matched-coordinate bufferedCV worsens",
+    "east improves and north slightly worsens"
+  ],
+  "original_plan_v1_preserved": true
+}

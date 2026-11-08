@@ -1,0 +1,52 @@
+{
+  "decision": {
+    "model_id": "17_ensemble",
+    "candidate": 17,
+    "seed_mode": "ensemble",
+    "settings": {
+      "landuse_mode": "raw",
+      "scale_mode": "signal_sqrt",
+      "rf_params": {
+        "rf__n_estimators": 500,
+        "rf__min_samples_split": 10,
+        "rf__min_samples_leaf": 5,
+        "rf__max_features": 0.5,
+        "rf__max_depth": 16,
+        "rf__criterion": "squared_error"
+      },
+      "include_position": true
+    },
+    "development_joint_gate_pass": true,
+    "frozen_utc": "2026-11-08T05:32:07.749960+00:00",
+    "legacy_target_for_selection": false
+  },
+  "legacy_reuse_is_exploratory": true,
+  "v1": {
+    "legacy_evaluation": {
+      "rmse": 97.9847617752215,
+      "mae": 64.95975977733255,
+      "r2": 0.7317356492425571,
+      "bias": 19.098146715374178
+    },
+    "moran": {
+      "I": 0.29957723847967016,
+      "k": 8,
+      "p_two_sided": 0.0001,
+      "permutations": 9999
+    }
+  },
+  "spatial_v5": {
+    "legacy_evaluation": {
+      "rmse": 92.89041345528099,
+      "mae": 59.855464752557246,
+      "r2": 0.7589052943945258,
+      "bias": 9.47231530856152
+    },
+    "moran": {
+      "I": 0.3317333457573139,
+      "k": 8,
+      "p_two_sided": 0.0001,
+      "permutations": 9999
+    }
+  }
+}

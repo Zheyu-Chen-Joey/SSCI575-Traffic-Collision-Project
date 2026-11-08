@@ -42,7 +42,7 @@ landuse_coverage,float64,diagnostic,see name,derived project data,Not selected a
 landuse_overlap_fraction,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
 landuse_uncovered_fraction,float64,baseline,fraction,General Plan Land Use current snapshot,1 - union category area / city area. Includes unmapped roads/water; not inferred category.,0
 signal_point_count,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
-signal_density_snapshot_km2,float64,enhanced,unique signal points/city km2,LADOT Signal Locations current snapshot,0.1m coordinate deduplication. Does not establish historic installation coverage.,0
+signal_density_snapshot_km2,float64,enhanced,unique signal points/city km2,LADOT mixed signal and speed-feedback locations snapshot,"0.1m coordinate deduplication; metadata includes speed feedback signs and has no facility-type field. Mixed facility proxy, not audited pure historic signal intersections.",0
 traffic_report_location_count,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
 traffic_volume_2017_2021,float64,excluded_by_user_design,daily-equivalent vehicles/day,required future authorized counts,Retained as an audit field only. User temporarily excluded traffic volume; not passed to either RF pipeline.,1473
 traffic_volume_observed,bool,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0

@@ -1,0 +1,28 @@
+{
+  "selection_rule_file": "02_config/spatial_extension_v5.json",
+  "selected_framework": "direct_position_RF",
+  "selected_model_id": "17_ensemble",
+  "development_validation_metrics": {
+    "model_id": "17_ensemble",
+    "candidate": 17,
+    "seed_mode": "ensemble",
+    "rmse": 91.3806663917048,
+    "mae": 56.864559509114976,
+    "r2": 0.9052521273249774,
+    "bias": 7.671419314657616,
+    "moran_i": 0.1246776654871149
+  },
+  "original_validation_metrics": {
+    "model_id": "0_single",
+    "candidate": 0,
+    "seed_mode": "single",
+    "rmse": 129.4243819008549,
+    "mae": 69.35203837170539,
+    "r2": 0.8099389932963869,
+    "bias": -4.645238632395795,
+    "moran_i": 0.285108788886046
+  },
+  "position_only_residual_branch": "did not pass predeclared buffered-CV gate; retained its original reference",
+  "legacy_metrics_used_in_this_aggregate_selection": false,
+  "created_utc": "2026-11-08T05:32:44.706723+00:00"
+}

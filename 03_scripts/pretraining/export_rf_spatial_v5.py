@@ -1,0 +1,56 @@
+"""Independent verification, paired uncertainty and spatial-extension result artifacts."""
+import sys,pathlib,json,hashlib
+ROOT=pathlib.Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'.runtime'));sys.path.insert(0,str(ROOT/'03_scripts/pretraining'))
+import numpy as np,pandas as pd,geopandas as gpd,joblib
+from scipy.spatial import cKDTree
+from sklearn.metrics import mean_squared_error,mean_absolute_error,r2_score
+from pipeline_definition import feature_names
+from rf_spatial_model import SpatialCoverageForest
+from rf_fixed_blend import FixedForestBlend
+import matplotlib;matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib.colors import TwoSlopeNorm
+O=ROOT/'04_outputs/rf_spatial_v5';M=ROOT/'05_models/rf_spatial_v5';F=O/'figures';F.mkdir(exist_ok=True);src=ROOT/'01_data/processed/pretraining_1km/model_table_1000_final.csv';df=pd.read_csv(src);tr=df[df.eligible&(df.split=='train')];va=df[df.eligible&(df.split=='validation')];dev=pd.concat([tr,va],ignore_index=True);test=df[df.eligible&(df.split=='test')];basecols=feature_names('enhanced');cols=basecols+['cx','cy'];pr=json.loads((O/'protocol.json').read_text());assert hashlib.sha256(src.read_bytes()).hexdigest()==pr['input_sha256'];ev=json.loads((O/'evaluation.json').read_text());folds=json.loads((O/'cv_fold_ids.json').read_text());pos=joblib.load(M/'spatial_frozen_rf.joblib');ab=joblib.load(M/'matched_position_False_rf.joblib');match=joblib.load(M/'matched_position_True_rf.joblib');old=joblib.load(ROOT/'05_models/rf_project_v1/enhanced_optimized_rf.joblib');blend=joblib.load(ROOT/'05_models/rf_stability_blend_v4b/blend_frozen.joblib')
+for fold in folds:
+ a=df[df.grid_id.isin(fold['buffered_fit_ids'])];b=df[df.grid_id.isin(fold['eval_ids'])];assert set(a.split)=={'train'}and set(b.split)=={'train'};assert not(set(a.block_id)&set(b.block_id));dx=np.maximum(np.abs(a.cx.to_numpy()[:,None]-b.cx.to_numpy()[None,:])-1000,0);dy=np.maximum(np.abs(a.cy.to_numpy()[:,None]-b.cy.to_numpy()[None,:])-1000,0);assert np.sqrt(dx*dx+dy*dy).min()>1000
+z=pos._X(dev[cols]);assert np.allclose(z.position_east_km,(dev.cx-345000)/1000);assert np.allclose(z.position_north_km,(dev.cy-3730000)/1000);assert not any(c.startswith('count_')or c in ['grid_id','split','block_id','hin_length_m']for c in z.columns)
+for m in [pos,ab]:
+ for forest in m.forests_:assert all(np.isclose(t.tree_.weighted_n_node_samples[0],886)for t in forest.named_steps['rf'].estimators_)
+assert np.allclose(match.predict(df[cols]),pos.predict(df[cols]));y=test.count_2017_2021.to_numpy();models={'Original V1':(old,basecols),'V4b blend':(blend,basecols),'Matched no XY':(ab,cols),'Spatial V5':(pos,cols)};p={k:m.predict(test[c])for k,(m,c)in models.items()};allp={k:m.predict(df[c])for k,(m,c)in models.items()};rows=[];morans={}
+def moran(res,k,perms=9999):
+ z=res-res.mean();n=len(z);nn=cKDTree(test[['cx','cy']]).query(test[['cx','cy']],k=k+1)[1][:,1:];den=z@z;I=float((z[:,None]*z[nn]).sum()/k/den);rng=np.random.default_rng(575);null=[]
+ for _ in range(perms):
+  q=rng.permutation(z);null.append((q[:,None]*q[nn]).sum()/k/den)
+ return {'I':I,'p_two_sided':float((1+np.sum(abs(np.array(null)+1/(n-1))>=abs(I+1/(n-1))))/(perms+1)),'permutations':perms,'k':k}
+for name,pp in p.items():
+ assert np.isfinite(pp).all()and(pp>=0).all();r=y-pp;morans[name]={str(k):moran(r,k)for k in [4,8,12]};rows.append({'model':name,'rmse':float(np.sqrt(mean_squared_error(y,pp))),'mae':float(mean_absolute_error(y,pp)),'r2':float(r2_score(y,pp)),'bias':float(np.mean(pp-y)),'moran_i':morans[name]['8']['I'],'p':morans[name]['8']['p_two_sided'],'median_abs_error':float(np.median(abs(r))),'p90_abs_error':float(np.quantile(abs(r),.9))})
+score=pd.DataFrame(rows);score.to_csv(O/'comparison_metrics.csv',index=False);assert np.isclose(score.iloc[-1].rmse,ev['spatial_v5']['legacy_evaluation']['rmse']);(O/'moran_sensitivity.json').write_text(json.dumps(morans,indent=2));rng=np.random.default_rng(575);groups=test.block_id.unique();by={g:np.flatnonzero(test.block_id.to_numpy()==g)for g in groups};boot=[]
+for _ in range(2000):
+ ix=np.concatenate([by[g]for g in rng.choice(groups,len(groups),replace=True)]);new=p['Spatial V5'][ix];r={}
+ for name in ['Original V1','Matched no XY']:
+  pp=p[name][ix];r[name+'_delta_rmse']=float(np.sqrt(np.mean((y[ix]-new)**2))-np.sqrt(np.mean((y[ix]-pp)**2)));r[name+'_delta_mae']=float(np.mean(abs(y[ix]-new))-np.mean(abs(y[ix]-pp)))
+ boot.append(r)
+b=pd.DataFrame(boot);b.to_csv(O/'paired_block_bootstrap.csv',index=False);ci={c:{'lower':float(b[c].quantile(.025)),'upper':float(b[c].quantile(.975))}for c in b};(O/'bootstrap_intervals.json').write_text(json.dumps(ci,indent=2));sub=[]
+for label,mask in [('all_missing_landuse',test.filter(like='landuse_share_').isna().all(axis=1).to_numpy()),('landuse_observed',~test.filter(like='landuse_share_').isna().all(axis=1).to_numpy())]:
+ for name,pp in p.items():sub.append({'group':label,'n':int(mask.sum()),'model':name,'rmse':float(np.sqrt(np.mean((y[mask]-pp[mask])**2))),'mae':float(np.mean(abs(y[mask]-pp[mask])))})
+pd.DataFrame(sub).to_csv(O/'coverage_subgroup_diagnostics.csv',index=False)
+# GIS and complete-vs-heldout role labels.
+grid=gpd.read_file(ROOT/'01_data/processed/pretraining_1km/grid_1000.gpkg');g=grid[['grid_id','geometry']].merge(df,on='grid_id',validate='one_to_one');g['v1_pred']=allp['Original V1'];g['spatial_pred']=allp['Spatial V5'];g['v1_resid']=g.count_2017_2021-g.v1_pred;g['spatial_resid']=g.count_2017_2021-g.spatial_pred;g['prediction_role']=np.where(~g.eligible,'boundary_extrapolation',np.where(g.split=='test','legacy_reuse','development_fit'));g.to_file(O/'spatial_predictions_1000.gpkg',driver='GPKG');g.to_crs(4326).to_file(O/'spatial_predictions_1000.geojson',driver='GeoJSON');g.drop(columns='geometry').to_csv(O/'spatial_predictions_1000.csv',index=False);plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'savefig.dpi':180})
+fig,axes=plt.subplots(1,3,figsize=(11,3.7))
+for ax,c,title in zip(axes,['rmse','mae','moran_i'],['RMSE','MAE','Residual Moran I']):
+ ax.bar(score.model,score[c],color=['#537aa3','#a0bfa7','#c4b5a5','#bf6738']);ax.set_title(title);ax.tick_params(axis='x',rotation=15,labelsize=8);ax.set_ylim(0,score[c].max()*1.18)
+ for i,v in enumerate(score[c]):ax.text(i,v,f'{v:.3f}'if c=='moran_i'else f'{v:.2f}',ha='center',va='bottom',fontsize=9)
+fig.suptitle('Exploratory legacy-region reuse | error magnitude improves, clustering remains');fig.tight_layout();fig.savefig(F/'01_metric_comparison.png',bbox_inches='tight');plt.close(fig)
+e=g[g.eligible];t=e[e.split=='test'];limit=max(t.v1_resid.abs().max(),t.spatial_resid.abs().max());fig,axes=plt.subplots(1,2,figsize=(10,7))
+for ax,col,title in zip(axes,['v1_resid','spatial_resid'],['Original RF residuals','Position-augmented RF residuals']):g.plot(ax=ax,color='#eeeeee');t.plot(column=col,ax=ax,cmap='RdBu_r',norm=TwoSlopeNorm(vmin=-limit,vcenter=0,vmax=limit),legend=True,legend_kwds={'shrink':.4});ax.set_axis_off();ax.set_title(title)
+fig.suptitle('Same legacy evaluation cells and residual scale | observed minus predicted');fig.tight_layout(rect=[0,0,1,.94]);fig.savefig(F/'02_legacy_residual_comparison.png',bbox_inches='tight');plt.close(fig)
+fig,axes=plt.subplots(1,3,figsize=(12,7));maxcount=max(e.count_2017_2021.max(),e.spatial_pred.max());rr=e.spatial_resid.abs().max()
+for ax,col,title in zip(axes,['count_2017_2021','spatial_pred','spatial_resid'],['Observed historical count','Spatial RF prediction','Observed minus predicted']):
+ g.plot(ax=ax,color='#eeeeee');kw={'cmap':'RdBu_r','norm':TwoSlopeNorm(vmin=-rr,vcenter=0,vmax=rr)}if col=='spatial_resid'else{'cmap':'YlOrRd','vmin':0,'vmax':maxcount};e.plot(column=col,ax=ax,legend=True,legend_kwds={'shrink':.4},**kw);t.boundary.plot(ax=ax,color='black',linewidth=.2);ax.set_axis_off();ax.set_title(title,fontsize=11)
+fig.suptitle('Full city eligible cells | black outlines = legacy evaluation\nOther cells are development fitted predictions, not independent evaluation',fontsize=11);fig.tight_layout(rect=[0,0,1,.92]);fig.savefig(F/'03_full_city_comparison.png',bbox_inches='tight');plt.close(fig)
+ablation=pd.read_csv(O/'matched_coordinate_ablation.csv');fig,axes=plt.subplots(1,3,figsize=(11,3.6))
+for ax,mode,title in zip(axes,['buffered_training_OOF','validation','legacy_reuse'],['1 km-gap training OOF','Validation','Exploratory legacy reuse']):
+ a=ablation[ablation.evaluation==mode];ax.bar(['No XY','With XY'],a.rmse,color=['#537aa3','#bf6738']);ax.set_title(title);ax.set_ylabel('RMSE');ax.set_ylim(0,a.rmse.max()*1.15)
+ for i,v in enumerate(a.rmse):ax.text(i,v,f'{v:.2f}',ha='center',va='bottom')
+fig.suptitle('Matched parameters, scaling and seeds | coordinate effect varies by evaluation');fig.tight_layout();fig.savefig(F/'04_coordinate_ablation.png',bbox_inches='tight');plt.close(fig)
+contract={'model':'spatial_frozen_rf.joblib','features':cols,'position_crs':'EPSG26911, meters','grid_side_m':1000,'origin_m':[345000,3730000],'transformed_position_features':['position_east_km','position_north_km'],'original_plan_extension_user_authorized':True,'RF_seed_ensemble':[7,42,99],'tree_count_per_seed':500,'target':'recorded2017–2021collision count, not future risk','caveat':'Location trend may exploit local interpolation; matched bufferedCV and north holdout did not improve. Needs fresh external validation.'};(M/'input_contract.json').write_text(json.dumps(contract,indent=2));verification={'status':'pass','source_hash_unchanged':True,'fiveCVfolds_train_only_and_blocks_disjoint':True,'all_buffered_full_grid_polygon_gaps_gt1000m':True,'position_features_equal_fixed_EPSG26911_grid_centers':True,'no_target_HIN_or_id_feature':True,'three_forests_each_fit886development_rows':True,'matched_ablation_position_model_reproduces_selected':True,'metrics_reloaded_match':True,'GIS1473rows_count230536':bool(len(g)==1473 and g.count_2017_2021.sum()==230536),'legacy_comparison_exploratory':True};(O/'verification.json').write_text(json.dumps(verification,indent=2));print(score.to_string(index=False));print(json.dumps(ci,indent=2));print('VERIFIED')

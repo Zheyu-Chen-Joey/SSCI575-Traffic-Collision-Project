@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "source_hash_unchanged": true,
+  "fiveCVfolds_train_only_and_blocks_disjoint": true,
+  "all_buffered_full_grid_polygon_gaps_gt1000m": true,
+  "position_features_equal_fixed_EPSG26911_grid_centers": true,
+  "no_target_HIN_or_id_feature": true,
+  "three_forests_each_fit886development_rows": true,
+  "matched_ablation_position_model_reproduces_selected": true,
+  "metrics_reloaded_match": true,
+  "GIS1473rows_count230536": true,
+  "legacy_comparison_exploratory": true
+}
