@@ -1,0 +1,30 @@
+{
+  "decision": {
+    "candidate": {
+      "candidate": 4,
+      "bandwidth_m": 10000.0,
+      "strength": 0.75
+    },
+    "development_gate_pass": true,
+    "frozen_utc": "2026-11-08T06:30:46.306499+00:00",
+    "legacy_parameters_fitted": false
+  },
+  "original": {
+    "rmse": 92.89041345528099,
+    "mae": 59.855464752557246,
+    "r2": 0.7589052943945258,
+    "bias": 9.47231530856152
+  },
+  "candidate": {
+    "rmse": 83.50627461876863,
+    "mae": 54.57201386735293,
+    "r2": 0.8051573173864832,
+    "bias": 10.40245063564282
+  },
+  "original_moran": 0.3317333457573139,
+  "candidate_moran": 0.31336456947350627,
+  "eligible_for_exploratory_promotion": true,
+  "legacy_reuse_not_independent": true,
+  "candidate_private_path": null,
+  "retained_model_path": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib"
+}

@@ -1,5 +1,5 @@
 {
-  "version": "spatial_RF_v5",
+  "version": "best_local_weighted_spatial_RF",
   "created_utc": "2026-11-08T05:49:45.702009+00:00",
   "report": "06_reports/RF_Spatial_Extension_v5.docx",
   "model": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib",
@@ -8,25 +8,36 @@
   "evaluation_nature": "exploratory legacy-region reuse; no new independent validation",
   "performance": {
     "legacy_evaluation": {
-      "rmse": 92.89041345528099,
-      "mae": 59.855464752557246,
-      "r2": 0.7589052943945258,
-      "bias": 9.47231530856152
+      "rmse": 83.50627461876863,
+      "mae": 54.57201386735293,
+      "r2": 0.8051573173864832,
+      "bias": 10.40245063564282
     },
     "moran": {
-      "I": 0.3317333457573139,
-      "k": 8,
+      "I": 0.31336456947350627,
       "p_two_sided": 0.0001,
-      "permutations": 9999
+      "permutations": 9999,
+      "k": 8
     }
   },
   "limits": [
-    "residual Moran not improved",
-    "matched-coordinate bufferedCV worsens",
-    "east improves and north slightly worsens"
+    "legacy region repeatedly reused and referenced in promotion",
+    "residual Moran remains significant",
+    "north/east contiguous geographic checks worsen"
   ],
   "original_plan_v1_preserved": false,
   "retention": "best model artifact only; historical model artifacts removed, references retained as frozen predictions",
   "historical_versions_available_in_git": true,
-  "cleanup_manifest": "00_admin/cleanup_manifest.json"
+  "cleanup_manifest": "00_admin/cleanup_manifest.json",
+  "method": "25pct global plus75pct Gaussian-weighted local RF; 10km bandwidth",
+  "updated_utc": "2026-11-08T06:43:06.344424+00:00",
+  "latest_refinement": {
+    "date": "2026-11-07",
+    "candidate_count": 37,
+    "promoted": false,
+    "reason": "continuous north/east geographic stability gate failed",
+    "audit": "06_reports/RF_Refinement_20261107.txt",
+    "evidence": "04_outputs/rf_spatial_v5/refinement_20261107",
+    "legacy_evaluated": false
+  }
 }

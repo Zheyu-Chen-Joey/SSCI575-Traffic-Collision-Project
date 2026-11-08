@@ -49,9 +49,18 @@
       "cy"
     ],
     "crs": "EPSG26911",
-    "factory": "rf_spatial_model.SpatialCoverageForest",
+    "factory": "rf_local_weighted_model.LocalWeightedSpatialForest",
     "protocol": "02_config/spatial_extension_v5.json",
     "model": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib",
-    "interpretation": "spatial trend extension, not causal effect; legacy evaluation exploratory; buffered coordinate ablation not uniformly improved"
+    "interpretation": "spatial trend extension, not causal effect; legacy evaluation exploratory; buffered coordinate ablation not uniformly improved",
+    "local_weighting_settings": {
+      "bandwidth_m": 10000.0,
+      "anchor_spacing_m": 20000.0,
+      "local_strength": 0.75,
+      "local_trees": 200,
+      "min_effective_samples": 40,
+      "nearest_anchors": 3
+    },
+    "current_optimization_request": "User requested reducing actual residual magnitudes, with unchanged color scales"
   }
 }

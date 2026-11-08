@@ -1,0 +1,9 @@
+{
+  "verified_utc": "2026-11-08T07:00:50.044369+00:00",
+  "champion_sha256_unchanged": "06d3a830d589f96e4c37bacc52646424fb6f61d97c8460172edfc461f3b81ea1",
+  "input_sha256_unchanged": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "crashes_conserved": 230536,
+  "production_model_count": 1,
+  "legacy_region_not_evaluated_this_round": true,
+  "promoted": false
+}

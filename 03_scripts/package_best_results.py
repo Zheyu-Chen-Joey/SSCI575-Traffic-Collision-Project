@@ -5,9 +5,11 @@ R=Path(__file__).resolve().parents[1];O=R/'04_outputs/rf_spatial_v5';M=R/'05_mod
 clean=R/'00_admin/cleanup_manifest.json';c=json.loads(clean.read_text(encoding='utf-8-sig'));c['post_cleanup_checks']['final_report_rendered_pages']=5;c['post_cleanup_checks']['obsolete_QA_and_logs_removed']=True;clean.write_text(json.dumps(c,indent=2),encoding='utf-8')
 files=[R/p for p in ['README.md','requirements.txt','00_admin/latest_results.json','00_admin/cleanup_manifest.json','02_config/feature_design.json','02_config/spatial_extension_v5.json','06_reports/RF_Spatial_Extension_v5.docx','06_reports/grid_decision.md','06_reports/Signal_Source_Semantics_Clarification.txt','06_reports/presentations/SSCI575_Presentation2_Downloads_Minimal_Final.pptx','06_reports/SSCI575_Presentation2_Speaking_Script.docx','03_scripts/package_best_results.py','03_scripts/create_rf_spatial_v5_report.py','01_data/processed/pretraining_1km/model_table_1000_final.csv','01_data/processed/pretraining_1km/grid_1000.gpkg']]
 for folder in [M,O]:files +=[p for p in folder.rglob('*')if p.is_file()and p.suffix!='.log'and '__pycache__'not in p.parts]
-files +=[R/'03_scripts/pretraining'/name for name in ['pipeline_definition.py','rf_coverage_scaled_model.py','rf_spatial_model.py','predict_spatial_rf_v5.py','train_best_spatial_rf.py','export_rf_spatial_v5.py']]
+files +=[R/'03_scripts/pretraining'/name for name in ['pipeline_definition.py','rf_coverage_scaled_model.py','rf_spatial_model.py','rf_local_weighted_model.py','predict_spatial_rf_v5.py','train_best_spatial_rf.py','export_rf_spatial_v5.py']]
+files += [R/'06_reports/RF_Refinement_20261107.txt']
+files += [R/'03_scripts/pretraining'/name for name in ['rf_refined_local_model.py','refine_local_rf.py','finalize_refinement_audit.py']]
 files=sorted(set(files));assert all(p.is_file()for p in files)
-for target in re.findall(r'\]\(([^)]+)\)',(R/'README.md').read_text()):
+for target in re.findall(r'\]\(([^)]+)\)',(R/'README.md').read_text(encoding='utf-8')):
  if not target.startswith(('http:','https:','#')):assert (R/target).exists(),target
 manifest={'version':'spatial_RF_v5_best_only','generated_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'trained_model_count':1,'retention':'selected model plus data, necessary verification and frozen references; original raw snapshots remain in full repository','files':[{'path':p.relative_to(R).as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}for p in files]};mp=R/'00_admin/project_result_manifest.json';mp.write_text(json.dumps(manifest,indent=2),encoding='utf-8');dest=R/'06_reports/SSCI575_Project_Results.zip'
 with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED,compresslevel=6)as z:

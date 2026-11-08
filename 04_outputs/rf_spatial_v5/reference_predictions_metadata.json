@@ -1,6 +1,6 @@
 {
   "created_utc": "2026-11-08T06:01:13.678059+00:00",
-  "sha256": "2fae74e2d83fd229b11b6b872a2c71578e8abd4052018889dee89b5bd2f72b46",
+  "sha256": "eeba9c3c45a3b24c534d165bfe831ab17b38a0f52f8622580eb6dd5014f0c423",
   "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
   "rows": 1473,
   "references": [
@@ -21,6 +21,12 @@
       "original_model_path": "05_models/rf_spatial_v5/matched_position_False_rf.joblib",
       "original_model_sha256": "1c58b1c03c66d686794f15b12edf4a53eac2f850353ebb6fe0c11164d8540efe",
       "role": "frozen historical reference predictions; serialized candidate removed during best-only cleanup"
+    },
+    {
+      "label": "Previous Spatial V5",
+      "original_model_path": "05_models/rf_spatial_v5/spatial_frozen_rf.joblib before local RF promotion",
+      "original_model_sha256": "e0d0cb8433001ad548ff7d068d0d6d64d57f872d5edca4c26733ecd6f26bf6d8",
+      "role": "frozen previous champion; only new best artifact retained"
     }
   ]
 }

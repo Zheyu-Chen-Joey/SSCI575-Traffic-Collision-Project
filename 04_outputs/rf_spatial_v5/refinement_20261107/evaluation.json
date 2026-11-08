@@ -1,0 +1,22 @@
+{
+  "decision": {
+    "candidate": {
+      "candidate": 3,
+      "setting": 0,
+      "strength": 1.0
+    },
+    "settings": {
+      "bandwidth_m": 5000,
+      "anchor_spacing_m": 10000,
+      "local_leaf": 5,
+      "local_depth": 16,
+      "local_features": 0.5,
+      "support_attenuation": true
+    },
+    "development_validation_pass": true,
+    "frozen_utc": "2026-11-08T06:59:17.525095+00:00"
+  },
+  "geographic_gate_pass": false,
+  "promote": false,
+  "legacy_reuse_exploratory": true
+}

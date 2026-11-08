@@ -8,6 +8,8 @@
   "three_forests_each_fit886development_rows": true,
   "historical_comparisons_recomputed_from_frozen_hash_verified_predictions": true,
   "metrics_reloaded_match": true,
+  "local_weighted_model_training_rows": 886,
+  "local_anchor_count": 10,
   "GIS1473rows_count230536": true,
   "legacy_comparison_exploratory": true
 }

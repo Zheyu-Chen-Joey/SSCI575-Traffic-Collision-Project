@@ -8,5 +8,10 @@
   ],
   "aggregate_recommendation_rule": "Among each framework frozen developmental choice, require validation RMSE,MAE andabsMoran no worse than original, withRMSE strict improvement. Choose minimum validation RMSE/anchorRMSE+0.15absI/absAnchorI. Do not read legacy metric into selection.",
   "legacy_evaluation_status": "Previously observed region, all v5 results exploratory. Do not claim new independent confirmation.",
-  "created_utc": "2026-11-08T05:31:51.869508+00:00"
+  "created_utc": "2026-11-08T05:31:51.869508+00:00",
+  "current_local_weighting_extension": {
+    "protocol": "04_outputs/rf_spatial_v5/local_rf_protocol.json",
+    "frozen_decision": "04_outputs/rf_spatial_v5/local_rf_frozen_decision.json",
+    "reuse_acceptance": "Frozen candidate retained only after lower legacy RMSE andMAE; adaptive exploratory promotion, not independent confirmation"
+  }
 }

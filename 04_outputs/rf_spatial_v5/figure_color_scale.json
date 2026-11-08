@@ -1,0 +1,7 @@
+{
+  "legacy_residual_abs_limit": 341.457935510193,
+  "full_city_residual_abs_limit": 517.8222287300841,
+  "residual_definition": "observed minus predicted",
+  "before_after_identical_bounds": true,
+  "no_out_of_bounds_residuals_clipped_in_current_comparison": true
+}

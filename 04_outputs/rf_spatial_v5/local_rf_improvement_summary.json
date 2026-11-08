@@ -1,0 +1,8 @@
+{
+  "legacy_cells": 227,
+  "improved_cells": 144,
+  "worsened_cells": 83,
+  "improved_fraction": 0.6343612334801763,
+  "rmse_reduction_pct": 10.102376001405188,
+  "mae_reduction_pct": 8.82701505542748
+}

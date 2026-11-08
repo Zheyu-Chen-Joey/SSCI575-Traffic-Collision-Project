@@ -1,0 +1,10 @@
+{
+  "candidate": {
+    "candidate": 4,
+    "bandwidth_m": 10000.0,
+    "strength": 0.75
+  },
+  "development_gate_pass": true,
+  "frozen_utc": "2026-11-08T06:30:46.306499+00:00",
+  "legacy_parameters_fitted": false
+}

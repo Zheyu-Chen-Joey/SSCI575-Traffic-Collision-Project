@@ -1,0 +1,126 @@
+{
+  "created_utc": "2026-11-08T06:55:43.773474+00:00",
+  "reference_sha256": "06d3a830d589f96e4c37bacc52646424fb6f61d97c8460172edfc461f3b81ea1",
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "global_settings": {
+    "landuse_mode": "raw",
+    "scale_mode": "signal_sqrt",
+    "rf_params": {
+      "rf__n_estimators": 500,
+      "rf__min_samples_split": 10,
+      "rf__min_samples_leaf": 5,
+      "rf__max_features": 0.5,
+      "rf__max_depth": 16,
+      "rf__criterion": "squared_error"
+    },
+    "include_position": true
+  },
+  "settings": [
+    {
+      "bandwidth_m": 5000,
+      "anchor_spacing_m": 10000,
+      "local_leaf": 5,
+      "local_depth": 16,
+      "local_features": 0.5,
+      "support_attenuation": true
+    },
+    {
+      "bandwidth_m": 7500,
+      "anchor_spacing_m": 10000,
+      "local_leaf": 5,
+      "local_depth": 16,
+      "local_features": 0.5,
+      "support_attenuation": true
+    },
+    {
+      "bandwidth_m": 10000,
+      "anchor_spacing_m": 10000,
+      "local_leaf": 5,
+      "local_depth": 16,
+      "local_features": 0.5,
+      "support_attenuation": true
+    },
+    {
+      "bandwidth_m": 7500,
+      "anchor_spacing_m": 15000,
+      "local_leaf": 5,
+      "local_depth": 16,
+      "local_features": 0.5,
+      "support_attenuation": true
+    },
+    {
+      "bandwidth_m": 10000,
+      "anchor_spacing_m": 15000,
+      "local_leaf": 5,
+      "local_depth": 16,
+      "local_features": 0.5,
+      "support_attenuation": true
+    },
+    {
+      "bandwidth_m": 10000,
+      "anchor_spacing_m": 20000,
+      "local_leaf": 5,
+      "local_depth": 16,
+      "local_features": 0.5,
+      "support_attenuation": true
+    },
+    {
+      "support_attenuation": true,
+      "local_leaf": 3,
+      "local_features": 0.8,
+      "local_depth": 12,
+      "bandwidth_m": 15000,
+      "anchor_spacing_m": 10000
+    },
+    {
+      "support_attenuation": true,
+      "local_leaf": 8,
+      "local_features": 0.5,
+      "local_depth": null,
+      "bandwidth_m": 10000,
+      "anchor_spacing_m": 10000
+    },
+    {
+      "support_attenuation": true,
+      "local_leaf": 8,
+      "local_features": 0.5,
+      "local_depth": 12,
+      "bandwidth_m": 15000,
+      "anchor_spacing_m": 15000
+    },
+    {
+      "support_attenuation": false,
+      "local_leaf": 5,
+      "local_features": 1.0,
+      "local_depth": 16,
+      "bandwidth_m": 10000,
+      "anchor_spacing_m": 10000
+    },
+    {
+      "support_attenuation": true,
+      "local_leaf": 3,
+      "local_features": 1.0,
+      "local_depth": null,
+      "bandwidth_m": 10000,
+      "anchor_spacing_m": 10000
+    },
+    {
+      "support_attenuation": false,
+      "local_leaf": 8,
+      "local_features": 1.0,
+      "local_depth": 16,
+      "bandwidth_m": 10000,
+      "anchor_spacing_m": 10000
+    }
+  ],
+  "strengths": [
+    0.5,
+    0.75,
+    1.0
+  ],
+  "selection": "5fold recorded1km-square-gap CV on train720. Qualify meanRMSE<=1.005champion,MAE<=1.02champion; shortlist4 lowestRMSE. Validation must lowerRMSE andMAE; choose minRMSE. Frozen winner must have mean normalized north/east dev-holdout RMSE andMAE<=1.01champion before legacy evaluation.",
+  "support": "attenuate local effect only beyond nearest training center5km, Gaussian decay5km; uses coordinates only, no observed neighbor outcome as prediction input",
+  "legacy_promotion": "exploratory reused region; frozen candidate must lowerRMSE andMAE and not worsen p90abs error by>2pct to replace champion",
+  "model_retention": "only champion production artifact retained; candidates temporary",
+  "no_plot_manipulation": "same legacy and full-city residual bounds; no labels removed, no residual smoothing"
+}

@@ -38,5 +38,28 @@
   ],
   "tree_count_per_seed": 500,
   "target": "recorded2017\u20132021collision count, not future risk",
-  "caveat": "Location trend may exploit local interpolation; matched bufferedCV and north holdout did not improve. Needs fresh external validation."
+  "caveat": "Legacy evaluation reused; local version improves interpolation errors but geographic holdouts worsen; requires fresh confirmation.",
+  "model_class": "rf_local_weighted_model.LocalWeightedSpatialForest",
+  "model_version": "local_weighted_RF_v6",
+  "local_anchor_count": 10,
+  "local_effective_sample_sizes": [
+    235.08790209734792,
+    424.6181192559641,
+    274.8777791555725,
+    94.98729895565668,
+    316.49259120065886,
+    564.2830748078395,
+    255.25550753740723,
+    79.98933430176587,
+    200.92911885724942,
+    182.0950158434563
+  ],
+  "local_weighting_settings": {
+    "bandwidth_m": 10000.0,
+    "anchor_spacing_m": 20000.0,
+    "local_strength": 0.75,
+    "local_trees": 200,
+    "min_effective_samples": 40,
+    "nearest_anchors": 3
+  }
 }

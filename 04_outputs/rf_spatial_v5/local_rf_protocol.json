@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-11-08T06:30:05.323361+00:00",
+  "purpose": "reduce actual absolute count residuals; color scale fixed, no residual smoothing",
+  "input_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "features": [
+    "road_density_km_per_km2",
+    "intersection_density_km2",
+    "population_density_km2",
+    "landuse_share_residential",
+    "landuse_share_commercial",
+    "landuse_share_industrial",
+    "landuse_share_open_space_public_facilities",
+    "landuse_share_lax_airport",
+    "landuse_share_port_of_la",
+    "landuse_share_parking",
+    "landuse_uncovered_fraction",
+    "road_sinuosity_length_weighted",
+    "freeway_share_functional",
+    "arterial_share_functional",
+    "signal_density_snapshot_km2",
+    "road_type_dominant",
+    "cx",
+    "cy"
+  ],
+  "reference_model_sha256": "e0d0cb8433001ad548ff7d068d0d6d64d57f872d5edca4c26733ecd6f26bf6d8",
+  "settings": {
+    "landuse_mode": "raw",
+    "scale_mode": "signal_sqrt",
+    "rf_params": {
+      "rf__n_estimators": 500,
+      "rf__min_samples_split": 10,
+      "rf__min_samples_leaf": 5,
+      "rf__max_features": 0.5,
+      "rf__max_depth": 16,
+      "rf__criterion": "squared_error"
+    },
+    "include_position": true
+  },
+  "seeds": [
+    7,
+    42,
+    99
+  ],
+  "bandwidth_m": [
+    10000.0,
+    20000.0,
+    35000.0
+  ],
+  "local_strength": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "anchor_spacing_m": 20000,
+  "local_tree_count": 200,
+  "min_kernel_effective_sample_size": 40,
+  "prediction": "fixedGaussian gating of3nearest occupied training-derived anchors; weightedRF labels only insidefit; no observed neighbor labels as inputs",
+  "selection": "Original train720 only; reuse recorded5fold IDs with actual square gap>1000m. Qualify mean bufferedRMSE<=anchor andMAE<=1.02anchor. Shortlist4 lowestRMSE. Validation166must improveRMSE andMAE; choose minimumRMSE thenMAE. Freeze before legacy reuse. Moran diagnostic, not direct color objective.",
+  "legacy_status": "previously seen region; candidate direction and promotion adaptive, no independent confirmation",
+  "promotion_policy": "only replace production champion if development gate passes and frozen candidate also has lower legacy RMSE andMAE; this acceptance reuses old evaluation, explicitly exploratory",
+  "one_model_retention": "candidate persisted only under privateQA until verified; nonwinning models not retained"
+}
