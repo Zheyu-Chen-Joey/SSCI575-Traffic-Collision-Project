@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "reloaded_model_metrics_match": true,
+  "v1_anchor_reproduces_frozen_v1": true,
+  "input_hash_unchanged": true,
+  "development_fit_rows": 886,
+  "legacy_test_not_fit": true,
+  "legacy_test_is_not_new_independent_validation": true,
+  "grid_rows": 1473,
+  "selected_candidate": 2
+}

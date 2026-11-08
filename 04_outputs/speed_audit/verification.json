@@ -1,0 +1,10 @@
+{
+  "raw_hashes_verified": 20,
+  "unique_objects": 3058,
+  "city_features": 1809,
+  "coverage_failed": true,
+  "temporal_failed": true,
+  "selected_input_checks_passed": true,
+  "training_executed": false,
+  "ppt_inspected_slides": 12
+}

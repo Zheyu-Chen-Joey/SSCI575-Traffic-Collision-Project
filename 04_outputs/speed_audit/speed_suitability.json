@@ -1,0 +1,73 @@
+{
+  "source_url": "https://geo.dot.gov/server/rest/services/Hosted/fhwa__2022_speed_limit_study_results__all_states/FeatureServer/0",
+  "bbox_objects_downloaded": 3058,
+  "unique_object_ids_verified": true,
+  "city_source_features": 1809,
+  "city_source_line_km_summed": 767.2812076093952,
+  "source_type_counts": {
+    "HPMS": 1371,
+    "Imputed": 438
+  },
+  "speed_value_counts_native_units": {
+    "70": 1533,
+    "60": 86,
+    "55": 73,
+    "50": 67,
+    "65": 27,
+    "45": 23
+  },
+  "imputed_source_line_length_fraction": 0.27161031211059244,
+  "functional_class_counts": {
+    "1": 949,
+    "2": 619,
+    "3": 233,
+    "4": 7,
+    "7": 1
+  },
+  "coverage_main_reported_30m": {
+    "scenario": "reported_only",
+    "buffer_m": 30,
+    "road_length_denominator_km": 13764.620393276178,
+    "potentially_overlapping_road_km": 1648.5117926736402,
+    "city_motorized_road_coverage": 0.11976442107178742,
+    "train_cells_any_line_fraction": 0.275,
+    "train_cells_ge80pct_road_coverage_fraction": 0.002777777777777778
+  },
+  "coverage_broad_50m_including_publisher_imputed": {
+    "scenario": "reported_plus_publisher_imputed",
+    "buffer_m": 50,
+    "road_length_denominator_km": 13764.620393276178,
+    "potentially_overlapping_road_km": 1956.8128806457225,
+    "city_motorized_road_coverage": 0.14216250246912715,
+    "train_cells_any_line_fraction": 0.275,
+    "train_cells_ge80pct_road_coverage_fraction": 0.004166666666666667
+  },
+  "all_grid_any_reported_line_fraction": 0.28445349626612354,
+  "eligible_grid_any_reported_line_fraction": 0.29020664869721474,
+  "eligible_grid_native_speed_missing_fraction": 0.7097933513027853,
+  "temporal_audit": {
+    "record_year_distribution": {
+      "2020": 1809
+    },
+    "year_in_target_period": true,
+    "effective_date_fields_present": false,
+    "source_speed_observation_date_known": false,
+    "metadata_basis": "HPMS2020 linework,2022 study combines state-submitted HPMS/posted data; no individual speed effective dates.",
+    "period_alignment": "partial:2020 inventory year falls within study period, but2017\u20132021 speed-history consistency unverified",
+    "meets_admission_temporal_rule": false
+  },
+  "speed_unit_handling": "Native numeric values retained without unit conversion. Layer field metadata does not explicitly encode units. No numerical predictor adopted.",
+  "coverage_method_limit": "Buffered corridor intersection is potential road overlap, not verified road-link matching. Nearby parallel/local roads may be included. Coverage can differ by buffer and carriageway representation. NHS summed line length is not a city coverage ratio.",
+  "decision": {
+    "include_in_enhanced_model": false,
+    "status": "not_suitable_for_current_citywide_model",
+    "reasons": [
+      "Insufficient citywide motorized-road corridor coverage even under broad buffer scenario.",
+      "Most eligible grid cells do not have adequate road-length coverage.",
+      "2020 record year does not establish posted speed effective throughout2017\u20132021.",
+      "Publisher-imputed values are present and must not be treated as directly observed."
+    ],
+    "policy_path": "02_config/speed_admission_policy.json"
+  },
+  "training_executed": false
+}

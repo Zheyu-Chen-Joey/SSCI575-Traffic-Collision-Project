@@ -1,0 +1,13 @@
+feature,delta_rmse_mean,delta_rmse_std
+population_density_km2,79.31025242369016,11.12389377299952
+landuse_share_commercial,47.00870252215381,8.981046870582551
+landuse_uncovered_fraction,18.89434187771781,3.7341344748059786
+landuse_share_residential,15.671953855752843,3.0156220908103015
+road_density_km_per_km2,4.607705413449395,3.103058195997312
+intersection_density_km2,3.8632190460698452,1.3877643801393142
+landuse_share_industrial,0.6243736618393413,0.5534778976900115
+landuse_share_open_space_public_facilities,0.05793961923331352,0.4340326201414362
+landuse_share_lax_airport,0.0,0.0
+landuse_share_port_of_la,0.0,0.0
+landuse_share_parking,0.0,0.0
+road_type_dominant,-0.000371763825617677,0.00012118076283159474

@@ -1,0 +1,108 @@
+{
+  "retrieved_utc": "2026-11-08T02:15:53.030204+00:00",
+  "service_url": "https://geo.dot.gov/server/rest/services/Hosted/fhwa__2022_speed_limit_study_results__all_states/FeatureServer/0",
+  "requested_objects": 3058,
+  "received_unique_objects": 3058,
+  "files": [
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\layer_metadata.json",
+      "bytes": 10599,
+      "sha256": "1afbb99144c7fbf92d46cc3b9e9b50ef6a1554e6182ae761d0553afaea16f17a"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\query_definition.json",
+      "bytes": 274,
+      "sha256": "7291205ec83e884eb9493829b4986e50e1050a8e1bafca04671a9650857b6224"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\query_ids.json",
+      "bytes": 20999,
+      "sha256": "160a2cdab2d110a9ea08dc6f597f168c77d5f321df739fb47a3d98c6ca9e6473"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\service_metadata.json",
+      "bytes": 2451,
+      "sha256": "6b750f7d4f3460db96fdababfb8521b2608b4592f3a29430f22e1a7531a75e3f"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_00000.geojson",
+      "bytes": 170783,
+      "sha256": "9c437951ceb63a8d7643134a4fa9743829e60ba282802627995411f27070e4d0"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_00200.geojson",
+      "bytes": 199084,
+      "sha256": "52941bf8441861e62d9c69ccbef05ea769d44418c7c9e346d440d2c06b4c37c4"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_00400.geojson",
+      "bytes": 180056,
+      "sha256": "908efdbcca919edbbdc8476242837bb16ac6677bfcfbbf5e9c6b4bd315148f05"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_00600.geojson",
+      "bytes": 160126,
+      "sha256": "f4a931db6a2aab5a062280e4f4adb986c89c6945b8d177c41377060ed14c4df3"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_00800.geojson",
+      "bytes": 165474,
+      "sha256": "76e4fa40a505b86f888ce116a4825cfda05c80f9877f52f2b7ab7a58c940c459"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_01000.geojson",
+      "bytes": 172910,
+      "sha256": "8201b78345cb032dd36752b28ba861b75f6674f138b1c981a199da58acde37f2"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_01200.geojson",
+      "bytes": 181733,
+      "sha256": "b7380b469afbd931c39b02a37259d8fe32e933e49de0d3071086cef4b07fbcbd"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_01400.geojson",
+      "bytes": 186712,
+      "sha256": "e7b5d4bf4ebb15d6cff46c9f96eaa5c62b284ecb1da42810232a8435ebb9d885"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_01600.geojson",
+      "bytes": 225922,
+      "sha256": "6a77b42acc1fbab5c374cb86324f5d3c45fd2126e31bc4d77f8e843639098ed1"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_01800.geojson",
+      "bytes": 182894,
+      "sha256": "ddc5e9a9dfa33615d6b70e260c336d81075c90722a84d17f6d184ba19cee18cd"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_02000.geojson",
+      "bytes": 224825,
+      "sha256": "9ddb63b40b0b0d58f91df938cc7108bcac362447b20732313bdbd69cfd3d76e6"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_02200.geojson",
+      "bytes": 209092,
+      "sha256": "bdeb11829331042dc135e83ec57854452362fc348644ad386dc26bc20da9bf57"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_02400.geojson",
+      "bytes": 252957,
+      "sha256": "89151f871913645e3bbf6fa6588a8c92ffcc169ae54a0e2acc1ffdfce58af259"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_02600.geojson",
+      "bytes": 211447,
+      "sha256": "a405f423aa56a8163175c70c2e8719ffd29950b2cdfc93f168c93f3beff8c7ac"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_02800.geojson",
+      "bytes": 277297,
+      "sha256": "e838fa5b63fdbd7a714cfa7ed135aa6d6bd67e30417ef2641a0d99fb56062217"
+    },
+    {
+      "path": "01_data\\raw\\speed_audit_20261107\\speed_batch_03000.geojson",
+      "bytes": 72431,
+      "sha256": "819d82f38fce93653e86e24804a5d31ab108778382a64fb808fc561cd51ee2aa"
+    }
+  ]
+}

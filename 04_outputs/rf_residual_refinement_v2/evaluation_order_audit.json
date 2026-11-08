@@ -1,0 +1,8 @@
+{
+  "final_development_order": "pd.concat([train,validation],ignore_index=True), identical to v1",
+  "reason": "RF bootstrap depends on row ordering even when training row set is unchanged. Independent anchor reproduction detected ordering mismatch.",
+  "selection_changed": false,
+  "parameters_changed": false,
+  "corrected_anchor_reproduces_v1": true,
+  "legacy_test_after_correction_is_exploratory": true
+}

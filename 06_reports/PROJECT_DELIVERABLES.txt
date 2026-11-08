@@ -1,0 +1,33 @@
+SSCI575 最终项目交付与操作说明
+
+1 先读报告
+06_reports/SSCI575_Final_Project_Report.docx：研究设计、来源、参数、初始/优化比较、空间残差、重要性、稳定性、局限及复现。
+
+2 推荐模型
+05_models/rf_project_v1/enhanced_optimized_rf.joblib
+RF500树，深度8，叶最少5，max_features0.7，平方误差，随机种子42。含训练内插补及编码。只对本项目同定义的16个聚合字段预测；joblib需使用项目记录的依赖版本。目标是历史2017–2021公开记录数。
+同目录保留两套初始/优化最终模型、仅训练区拟合的解释模型和四年目标敏感性模型。最终主模型拟合886个开发格，测试227格未拟合。
+
+3 地图和GIS
+04_outputs/rf_project_v1/figures：8张结果图。
+04_outputs/rf_project_v1/grid_predictions_1000.gpkg：EPSG26911，grid_predictions和hin2024_context两层；ArcGIS Pro/QGIS可打开。
+同名CSV和GeoJSON用于表格与网页制图；GeoJSON为EPSG4326。
+prediction_role区分heldout_test、development_in_sample、boundary_extrapolation_not_evaluated。不能将开发区拟合值或边界外推当作测试精度。
+残差=观测−预测；正值为低估。1km原点不变。
+
+4 复查已完成结果 不重新训练
+项目根目录PowerShell：
+$env:PYTHONUTF8='1'
+python 03_scripts/pretraining/verify_trained_project.py
+python 03_scripts/pretraining/export_project_results.py
+python 03_scripts/pretraining/predict_frozen_rf.py --input 01_data/processed/pretraining_1km/model_table_1000_final.csv --output 04_outputs/rf_project_v1/new_predictions.csv
+Python依赖位于.runtime，脚本自动加入路径。文件environment.json记录训练环境。不要覆盖原始快照。
+
+5 完整训练过程
+03_scripts/pretraining/run_project_training.py为本次完整入口；training_protocol.json在训练前记录参数候选和CV网格ID。frozen_selection.json在测试之前冻结推荐模型。脚本阻止覆盖已完成的测试运行。
+未来重复训练需建立新运行目录并明确已看过本测试结果，不能把反复使用同一测试当成新独立验证。
+cv_fold_scores.csv、development_sensitivity.csv、bootstrap_intervals.json、validation_permutation_importance.csv与evaluation.json保留全部比较。历史train_rf.py仅是原先预留简版入口，本次实际使用run_project_training.py。
+
+6 结果边界
+增强调参测试R²0.7317，RMSE97.9848，MAE64.9598。基础调参未改善测试表现。残差空间聚集仍显著；增强相对基础的成对块重采样差异区间跨0。
+数据缺口与用户已确认调整见plan_alignment.json及报告。HIN仅为背景对照，不能当独立真值。项目完成的是研究分析与可运行离线模型，不包括在线服务部署。

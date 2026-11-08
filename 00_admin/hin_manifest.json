@@ -1,0 +1,25 @@
+{
+  "source": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/172",
+  "downloaded_objects": 325,
+  "city_features": 325,
+  "city_source_length_km_summed": 883.9409097590186,
+  "retrieved_utc": "2026-11-08T03:07:30.984013+00:00",
+  "role": "context only; same historic crash period makes it non-independent validation",
+  "files": [
+    {
+      "path": "01_data\\raw\\hin_context_20261107\\batch_00000.geojson",
+      "sha256": "9342f91dffa94bdd9fe4069cc01e2954f5f54c593c3c141b0ca4555d07d25bcf",
+      "bytes": 1271104
+    },
+    {
+      "path": "01_data\\raw\\hin_context_20261107\\ids.json",
+      "sha256": "449de66c058b9090a62c652eef09087dc810ffe510a7cb3f5495f1755d046cb6",
+      "bytes": 1563
+    },
+    {
+      "path": "01_data\\raw\\hin_context_20261107\\metadata.json",
+      "sha256": "7c87c9e385cdeca409678ec57b4e67c28b1edc98678023213aaf37de52f34b7c",
+      "bytes": 2497
+    }
+  ]
+}

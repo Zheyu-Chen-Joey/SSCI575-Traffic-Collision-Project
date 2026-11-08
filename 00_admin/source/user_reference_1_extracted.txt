@@ -1,0 +1,104 @@
+SSCI 575 — Presentation #1
+Spatial Prediction of Traffic Collision Risk
+in Los Angeles
+9-Minute Presentation Script
+Based on the uploaded PPT draft • Expanded with LADOT historical safety trends
+
+
+Time Allocation
+
+Part 1 — Research Background and Significance
+Target: approximately 3 minutes
+Slide 1 — Project Introduction  |  ≈ 20 sec
+Good morning. Our project is titled “Spatial Prediction of Traffic Collision Risk in Los Angeles.” We are interested in a simple but important spatial question: why are recorded traffic collisions concentrated in some parts of Los Angeles more than others, and how much of that spatial variation can be explained by the surrounding urban environment?
+
+Slide 2 — Research Background  |  ≈ 40 sec
+Traffic collisions are not distributed evenly across the city. A commercial corridor, a residential neighborhood, and a freeway environment have very different traffic exposure, road structure, population activity, and land use. Because these conditions vary from place to place, collision burden is naturally a spatial data science problem. Our goal is therefore not only to count collisions, but to connect their locations with the urban conditions surrounding them.
+
+Slide 3 — Research Significance and Historical Trend  |  ≈ 1 min 20 sec
+The historical trend shows why this question matters. According to LADOT’s 2024 Vision Zero Safety Study, reported traffic fatalities increased from 246 in 2017 to 294 in 2021, an increase of about 20 percent. Over the same period, fatal-and-severe-injury, or KSI, collisions increased from 1,472 to 1,658, about 13 percent.
+The problem also continued after our study period. LADOT reported 336 traffic fatalities in 2023, which was a record level in recent years. In 2024, the number declined to 304, the first decline in several years, but this still represents hundreds of preventable deaths in one year.
+The spatial concentration is equally important. The 2024 All Modes High Injury Network contains only 7.5 percent of city roadway mileage, but it includes 61.8 percent of fatal and severe-injury collisions from 2017 to 2021. So a relatively small share of streets contains a very large share of the most serious collision burden.
+One caution is that LADOT also reports a major change in LAPD reporting practices in 2021 for lower-severity collisions. Therefore, a drop in recorded injury collisions does not automatically mean a true safety improvement. In our project, we describe the outcome carefully as recorded collision burden.
+
+Slide 4 — Study Scope and Research Question  |  ≈ 40 sec
+For our analysis, the study area is the City of Los Angeles and the period is 2017 through 2021. We divide the city into one-kilometer by one-kilometer grids. For each grid, our outcome is the total number of recorded collisions during the five-year period.
+Our main research question is: how well can urban conditions predict spatial differences in recorded collision counts? The practical value is to identify areas that deserve closer safety investigation and to understand which urban conditions contain useful predictive information. This is a screening and prioritization tool, not a substitute for detailed engineering analysis.
+
+
+Part 2 + Part 3 — Datasets and Research Method
+Target: approximately 3 minutes total
+Slide 5 — Proposed Datasets  |  ≈ 40 sec
+Our project combines five public data sources. First, LAPD collision point records provide the target that we want to model. Second, LADOT traffic-count locations represent traffic exposure. Third, Census TIGER/Line roads provide the road network. Fourth, the 2021 American Community Survey provides block-group population data. Fifth, Los Angeles General Plan land-use polygons describe the surrounding land-use context.
+The 2024 High Injury Network is kept separate. We use it only as a contextual comparison layer and do not include it as a model predictor.
+
+Slide 6 — Six Predictors in One Grid Table  |  ≈ 30 sec
+After spatial processing, each one-kilometer grid becomes one row in our model table. We use six predictor concepts: traffic volume, road density, intersection density, road type, population density, and land use. Continuous variables are summarized within each grid, while categorical variables such as road type and land use will be encoded before modeling. The target remains the five-year recorded collision count.
+
+Slide 7 — Random Forest Regression  |  ≈ 50 sec
+Our machine-learning method is Random Forest regression. A Random Forest is an ensemble of many decision trees. Each tree is trained on a bootstrap sample of the training observations, and random subsets of predictors are considered when the tree makes splits. Because the individual trees are different, their errors are less likely to be identical. For a grid, the forest averages the predictions from all trees to produce one final collision-count estimate.
+We choose regression because our target is numerical. The final estimate can be fractional because it represents an average predicted count.
+
+Slide 8 — Why Random Forest and How We Use It  |  ≈ 40 sec
+Random Forest is useful for this project for three reasons. First, traffic-safety relationships may be nonlinear. Second, variables can interact: for example, high traffic volume may have different implications in a dense commercial area than in a residential area. Third, variable-importance measures can help us identify which inputs the model relies on most.
+In our project, the six urban predictors are the inputs and the predicted five-year collision count per grid is the output. This is retrospective spatial prediction for 2017 to 2021. It is not a forecast of next year’s crashes, and variable importance does not prove causation.
+
+Slide 9 — Planned Evaluation  |  ≈ 40 sec
+For evaluation, we will compare held-out predictions with observed collision counts using R-squared, RMSE, and MAE. We will also inspect residual maps to see where the model systematically underpredicts or overpredicts.
+Because nearby grids can be similar, we also plan to test sensitivity to spatial train-test separation. Finally, we will compare high-count grids with the official High Injury Network as contextual evidence. The HIN is not independent ground truth, so the main validation remains the held-out observed collision counts.
+
+
+Part 4 — Previous Work and Presentation Summary
+Target: approximately 3 minutes
+Slide 10 — Related Study: Bao et al. (2017)  |  ≈ 1 min 15 sec
+Our main related study is Bao and colleagues, published in Accident Analysis & Prevention in 2017. We selected this paper because it also studies traffic crashes in the City of Los Angeles and combines several types of spatial urban data within a common geographic unit.
+The authors asked whether Twitter-based human-activity information could improve spatial crash analysis. They collected five broad types of data: crash data, human-activity data, traditional traffic-exposure measures, road-network attributes, and sociodemographic information. These data were aggregated into 896 traffic analysis zones, and the Twitter check-ins were classified into seven activity categories using venue information.
+For modeling, the authors used Geographically Weighted Regression, or GWR. They compared models using traditional traffic-exposure variables only, Twitter-based activity variables only, and both types together. Their results showed that human-activity variables significantly affected crash counts at the zone level, and the combined models achieved the best fit, with higher R-squared and lower AICc values.
+
+Slide 11 — How the Study Informs Our Design  |  ≈ 55 sec
+The important lesson for us is not to copy their exact variables or model. Instead, the paper supports two design ideas: urban crash patterns should be analyzed together with the surrounding human and built environment, and data from different sources need a common spatial unit.
+Our project adapts that idea in three ways. First, we use regular one-kilometer grids instead of 896 traffic analysis zones. Second, instead of Twitter activity, we use six predictors from public transportation, road, census, and land-use datasets. Third, we use one Random Forest regressor instead of GWR. Therefore, the earlier paper supports our design logic, but its coefficients and model performance cannot be transferred directly to our project.
+
+Slide 12 — Project Summary and Closing  |  ≈ 50 sec
+To conclude, our project combines a meaningful public-safety problem, multiple spatial datasets, and one manageable machine-learning model. We will create a grid-based view of recorded collision burden, test whether six urban conditions can predict that burden, and inspect where the model succeeds or fails spatially.
+Before modeling, we still need to audit data coverage and timing, especially the 2021 reporting change and the uneven dates of traffic counts. Our next steps are to build the grid table, train and evaluate the Random Forest, map the residuals, and compare our high-count areas with the official HIN.
+Thank you. We welcome feedback on whether our study scope, data choices, and proposed method are appropriate.
+
+
+Quick Speaking Notes
+References and Source Links
+Los Angeles Department of Transportation. (2024). Los Angeles Vision Zero Safety Study. https://ladot.lacity.gov/sites/default/files/documents/la-vision-zero-safety-study-2024.pdf
+Los Angeles Department of Transportation. (2023). Annual Report Year 2023. https://ladot.lacity.gov/annual-report-yr-23
+Los Angeles Department of Transportation. (FY 2024–2025). Annual Report. https://ladot.lacity.gov/docs/annual-report-fy-2024-2025
+Bao, J., Liu, P., Yu, H., & Xu, C. (2017). Incorporating Twitter-based human activity information in spatial analysis of crashes in urban areas. Accident Analysis & Prevention, 106, 358–369. https://doi.org/10.1016/j.aap.2017.06.012
+scikit-learn. RandomForestRegressor documentation. https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
+LAPD collision data: https://data.lacity.org/d/d5tf-ez2w
+LADOT traffic counts: https://data.lacity.org/d/94wu-3ps3
+U.S. Census TIGER/Line: https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+ACS 5-year data: https://www.census.gov/data/developers/data-sets/acs-5year.html
+Los Angeles General Plan Land Use Feature Service: https://services5.arcgis.com/7nsPwEMP38bSkCjy/ArcGIS/rest/services/General_Plan_Land_Use/FeatureServer
+使用说明
+正文为英文口头演讲稿。建议语速约 130–140 words per minute。加粗或数字部分演讲时稍微放慢；灰色 Source note 仅供备课，不需要朗读。
+Part | Slides | Content | Target Time
+Part 1 | 1–4 | Background, trend, significance, research question | ≈ 3 min
+Part 2 + 3 | 5–9 | Datasets + Random Forest + evaluation | ≈ 3 min
+Part 4 | 10–12 | Previous paper + adaptation + conclusion | ≈ 3 min
+Source note — do not read aloud: The PPT title defines the project as a City of Los Angeles spatial collision-prediction study for SSCI 575.
+Source note — do not read aloud: This framing follows the PPT: traffic exposure and urban conditions vary across Los Angeles, so the project asks how those spatial differences relate to recorded collisions.
+Source note — do not read aloud: LADOT 2024 Vision Zero Safety Study: fatalities rose from 246 (2017) to 294 (2021); KSI collisions rose from 1,472 to 1,658; 2021 lower-severity reporting changed. PPT slide 3: 7.5% of roadway mileage in the 2024 All Modes HIN contains 61.8% of fatal/severe-injury collisions. LADOT Annual Report 2023: 336 fatalities. LADOT FY 2024–25 Annual Report: 304 fatalities in calendar year 2024.
+Source note — do not read aloud: The PPT defines the City of Los Angeles, 2017–2021, 1 km × 1 km grids, with recorded collision count per grid as the outcome.
+Source note — do not read aloud: PPT slide 5 data sources: LAPD collisions, LADOT traffic counts, Census TIGER/Line, ACS 2021 5-year, LA General Plan land use. HIN is explicitly excluded from model inputs.
+Source note — do not read aloud: The six predictor concepts match PPT slide 6.
+Source note — do not read aloud: Random Forest description follows scikit-learn RandomForestRegressor and the PPT.
+Source note — do not read aloud: PPT slide 8 defines six urban predictors as input and predicted collision count per grid as output.
+Source note — do not read aloud: PPT slide 9 lists R², RMSE, MAE, residual inspection, spatial split sensitivity, and HIN comparison.
+Source note — do not read aloud: Bao, J., Liu, P., Yu, H., & Xu, C. (2017), Accident Analysis & Prevention 106, 358–369. DOI: 10.1016/j.aap.2017.06.012.
+Source note — do not read aloud: PPT slide 11 contrasts Bao et al.'s TAZs, Twitter activity and spatial crash regression with the project's 1 km grids, six predictors and Random Forest regression.
+Source note — do not read aloud: The closing follows the project contribution and discussion prompt shown on PPT slide 12.
+Term | How to Say It | Meaning in This Presentation
+KSI | “K-S-I” | Killed or seriously injured / fatal-and-severe-injury collisions
+HIN | “H-I-N” or “High Injury Network” | Official LADOT priority safety network
+GWR | “G-W-R” | Geographically Weighted Regression
+AICc | “A-I-C-c” | A model-fit criterion; lower values indicate better relative fit
+RMSE | “R-M-S-E” | Root Mean Squared Error
+MAE | “M-A-E” | Mean Absolute Error

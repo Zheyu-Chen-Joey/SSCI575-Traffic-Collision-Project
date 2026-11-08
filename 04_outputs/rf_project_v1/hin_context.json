@@ -1,0 +1,9 @@
+{
+  "source": "00_admin/hin_manifest.json",
+  "role": "non-independent context, NOT a model input or performance ground truth",
+  "test_top_predicted_cells": 23,
+  "fraction_high_predicted_test_cells_with_any_HIN": 0.9565217391304348,
+  "fraction_all_test_cells_with_any_HIN": 0.4889867841409692,
+  "hin_length_conserved_m": 883940.9097590178,
+  "warning": "HIN targets severe-injury corridors; model targets all recorded collisions. Any-HIN in1km cell is coarse coincidence."
+}

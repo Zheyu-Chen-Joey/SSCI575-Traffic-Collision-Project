@@ -30,6 +30,12 @@
       "RQ1": "How well do road network, population and land-use features predict recorded2017\u20132021 collision counts at1km?",
       "RQ2": "Do road sinuosity, functional-class shares and signal density improve prediction over the revised five-group baseline?",
       "RQ3": "What sensitivity and limitations do spatial scale diagnostics reveal for the practical1km working grid?"
+    },
+    "include_speed_limit": false,
+    "speed_limit_admission": {
+      "status": "not_suitable_for_current_citywide_model",
+      "audit": "04_outputs/speed_audit/speed_suitability.json",
+      "reason": "NHS-focused source: reported30m corridor coverage11.98%;2017\u20132021 speed effective dates unavailable."
     }
   },
   "training_executed": false,
@@ -66,5 +72,14 @@
     "no_fitted_models": true,
     "collision_extract_matches_publisher_by_year": true,
     "collision_completeness": "matches current published extract; 2021 low count remains unexplained and is not a population-level completeness guarantee"
-  }
+  },
+  "candidate_feature_audits": {
+    "speed_limit": {
+      "status": "not_suitable_for_current_citywide_model",
+      "audit": "04_outputs/speed_audit/speed_suitability.json",
+      "reason": "NHS-focused source: reported30m corridor coverage11.98%;2017\u20132021 speed effective dates unavailable."
+    }
+  },
+  "snapshot_scope": "historical pretraining gate; training now completed separately",
+  "current_training_result": "04_outputs/rf_project_v1/run_receipt.json"
 }

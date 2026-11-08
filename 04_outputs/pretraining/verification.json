@@ -8,12 +8,10 @@
     "eligibility_rule",
     "raw_baseline_hashes_unchanged",
     "no_target_or_split_features",
-    "pipelines_remain_unfitted",
-    "functional_layer_all_requested_unique_ids_received"
+    "pipelines_remain_unfitted"
   ],
   "n_old_raw_snapshots_verified": 151,
   "n_grid_rows": 1473,
   "count_sum": 230536,
-  "model_fit_executed": false,
-  "functional_object_count_verified": 115738
+  "model_fit_executed": false
 }

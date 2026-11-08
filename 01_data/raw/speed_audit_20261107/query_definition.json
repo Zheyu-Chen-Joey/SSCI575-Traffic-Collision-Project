@@ -1,0 +1,9 @@
+{
+  "f": "json",
+  "where": "state_code=6",
+  "geometry": "-118.67318849568805,33.698655679107226,-118.1503698671032,34.34231107839654",
+  "geometryType": "esriGeometryEnvelope",
+  "inSR": 4326,
+  "spatialRel": "esriSpatialRelIntersects",
+  "returnIdsOnly": "true"
+}

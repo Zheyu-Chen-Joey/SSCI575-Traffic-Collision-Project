@@ -1,0 +1,14 @@
+{
+  "purpose": "Eligibility for enhanced citywide1km model; no fitting",
+  "minimum_city_motorized_road_corridor_coverage": 0.8,
+  "minimum_training_cell_fraction_with_80pct_road_corridor_coverage": 0.8,
+  "buffer_sensitivity_m": [
+    10,
+    20,
+    30,
+    50
+  ],
+  "decision_buffer_m": 30,
+  "temporal_requirement": "Record year within2017\u20132021 AND speed observation/effective period documented as applicable to target period. Inventory linework year alone is insufficient.",
+  "threshold_basis": "Operational project screening rule, not universal statistical cutoff. Corridor buffers give potential spatial overlap, not verified road-link matching. Low upper-bound coverage is sufficient for rejection; a high score would still require link matching."
+}
