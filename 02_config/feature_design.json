@@ -1,0 +1,31 @@
+{
+  "version": "2026-11-07_no_traffic_volume",
+  "authorization": "User explicitly requested temporary removal of traffic volume on2026-11-07",
+  "working_scale_m": 1000,
+  "include_traffic_volume": false,
+  "baseline_feature_groups": [
+    "road_density",
+    "intersection_density",
+    "road_type",
+    "population_density",
+    "land_use_composition"
+  ],
+  "enhanced_additions": [
+    "road_sinuosity_proxy",
+    "freeway_share_functional",
+    "arterial_share_functional",
+    "signal_density_snapshot"
+  ],
+  "target": "published_LAPD_collision_count_2017_2021",
+  "training_authorized": false,
+  "interpretation_limits": [
+    "Predict recorded collision burden, not exposure-adjusted crash risk or accident rate.",
+    "No direct vehicle-exposure control; road/population features are not claimed to replace observed traffic.",
+    "Baseline uses5 original groups after traffic removal, not the original6-group baseline."
+  ],
+  "research_questions": {
+    "RQ1": "How well do road network, population and land-use features predict recorded2017\u20132021 collision counts at1km?",
+    "RQ2": "Do road sinuosity, functional-class shares and signal density improve prediction over the revised five-group baseline?",
+    "RQ3": "What sensitivity and limitations do spatial scale diagnostics reveal for the practical1km working grid?"
+  }
+}

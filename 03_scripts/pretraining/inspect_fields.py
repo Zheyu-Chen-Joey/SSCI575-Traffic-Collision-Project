@@ -1,0 +1,4 @@
+import sys,pathlib,json
+sys.path.insert(0,str(pathlib.Path.cwd()/'.runtime'))
+import pandas as pd,geopandas as gpd
+p=pd.read_csv('01_data/raw/pretraining_20261107/acsdt5y2021-b01003.dat',sep='|',dtype=str);p=p[p.GEO_ID.str.startswith('1500000US06037')].copy();p['GEOID']=p.GEO_ID.str.replace('1500000US','',regex=False);p=p.rename(columns={'B01003_E001':'population','B01003_M001':'population_moe90'});p.to_csv('01_data/interim/acs2021_la_blockgroup_population.csv',index=False);bg=gpd.read_file('01_data/processed/block_groups_2021.gpkg');j=bg.merge(p,on='GEOID',how='left',validate='one_to_one');print('ACS',len(p),'BG',len(bg),'missing',j.population.isna().sum());print('ROADS',gpd.read_file('01_data/processed/roads_2021.gpkg').columns.tolist());c=json.load(open('01_data/raw/pretraining_20261107/caltrans.txt'));print('CALTRANS',[(f['name'],f.get('alias'),f.get('domain')) for f in c.get('fields',[])][:30])

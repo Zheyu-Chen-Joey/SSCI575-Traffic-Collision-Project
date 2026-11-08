@@ -1,0 +1,17 @@
+{
+  "all_rows": 1473,
+  "eligible_rows": 1113,
+  "fixed_eligible_splits": {
+    "train": 720,
+    "test": 227,
+    "validation": 166
+  },
+  "split_target_audit": "Only total conservation inspected; no test target used for feature/tuning decisions.",
+  "signal_within30m_fraction": 0.8899382491827098,
+  "signal_distance_median_m": 1.2571755828834328,
+  "landuse_coverage_median": 0.8128859899521802,
+  "n_no_landuse_polygon": 19,
+  "no_fitted_models": true,
+  "collision_extract_matches_publisher_by_year": true,
+  "collision_completeness": "matches current published extract; 2021 low count remains unexplained and is not a population-level completeness guarantee"
+}

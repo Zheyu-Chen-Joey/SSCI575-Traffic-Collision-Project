@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 AGENTS.md
 07_agents/
+06_reports/_qa/
+01_data/raw/pretraining_20261107/nav_*

@@ -1,0 +1,80 @@
+{
+  "grid": {
+    "n_all": 1473,
+    "n_eligible": 1113,
+    "counts_conserved": 230536,
+    "zero_rate_all": 0.13238289205702647,
+    "split_cells_all": {
+      "train": 935,
+      "test": 299,
+      "validation": 239
+    },
+    "split_eligible": {
+      "train": 720,
+      "test": 227,
+      "validation": 166
+    },
+    "origin_m": [
+      345000.0,
+      3730000.0
+    ]
+  },
+  "population": {
+    "bg_matched": 2941,
+    "missing_population_bg": 0,
+    "population_allocated_city": 3895136.1596924635,
+    "assumption": "Uniform population over each original BG total geometry, including water. MOE root-sum-square treats BG estimates as independent and is approximate."
+  },
+  "roads": {
+    "motorized_segments": 27759,
+    "original_city_length_m": 13764620.393276248,
+    "grid_length_m": 13764620.393276177,
+    "length_relative_difference": 5.1422061523288565e-15,
+    "class_labels": "S1100 primary; S1200 secondary; S1400 local; S1630 ramp; S1640 service drive. S1200 is not assumed arterial."
+  },
+  "intersections": {
+    "candidate_nodes": 1335,
+    "definition": "Original TIGER endpoints rounded to 0.1 m, >=3 distinct incident segments and >=3 direction bins; excludes primary roads and ramps. Endpoint graph only, no geometric-crossing noding. Grade separation not fully encoded; remains a proxy requiring audit."
+  },
+  "landuse": {
+    "categories": {
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "industrial": "Industrial",
+      "parking": "Parking",
+      "open_space_public_facilities": "Open Space/Public Facilities",
+      "port_of_la": "Port of LA",
+      "lax_airport": "LAX Airport"
+    },
+    "max_cross_category_overlap_fraction": 6.608190440959838e-06,
+    "n_cells_overlap_gt_1pct": 0,
+    "snapshot": "current General Plan Land Use; not proof of 2017\u20132021 conditions"
+  },
+  "signals": {
+    "source_points": 5506,
+    "unique_coordinate_points": 5464,
+    "temporal_status": "snapshot; no installation/retirement history"
+  },
+  "traffic": {
+    "location_coverage_all": 0.6653088934147997,
+    "value_coverage_all": 0.0,
+    "values_obtained": false
+  },
+  "grid_diagnostics": {
+    "scale_m": 1000,
+    "n_fit": 886,
+    "max_lag_m": 25000,
+    "model": "spherical",
+    "nugget": 18529.258641637873,
+    "partial_sill": 53100.64507530704,
+    "sill": 71629.90371694491,
+    "nsr": 0.2586804906908531,
+    "range_m": 37129.53779840184,
+    "range_extrapolated": true,
+    "moran_i_knn8": 0.7402396467146595,
+    "moran_permutations": 199,
+    "moran_p": 0.005,
+    "claim": "practical 1 km scale; not NSR-selected optimum"
+  },
+  "no_block_split_leakage": true
+}

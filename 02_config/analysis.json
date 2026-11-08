@@ -1,10 +1,30 @@
 {
   "project": "SSCI575 LA collisions 2017-2021",
   "crs": "EPSG:26911",
-  "scales_m": {"start":500,"stop":5000,"step":150},
-  "seed":575,
-  "variogram": {"model":"spherical","max_lag_m":25000,"bins":25,"minimum_pairs":30,"max_sample_cells":2500,"min_city_area_fraction":0.8},
-  "final_scale_m":null,
-  "working_candidate_m":1100,
-  "model_allowed":false
+  "scales_m": {
+    "start": 500,
+    "stop": 5000,
+    "step": 150
+  },
+  "seed": 575,
+  "variogram": {
+    "model": "spherical",
+    "max_lag_m": 25000,
+    "bins": 25,
+    "minimum_pairs": 30,
+    "max_sample_cells": 2500,
+    "min_city_area_fraction": 0.8
+  },
+  "final_scale_m": 1000,
+  "working_candidate_m": 1100,
+  "model_allowed": false,
+  "scale_decision": {
+    "basis": "user_selected_practical_working_scale",
+    "date_local": "2026-11-07",
+    "reason": "standard 1 km reporting and aggregation; not claimed to be NSR optimum"
+  },
+  "execution_scope": "data_and_training_scripts_only_no_fit",
+  "feature_design": "02_config/feature_design.json",
+  "traffic_volume_included": false,
+  "scope": "prepare_only_no_training"
 }

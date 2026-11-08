@@ -1,0 +1,12 @@
+{
+  "tiger_topology_edges": 95452,
+  "junctions_degree_ge3": 42672,
+  "n_coordinate_spread_gt1m": 0,
+  "topology_definition": "Unique TLID degree >=3 at existing TNID nodes on S1200/S1400/S1640 roads. Primary roads and ramps excluded. Does not node geometric crossings. Physical grade separation is not independently field-verified.",
+  "functional_source_features_downloaded": 115738,
+  "functional_city_features": 88645,
+  "functional_class": "1 interstate,2 other freeway,3 other principal arterial,4 minor arterial,5 major collector,6 minor collector,7 local",
+  "functional_temporal_status": "current service snapshot; historical equivalence unverified",
+  "functional_total_length_m": 12824728.296044122,
+  "functional_grid_length_m": 12824728.296037026
+}

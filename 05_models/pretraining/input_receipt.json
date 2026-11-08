@@ -1,0 +1,9 @@
+{
+  "model_table_sha256": "9f9645d7400b60c29e19c053cc5161df4b2c9c48de16963fa774a730c0b73779",
+  "partition_canonical_csv_sha256": "12d614e232d8fcffdf9f1fa2bc98c38211e4824308a95905c27a88f7c108c3b5",
+  "no_training_performed": true,
+  "rows": 1473,
+  "columns": 55,
+  "feature_design_sha256": "28d6d713afb3b6f0c5e960c2accedd2a931b81e9e1554d3a9fdb8991ee47496a",
+  "pipeline_definition_sha256": "c23556183f0e36c72bb486a2bb1cf6e2c30635f8a175ed4852fa2ccf8b280c25"
+}

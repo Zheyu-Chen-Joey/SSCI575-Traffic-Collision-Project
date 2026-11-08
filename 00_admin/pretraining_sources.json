@@ -1,0 +1,33 @@
+{
+  "retrieved_local_date": "2026-11-07",
+  "sources": [
+    {
+      "name": "ACS2021 ACS5 B01003",
+      "path": "01_data/raw/pretraining_20261107/acsdt5y2021-b01003.dat",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/table-based-SF/data/5YRData/acsdt5y2021-b01003.dat",
+      "vintage": "2021 ACS5 (2017\u20132021 pooled)"
+    },
+    {
+      "name": "TIGER2021 Edges LA County",
+      "path": "01_data/raw/pretraining_20261107/tl_2021_06037_edges.zip",
+      "url": "https://www2.census.gov/geo/tiger/TIGER2021/EDGES/tl_2021_06037_edges.zip",
+      "vintage": "2021"
+    },
+    {
+      "name": "Caltrans functional classification",
+      "paths": "01_data/raw/pretraining_20261107/functional_class_*.json",
+      "url": "https://geodata.dot.ca.gov/arcgis/rest/services/chhighway/CRS_Functional_Classification/FeatureServer/0",
+      "vintage": "current snapshot",
+      "requested_object_count": 115738,
+      "downloaded_object_count": 115738
+    },
+    {
+      "name": "LADOT Traffic Counts Summary",
+      "path": "01_data/raw/pretraining_20261107/traffic_summary.json",
+      "url": "https://data.lacity.org/resource/94wu-3ps3.json",
+      "n_rows": 5953,
+      "study_period_rows": 0,
+      "license_from_publisher_catalog": "CC0"
+    }
+  ]
+}

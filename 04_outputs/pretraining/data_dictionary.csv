@@ -1,0 +1,56 @@
+field,dtype,role,unit,source,construction,missing_count
+grid_id,str,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+i,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+j,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+block_id,str,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+split,str,partition,train/validation/test,fixed5km hash blocks,Test keeps prior rule; train-side validation separate hash. Not chosen by targets.,0
+count_2017_2021,int64,target,recorded collisions,LAPD d5tf-ez2w,Sum 2017–2021 cleaned records in half-open grid.,0
+city_area_km2,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+city_area_fraction,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+cx,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+cy,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+count_2017,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+count_2018,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+count_2019,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+count_2020,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+count_2021,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+eligible,bool,partition,boolean,city area fraction,>=80% of original1km square lies within city. Full cells table still retains boundary fragments.,0
+population,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+pop_area_m2,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+population_moe90_approx,float64,diagnostic,people,2021 ACS5 B01003 M001,sqrt(sum((BG area weight * BG 90% MOE)^2)). Independence approximation.,0
+population_density_km2,float64,baseline,estimated people/city km2,2021 ACS5 B01003 and 2021 BG,Uniform full-BG-area allocation; clipped city area denominator.,0
+population_geometry_coverage,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+road_length_m,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+road_density_km_per_km2,float64,baseline,road km/city km2,2021 TIGER Roads,"S1100,S1200,S1400,S1630,S1640 lines clipped and split. Boundary line assigned by midpoint.",0
+road_share_S1100,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,62
+road_share_S1200,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,62
+road_share_S1400,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,62
+road_share_S1630,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,62
+road_share_S1640,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,62
+road_sinuosity_length_weighted,float64,enhanced,dimensionless ratio,2021 TIGER Roads,Length / endpoint distance proxy averaged by clipped road length. Closed/endpoints<=1m missing. Depends on segmentation.,74
+sinuosity_length_coverage,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,62
+intersection_endpoint_candidate_count,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+intersection_density_candidate_km2,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+landuse_share_residential,float64,baseline,fraction of clipped city area,General Plan Land Use current snapshot,Union within category per grid; no renormalization of uncovered area; null when no land-use polygons observed.,19
+landuse_share_commercial,float64,baseline,fraction of clipped city area,General Plan Land Use current snapshot,Union within category per grid; no renormalization of uncovered area; null when no land-use polygons observed.,19
+landuse_share_industrial,float64,baseline,fraction of clipped city area,General Plan Land Use current snapshot,Union within category per grid; no renormalization of uncovered area; null when no land-use polygons observed.,19
+landuse_share_parking,float64,baseline,fraction of clipped city area,General Plan Land Use current snapshot,Union within category per grid; no renormalization of uncovered area; null when no land-use polygons observed.,19
+landuse_share_open_space_public_facilities,float64,baseline,fraction of clipped city area,General Plan Land Use current snapshot,Union within category per grid; no renormalization of uncovered area; null when no land-use polygons observed.,19
+landuse_share_port_of_la,float64,baseline,fraction of clipped city area,General Plan Land Use current snapshot,Union within category per grid; no renormalization of uncovered area; null when no land-use polygons observed.,19
+landuse_share_lax_airport,float64,baseline,fraction of clipped city area,General Plan Land Use current snapshot,Union within category per grid; no renormalization of uncovered area; null when no land-use polygons observed.,19
+landuse_coverage,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+landuse_overlap_fraction,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+landuse_uncovered_fraction,float64,baseline,fraction,General Plan Land Use current snapshot,1 - union category area / city area. Includes unmapped roads/water; not inferred category.,0
+signal_point_count,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+signal_density_snapshot_km2,float64,enhanced,unique signal points/city km2,LADOT Signal Locations current snapshot,0.1m coordinate deduplication. Does not establish historic installation coverage.,0
+traffic_report_location_count,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+traffic_volume_2017_2021,float64,excluded_by_user_design,daily-equivalent vehicles/day,required future authorized counts,Retained as an audit field only. User temporarily excluded traffic volume; not passed to either RF pipeline.,1473
+traffic_volume_observed,bool,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+intersection_count,int64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+intersection_density_km2,float64,baseline,nodes/city km2,2021 TIGER Edges,"Degree>=3 unique TLID incident at TNID node on S1200,S1400,S1640; no artificial clipping nodes.",0
+functional_network_length_m,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,0
+freeway_share_functional,float64,enhanced,fraction,Caltrans Functional Classification current snapshot,"Classes1,2 length / all functional network length.",62
+arterial_share_functional,float64,enhanced,fraction,Caltrans Functional Classification current snapshot,"Classes3,4 length / all functional network length.",62
+collector_share_functional,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,62
+local_share_functional,float64,diagnostic,see name,derived project data,Not selected as model input unless explicitly listed in pipeline_definition.py.,62
+road_type_dominant,str,baseline,MTFCC category,2021 TIGER Roads,Length-dominant MTFCC. no_motorized_road explicit.,0

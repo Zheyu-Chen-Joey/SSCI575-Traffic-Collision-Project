@@ -1,0 +1,21 @@
+{
+  "source": "https://data.lacity.org/resource/94wu-3ps3.json",
+  "n_rows": 5953,
+  "date_min": "2010-07-15 00:00:00",
+  "date_max": "2016-12-07 00:00:00",
+  "n_invalid_dates": 7,
+  "n_study_period": 0,
+  "years": {
+    "2010": 3,
+    "2011": 1457,
+    "2012": 134,
+    "2013": 1049,
+    "2014": 809,
+    "2015": 1812,
+    "2016": 682
+  },
+  "manual_count_caution": "Publisher: MAN generally 6-hour counts expanded by a conversion factor. Not automatically equivalent to measured AADT.",
+  "coordinates_present": false,
+  "included_in_2017_2021_volume_feature": false,
+  "reason": "No records in required study period. No relabeling of 2011\u20132016 counts as 2017\u20132021."
+}

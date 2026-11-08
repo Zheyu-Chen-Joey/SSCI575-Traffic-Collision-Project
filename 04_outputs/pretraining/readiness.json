@@ -1,0 +1,70 @@
+{
+  "status": "ready_for_training_inputs_no_fit",
+  "preparation_complete_for_selected_design": true,
+  "feature_design": {
+    "version": "2026-11-07_no_traffic_volume",
+    "authorization": "User explicitly requested temporary removal of traffic volume on2026-11-07",
+    "working_scale_m": 1000,
+    "include_traffic_volume": false,
+    "baseline_feature_groups": [
+      "road_density",
+      "intersection_density",
+      "road_type",
+      "population_density",
+      "land_use_composition"
+    ],
+    "enhanced_additions": [
+      "road_sinuosity_proxy",
+      "freeway_share_functional",
+      "arterial_share_functional",
+      "signal_density_snapshot"
+    ],
+    "target": "published_LAPD_collision_count_2017_2021",
+    "training_authorized": false,
+    "interpretation_limits": [
+      "Predict recorded collision burden, not exposure-adjusted crash risk or accident rate.",
+      "No direct vehicle-exposure control; road/population features are not claimed to replace observed traffic.",
+      "Baseline uses5 original groups after traffic removal, not the original6-group baseline."
+    ],
+    "research_questions": {
+      "RQ1": "How well do road network, population and land-use features predict recorded2017\u20132021 collision counts at1km?",
+      "RQ2": "Do road sinuosity, functional-class shares and signal density improve prediction over the revised five-group baseline?",
+      "RQ3": "What sensitivity and limitations do spatial scale diagnostics reveal for the practical1km working grid?"
+    }
+  },
+  "training_executed": false,
+  "training_authorized_this_task": false,
+  "working_scale_m": 1000,
+  "blocking_items": [],
+  "review_items": [
+    "2021 published collision count decreases: investigate reporting coverage before interpreting total burden.",
+    "Population allocation assumes uniform BG total area, including water; MOE approximate.",
+    "Land use, signal and Caltrans functional classification are current snapshots; historical consistency unverified.",
+    "TIGER topology junctions are an operational connectivity measure; no complete physical grade-separation audit.",
+    "Spatial splits have no distance buffer. RF generalization must be described as retrospective within-city assessment."
+  ],
+  "optional_excluded": [
+    "traffic_volume",
+    "speed_limit",
+    "sight_distance",
+    "population_derived_rurality"
+  ],
+  "input_table": "C:\\Users\\czy08\\Desktop\\SSCI Final\\01_data\\processed\\pretraining_1km\\model_table_1000_final.csv",
+  "quality_checks_passed": {
+    "all_rows": 1473,
+    "eligible_rows": 1113,
+    "fixed_eligible_splits": {
+      "train": 720,
+      "test": 227,
+      "validation": 166
+    },
+    "split_target_audit": "Only total conservation inspected; no test target used for feature/tuning decisions.",
+    "signal_within30m_fraction": 0.8899382491827098,
+    "signal_distance_median_m": 1.2571755828834328,
+    "landuse_coverage_median": 0.8128859899521802,
+    "n_no_landuse_polygon": 19,
+    "no_fitted_models": true,
+    "collision_extract_matches_publisher_by_year": true,
+    "collision_completeness": "matches current published extract; 2021 low count remains unexplained and is not a population-level completeness guarantee"
+  }
+}

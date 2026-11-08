@@ -1,0 +1,173 @@
+{
+ "currentVersion": 10.71,
+ "cimVersion": "2.4.0",
+ "id": 21,
+ "name": "Traffic Data",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPoint",
+ "sourceSpatialReference": {
+  "wkid": 102645,
+  "latestWkid": 2229,
+  "xyTolerance": 0.003280833333333333,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -117608900,
+  "falseY": -91881400,
+  "xyUnits": 3048.0060960121928,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "copyrightText": "",
+ "parentLayer": {
+  "id": 20,
+  "name": "Traffic Data "
+ },
+ "subLayers": [],
+ "minScale": 36113,
+ "maxScale": 0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriPMS",
+    "url": "e5a33b60818b7824d5faa7eb05e5ea39",
+    "imageData": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABNUlEQVQ4jbWTMUsCcRjGf6/eEAmJNBQ0BWH0BaIvEMGVQkH4IYLshvajoYYgjXLpKzQURbY06GQQLQW5BI21CAlWZ+m9DSWYd9cJ0TP9eV7eH88D79/gjzL+B7BgjaG6DCRBHTRySSx+zKH9Hg4wLQt1N0EGvgwBUXitP5DKZjjdvQoGmNlVRHdAfGLpOK5cML82w1m+6gWksyO0ZSu4LQBDKHlgzgtoyxIwGAIAYRZzfZTi9lNvhWTocgcRbU0CPQBRB/Xr7iPlrfM0usxKnwkaNOI3XsBLokjsuQpM/bouuk/JdryAkt3CtDIIZdBEQPQyrmt3Wz/voJi7JW1N40oOVROIfE/qoAXU3eB8rxkMADjJ3QMpFleGaRoTRKIOj407rg8+/EIFf6ajQg2oBc5DAX3qE388XqT/EcBnAAAAAElFTkSuQmCC",
+    "contentType": "image/png",
+    "width": 12,
+    "height": 12,
+    "angle": 0,
+    "xoffset": 0,
+    "yoffset": 0
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -1.3209493256797208E7,
+  "ymin": 3989044.491214513,
+  "xmax": -1.315337890486931E7,
+  "ymax": 4074138.992014007,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 1.4892314192838538E8,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "intersection",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "TrafficID",
+   "type": "esriFieldTypeOID",
+   "alias": "TrafficID",
+   "domain": null
+  },
+  {
+   "name": "IntersectionID",
+   "type": "esriFieldTypeInteger",
+   "alias": "IntersectionID",
+   "domain": null
+  },
+  {
+   "name": "lat",
+   "type": "esriFieldTypeDouble",
+   "alias": "lat",
+   "domain": null
+  },
+  {
+   "name": "lon",
+   "type": "esriFieldTypeDouble",
+   "alias": "lon",
+   "domain": null
+  },
+  {
+   "name": "intersection",
+   "type": "esriFieldTypeString",
+   "alias": "intersection",
+   "length": 250,
+   "domain": null
+  },
+  {
+   "name": "Shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "Shape",
+   "domain": null
+  },
+  {
+   "name": "TOOLTIP",
+   "type": "esriFieldTypeString",
+   "alias": "TOOLTIP",
+   "length": 284,
+   "domain": null
+  },
+  {
+   "name": "NLA_URL",
+   "type": "esriFieldTypeString",
+   "alias": "NLA_URL",
+   "length": 105,
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "Shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "Shape"
+ },
+ "indexes": null,
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": true,
+ "canScaleSymbols": false,
+ "hasLabels": false,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 1000,
+ "supportsStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsPagination": true,
+  "supportsTrueCurve": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true
+ },
+ "supportsDatumTransformation": true,
+ "dateFieldsTimeReference": null,
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true
+}

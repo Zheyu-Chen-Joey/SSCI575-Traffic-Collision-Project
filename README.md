@@ -1,3 +1,25 @@
+# 2026年11月7日训练前准备
+
+当前工作网格已按用户决定固定为1000米，属于实践选择。1km统计已经单独计算，未沿用1100米结果。本次明确不训练模型。
+
+当前建模表：01_data/processed/pretraining_1km/model_table_1000_final.csv及GPKG。1473个市界相交格，1113个合格格；固定训练/验证/测试为720/166/227格。人口、道路、拓扑路口、土地利用、信号和功能分类特征已完成。
+
+用户已确认暂时移除交通流量。当前baseline使用道路密度、交叉口密度、道路类型、人口密度、土地利用五类特征；enhanced增加道路设计特征。所选输入无整列缺失，readiness已通过。人口分配、历史快照及2021事故覆盖等研究限制仍须保留。
+
+详细状态：06_reports/pretraining_status_20261107.txt。检查项：04_outputs/pretraining/readiness.json与verification.json。数据字典：04_outputs/pretraining/data_dictionary.csv。
+
+检查而不训练：
+```powershell
+python 03_scripts/pretraining/prepare_training.py --check-only
+python 03_scripts/pretraining/verify_inputs.py
+```
+
+有效设计以02_config/feature_design.json为准。交通数据和缺失字段保留供审计，但不进入baseline或enhanced的X文件，不参与插补。研究预测公开记录的事故负担，不计算暴露调整事故率。未来重新纳入交通流量需要单独修订设计。train_rf.py默认不会拟合，本次不执行训练。
+
+以下内容保留早期1100米候选诊断记录，其当时的数据缺口和尺度状态不代表当前状态。
+
+---
+
 # 洛杉矶交通事故项目
 
 本文件夹已按原始资料 → 下载 → 清理 → 尺度诊断 → 特征构建 → 模型 → 报告建立目录。
@@ -26,3 +48,5 @@ python 03_scripts/08_finalize.py
 python 03_scripts/09_verify.py
 ```
 最终报告说明了人口数值与交通报告数值尚未完成。不要将当前文件夹视为已经可以直接训练模型的完整特征表。
+
+Range补充验证：python 03_scripts/10_validate_range.py；解释见06_reports/range_validation.md。该验证不训练RF、不改网格，也不使用预留测试区域。

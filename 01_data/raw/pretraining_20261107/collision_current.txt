@@ -1,0 +1,1527 @@
+{
+  "id" : "d5tf-ez2w",
+  "name" : "Traffic Collision Data from 2010 to Present",
+  "assetType" : "dataset",
+  "attribution" : "Los Angeles Police Department",
+  "averageRating" : 0,
+  "category" : "Public Safety",
+  "createdAt" : 1496929367,
+  "description" : "***Notice: Transition to Modernized Traffic Collision Reporting\nThe Los Angeles Police Department (LAPD) has transitioned traffic collision reporting to a new Records Management System (RMS) as part of our ongoing efforts to modernize data collection. This upgrade will enhance the accuracy and detail of reported traffic-related incidents.\nAs a result, the existing Traffic Collision Data from 2010 to Present dataset will no longer receive updates. It will remain available on the portal for historical reference only.\nOnce the new Traffic Collision dataset is complete, it will be published on the Los Angeles Open Data Portal and refreshed on a regular schedule. Additional details will be shared as they become available.\nThank you for your understanding as we work to provide more comprehensive and standardized data for the public.\n***\n\nThis dataset reflects traffic collision incidents in the City of Los Angeles dating back to 2010. This data is transcribed from original traffic reports that are typed on paper and therefore there may be some inaccuracies within the data. Some location fields with missing data are noted as (0°, 0°). Address fields are only provided to the nearest hundred block in order to maintain privacy. This data is as accurate as the data in the database. Please note questions or concerns in the comments.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 183749,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1556035287,
+  "licenseId" : "CC0_10",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 26151681,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1504035043,
+  "publicationGroup" : 14258040,
+  "publicationStage" : "published",
+  "rowClass" : "",
+  "rowIdentifierColumnId" : 313831413,
+  "rowsUpdatedAt" : 1741710617,
+  "tableId" : 14258040,
+  "totalTimesRated" : 0,
+  "viewCount" : 121730,
+  "viewLastModified" : 1767393319,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1512153385,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 882461,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1512153385,
+    "targetAudience" : "public",
+    "workflowId" : 2212,
+    "reviewer" : {
+      "id" : "95pg-i79k",
+      "displayName" : "ChelseaU"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "95pg-i79k",
+      "displayName" : "ChelseaU"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 313831413,
+    "name" : "DR Number",
+    "dataTypeName" : "text",
+    "description" : "Division of Records Number: Official file number made up of a 2 digit year, area ID, and 5 digits.",
+    "fieldName" : "dr_no",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763176,
+    "width" : 151,
+    "cachedContents" : {
+      "largest" : "252104133",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "192116684",
+        "count" : "1"
+      }, {
+        "item" : "130916523",
+        "count" : "1"
+      }, {
+        "item" : "100418970",
+        "count" : "1"
+      }, {
+        "item" : "101518321",
+        "count" : "1"
+      }, {
+        "item" : "132007110",
+        "count" : "1"
+      }, {
+        "item" : "151305935",
+        "count" : "1"
+      }, {
+        "item" : "120119097",
+        "count" : "1"
+      }, {
+        "item" : "171617471",
+        "count" : "1"
+      }, {
+        "item" : "121121389",
+        "count" : "1"
+      }, {
+        "item" : "141615266",
+        "count" : "1"
+      }, {
+        "item" : "130613586",
+        "count" : "1"
+      }, {
+        "item" : "160919881",
+        "count" : "1"
+      }, {
+        "item" : "220806812",
+        "count" : "1"
+      }, {
+        "item" : "140707842",
+        "count" : "1"
+      }, {
+        "item" : "150707474",
+        "count" : "1"
+      }, {
+        "item" : "130223725",
+        "count" : "1"
+      }, {
+        "item" : "181606985",
+        "count" : "1"
+      }, {
+        "item" : "162007774",
+        "count" : "1"
+      }, {
+        "item" : "141907358",
+        "count" : "1"
+      }, {
+        "item" : "190719181",
+        "count" : "1"
+      } ],
+      "smallest" : "100100007",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "621677"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 313851818,
+    "name" : "Date Reported",
+    "dataTypeName" : "calendar_date",
+    "description" : "MM/DD/YYYY",
+    "fieldName" : "date_rptd",
+    "position" : 2,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 48763177,
+    "width" : 169,
+    "cachedContents" : {
+      "largest" : "2025-03-08T00:00:00.000",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2018-04-12T00:00:00.000",
+        "count" : "235"
+      }, {
+        "item" : "2017-11-17T00:00:00.000",
+        "count" : "212"
+      }, {
+        "item" : "2018-10-01T00:00:00.000",
+        "count" : "209"
+      }, {
+        "item" : "2017-12-15T00:00:00.000",
+        "count" : "209"
+      }, {
+        "item" : "2020-02-03T00:00:00.000",
+        "count" : "208"
+      }, {
+        "item" : "2017-09-08T00:00:00.000",
+        "count" : "206"
+      }, {
+        "item" : "2016-10-20T00:00:00.000",
+        "count" : "206"
+      }, {
+        "item" : "2017-07-03T00:00:00.000",
+        "count" : "205"
+      }, {
+        "item" : "2017-09-29T00:00:00.000",
+        "count" : "205"
+      }, {
+        "item" : "2017-03-17T00:00:00.000",
+        "count" : "205"
+      }, {
+        "item" : "2014-12-08T00:00:00.000",
+        "count" : "205"
+      }, {
+        "item" : "2016-04-18T00:00:00.000",
+        "count" : "204"
+      }, {
+        "item" : "2017-11-08T00:00:00.000",
+        "count" : "203"
+      }, {
+        "item" : "2016-08-19T00:00:00.000",
+        "count" : "203"
+      }, {
+        "item" : "2018-11-30T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2018-06-08T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2016-09-26T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2016-08-05T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2019-04-18T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2018-01-08T00:00:00.000",
+        "count" : "198"
+      } ],
+      "smallest" : "2010-01-01T00:00:00.000",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "5546"
+    },
+    "format" : {
+      "view" : "date",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091910,
+    "name" : "Date Occurred",
+    "dataTypeName" : "calendar_date",
+    "description" : "MM/DD/YYYY",
+    "fieldName" : "date_occ",
+    "position" : 3,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 48763178,
+    "width" : 169,
+    "cachedContents" : {
+      "largest" : "2025-03-08T00:00:00.000",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2017-11-17T00:00:00.000",
+        "count" : "230"
+      }, {
+        "item" : "2016-12-15T00:00:00.000",
+        "count" : "223"
+      }, {
+        "item" : "2010-12-17T00:00:00.000",
+        "count" : "219"
+      }, {
+        "item" : "2017-12-01T00:00:00.000",
+        "count" : "219"
+      }, {
+        "item" : "2016-02-17T00:00:00.000",
+        "count" : "218"
+      }, {
+        "item" : "2018-02-16T00:00:00.000",
+        "count" : "217"
+      }, {
+        "item" : "2018-10-12T00:00:00.000",
+        "count" : "216"
+      }, {
+        "item" : "2015-10-09T00:00:00.000",
+        "count" : "213"
+      }, {
+        "item" : "2018-01-08T00:00:00.000",
+        "count" : "212"
+      }, {
+        "item" : "2015-11-20T00:00:00.000",
+        "count" : "208"
+      }, {
+        "item" : "2018-12-07T00:00:00.000",
+        "count" : "207"
+      }, {
+        "item" : "2019-12-06T00:00:00.000",
+        "count" : "206"
+      }, {
+        "item" : "2018-03-02T00:00:00.000",
+        "count" : "206"
+      }, {
+        "item" : "2017-09-29T00:00:00.000",
+        "count" : "204"
+      }, {
+        "item" : "2018-01-09T00:00:00.000",
+        "count" : "204"
+      }, {
+        "item" : "2018-11-30T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2018-09-21T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2010-02-05T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2017-11-04T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2017-10-27T00:00:00.000",
+        "count" : "201"
+      } ],
+      "smallest" : "2010-01-01T00:00:00.000",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "5546"
+    },
+    "format" : {
+      "view" : "date",
+      "align" : "right"
+    }
+  }, {
+    "id" : 313846228,
+    "name" : "Time Occurred",
+    "dataTypeName" : "text",
+    "description" : "In 24 hour military time.",
+    "fieldName" : "time_occ",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763179,
+    "width" : 167,
+    "cachedContents" : {
+      "largest" : "2359",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1800",
+        "count" : "8304"
+      }, {
+        "item" : "1700",
+        "count" : "7888"
+      }, {
+        "item" : "1600",
+        "count" : "7767"
+      }, {
+        "item" : "1500",
+        "count" : "7617"
+      }, {
+        "item" : "1900",
+        "count" : "7172"
+      }, {
+        "item" : "1400",
+        "count" : "6995"
+      }, {
+        "item" : "1200",
+        "count" : "6725"
+      }, {
+        "item" : "1300",
+        "count" : "6612"
+      }, {
+        "item" : "1730",
+        "count" : "6607"
+      }, {
+        "item" : "1830",
+        "count" : "6241"
+      }, {
+        "item" : "1530",
+        "count" : "6130"
+      }, {
+        "item" : "0800",
+        "count" : "6099"
+      }, {
+        "item" : "2000",
+        "count" : "6063"
+      }, {
+        "item" : "1630",
+        "count" : "5927"
+      }, {
+        "item" : "2100",
+        "count" : "5608"
+      }, {
+        "item" : "1430",
+        "count" : "5597"
+      }, {
+        "item" : "1000",
+        "count" : "5485"
+      }, {
+        "item" : "1100",
+        "count" : "5399"
+      }, {
+        "item" : "1330",
+        "count" : "5330"
+      }, {
+        "item" : "0900",
+        "count" : "5224"
+      } ],
+      "smallest" : "0001",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "1439"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 313844721,
+    "name" : "Area ID",
+    "dataTypeName" : "text",
+    "description" : "The LAPD has 21 Community Police Stations referred to as Geographic Areas within the department. These Geographic Areas are sequentially numbered from 1-21.",
+    "fieldName" : "area",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763180,
+    "width" : 123,
+    "cachedContents" : {
+      "largest" : "21",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "12",
+        "count" : "41780"
+      }, {
+        "item" : "03",
+        "count" : "36394"
+      }, {
+        "item" : "07",
+        "count" : "34640"
+      }, {
+        "item" : "20",
+        "count" : "32445"
+      }, {
+        "item" : "13",
+        "count" : "32399"
+      }, {
+        "item" : "15",
+        "count" : "32348"
+      }, {
+        "item" : "08",
+        "count" : "32208"
+      }, {
+        "item" : "14",
+        "count" : "31867"
+      }, {
+        "item" : "09",
+        "count" : "30621"
+      }, {
+        "item" : "17",
+        "count" : "30289"
+      }, {
+        "item" : "10",
+        "count" : "30155"
+      }, {
+        "item" : "06",
+        "count" : "29673"
+      }, {
+        "item" : "11",
+        "count" : "27597"
+      }, {
+        "item" : "18",
+        "count" : "27460"
+      }, {
+        "item" : "19",
+        "count" : "27339"
+      }, {
+        "item" : "01",
+        "count" : "26443"
+      }, {
+        "item" : "21",
+        "count" : "26055"
+      }, {
+        "item" : "02",
+        "count" : "23628"
+      }, {
+        "item" : "05",
+        "count" : "23373"
+      }, {
+        "item" : "04",
+        "count" : "22665"
+      } ],
+      "smallest" : "01",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "21"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091913,
+    "name" : "Area Name",
+    "dataTypeName" : "text",
+    "description" : "The 21 Geographic Areas or Patrol Divisions are also given a name designation that references a landmark or the surrounding community that it is responsible for. For example 77th Street Division is located at the intersection of South Broadway and 77th Street, serving neighborhoods in South Los Angeles.",
+    "fieldName" : "area_name",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763181,
+    "width" : 153,
+    "cachedContents" : {
+      "largest" : "Wilshire",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "77th Street",
+        "count" : "41780"
+      }, {
+        "item" : "Southwest",
+        "count" : "36394"
+      }, {
+        "item" : "Wilshire",
+        "count" : "34640"
+      }, {
+        "item" : "Olympic",
+        "count" : "32445"
+      }, {
+        "item" : "Newton",
+        "count" : "32399"
+      }, {
+        "item" : "N Hollywood",
+        "count" : "32348"
+      }, {
+        "item" : "West LA",
+        "count" : "32208"
+      }, {
+        "item" : "Pacific",
+        "count" : "31867"
+      }, {
+        "item" : "Van Nuys",
+        "count" : "30621"
+      }, {
+        "item" : "Devonshire",
+        "count" : "30289"
+      }, {
+        "item" : "West Valley",
+        "count" : "30155"
+      }, {
+        "item" : "Hollywood",
+        "count" : "29673"
+      }, {
+        "item" : "Northeast",
+        "count" : "27597"
+      }, {
+        "item" : "Southeast",
+        "count" : "27460"
+      }, {
+        "item" : "Mission",
+        "count" : "27339"
+      }, {
+        "item" : "Central",
+        "count" : "26443"
+      }, {
+        "item" : "Topanga",
+        "count" : "26055"
+      }, {
+        "item" : "Rampart",
+        "count" : "23628"
+      }, {
+        "item" : "Harbor",
+        "count" : "23373"
+      }, {
+        "item" : "Hollenbeck",
+        "count" : "22665"
+      } ],
+      "smallest" : "77th Street",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "21"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 313843950,
+    "name" : "Reporting District",
+    "dataTypeName" : "text",
+    "description" : "A code used in producing reports to group data into geographic sub-areas within an area. Find LAPD Reporting Districts on the LA City GeoHub at http://geohub.lacity.org/datasets/c4f83909b81d4786aa8ba8a74a4b4db1_4\n",
+    "fieldName" : "rpt_dist_no",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763182,
+    "width" : 185,
+    "cachedContents" : {
+      "largest" : "2199",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0645",
+        "count" : "2725"
+      }, {
+        "item" : "1494",
+        "count" : "2573"
+      }, {
+        "item" : "0111",
+        "count" : "2501"
+      }, {
+        "item" : "1309",
+        "count" : "2478"
+      }, {
+        "item" : "0646",
+        "count" : "2420"
+      }, {
+        "item" : "0666",
+        "count" : "2201"
+      }, {
+        "item" : "1822",
+        "count" : "1893"
+      }, {
+        "item" : "1249",
+        "count" : "1785"
+      }, {
+        "item" : "1764",
+        "count" : "1759"
+      }, {
+        "item" : "1802",
+        "count" : "1697"
+      }, {
+        "item" : "1265",
+        "count" : "1680"
+      }, {
+        "item" : "0765",
+        "count" : "1671"
+      }, {
+        "item" : "0914",
+        "count" : "1661"
+      }, {
+        "item" : "0636",
+        "count" : "1659"
+      }, {
+        "item" : "1245",
+        "count" : "1650"
+      }, {
+        "item" : "1269",
+        "count" : "1622"
+      }, {
+        "item" : "0363",
+        "count" : "1620"
+      }, {
+        "item" : "1063",
+        "count" : "1616"
+      }, {
+        "item" : "1256",
+        "count" : "1606"
+      }, {
+        "item" : "0923",
+        "count" : "1600"
+      } ],
+      "smallest" : "0100",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "1335"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 313842930,
+    "name" : "Crime Code",
+    "dataTypeName" : "text",
+    "description" : "Indicates the crime committed. For this dataset - all Crime Code 997.",
+    "fieldName" : "crm_cd",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763183,
+    "width" : 152,
+    "cachedContents" : {
+      "largest" : "997",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "997",
+        "count" : "621677"
+      } ],
+      "smallest" : "997",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "1"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091916,
+    "name" : "Crime Code Description",
+    "dataTypeName" : "text",
+    "description" : "Defines the Crime Code provided. For this dataset - all Traffic Collision.",
+    "fieldName" : "crm_cd_desc",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763184,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "TRAFFIC COLLISION",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "TRAFFIC COLLISION",
+        "count" : "621677"
+      } ],
+      "smallest" : "TRAFFIC COLLISION",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "1"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091917,
+    "name" : "MO Codes",
+    "dataTypeName" : "text",
+    "description" : "Modus Operandi: Activities associated with the suspect in commission of the crime. See attached PDF for list of MO Codes in numerical order. \n\nhttps://data.lacity.org/api/views/y8tr-7khq/files/3a967fbd-f210-4857-bc52-60230efe256c?download=true&filename=MO%20CODES%20(numerical%20order).pdf",
+    "fieldName" : "mocodes",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763185,
+    "width" : 172,
+    "cachedContents" : {
+      "largest" : "9999 3101 3401 3701 3011 3034 3801",
+      "non_null" : "534353",
+      "null" : "87324",
+      "top" : [ {
+        "item" : "0605",
+        "count" : "14922"
+      }, {
+        "item" : "3101 3401 3701 3006 3030",
+        "count" : "8572"
+      }, {
+        "item" : "3101 3401 3701 3004 3030",
+        "count" : "7816"
+      }, {
+        "item" : "3006 3028 3030 3035 3037 3101 3401 3701 4027",
+        "count" : "6332"
+      }, {
+        "item" : "3004 3028 3030 3035 3037 3101 3401 3701 4027",
+        "count" : "5206"
+      }, {
+        "item" : "3004 3037 3026 3101 3401 3701 4026",
+        "count" : "5124"
+      }, {
+        "item" : "1501",
+        "count" : "5021"
+      }, {
+        "item" : "3004 3036 3026 3101 3401 3701 4026",
+        "count" : "4090"
+      }, {
+        "item" : "3004 3026 3035 3037 3101 3401 3701 4027",
+        "count" : "3962"
+      }, {
+        "item" : "3004 3026 3035 3036 3101 3401 3701 4027",
+        "count" : "3561"
+      }, {
+        "item" : "3101 3401 3701 3004 3026",
+        "count" : "3546"
+      }, {
+        "item" : "3004 3037 3030 3028 3101 3401 3701 4026",
+        "count" : "3290"
+      }, {
+        "item" : "3101 3401 3701 3004 3026 3036",
+        "count" : "2849"
+      }, {
+        "item" : "3004 3036 3025 3101 3401 3701 4026",
+        "count" : "2406"
+      }, {
+        "item" : "3101 3401 3701 3004 3030 3036",
+        "count" : "2324"
+      }, {
+        "item" : "3006 3037 3030 3028 3101 3401 3701 4026",
+        "count" : "2182"
+      }, {
+        "item" : "4025 3037 3006 3028 3030 3101",
+        "count" : "2099"
+      }, {
+        "item" : "0605 1300",
+        "count" : "1982"
+      }, {
+        "item" : "4025 3037 3004 3028 3030 3101",
+        "count" : "1859"
+      }, {
+        "item" : "3004 3026 3101",
+        "count" : "1787"
+      } ],
+      "smallest" : "0100",
+      "not_null" : "415888",
+      "count" : "621677",
+      "cardinality" : "121045"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 313841222,
+    "name" : "Victim Age",
+    "dataTypeName" : "text",
+    "description" : "Two character numeric.",
+    "fieldName" : "vict_age",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763186,
+    "width" : 146,
+    "cachedContents" : {
+      "largest" : "99",
+      "non_null" : "533483",
+      "null" : "88194",
+      "top" : [ {
+        "item" : "30",
+        "count" : "18511"
+      }, {
+        "item" : "25",
+        "count" : "16593"
+      }, {
+        "item" : "40",
+        "count" : "15291"
+      }, {
+        "item" : "35",
+        "count" : "14681"
+      }, {
+        "item" : "27",
+        "count" : "14672"
+      }, {
+        "item" : "28",
+        "count" : "14514"
+      }, {
+        "item" : "23",
+        "count" : "14469"
+      }, {
+        "item" : "24",
+        "count" : "14465"
+      }, {
+        "item" : "50",
+        "count" : "14424"
+      }, {
+        "item" : "26",
+        "count" : "14208"
+      }, {
+        "item" : "22",
+        "count" : "14042"
+      }, {
+        "item" : "29",
+        "count" : "13844"
+      }, {
+        "item" : "31",
+        "count" : "12977"
+      }, {
+        "item" : "32",
+        "count" : "12726"
+      }, {
+        "item" : "21",
+        "count" : "12355"
+      }, {
+        "item" : "33",
+        "count" : "11975"
+      }, {
+        "item" : "45",
+        "count" : "11701"
+      }, {
+        "item" : "34",
+        "count" : "11607"
+      }, {
+        "item" : "20",
+        "count" : "11544"
+      }, {
+        "item" : "36",
+        "count" : "11014"
+      } ],
+      "smallest" : "10",
+      "not_null" : "423306",
+      "count" : "621677",
+      "cardinality" : "90"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091919,
+    "name" : "Victim Sex",
+    "dataTypeName" : "text",
+    "description" : "F - Female M - Male X - Unknown",
+    "fieldName" : "vict_sex",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763187,
+    "width" : 141,
+    "cachedContents" : {
+      "largest" : "X",
+      "non_null" : "610980",
+      "null" : "10697",
+      "top" : [ {
+        "item" : "M",
+        "count" : "366612"
+      }, {
+        "item" : "F",
+        "count" : "226576"
+      }, {
+        "item" : "X",
+        "count" : "17594"
+      }, {
+        "item" : "H",
+        "count" : "186"
+      }, {
+        "item" : "N",
+        "count" : "11"
+      }, {
+        "item" : "-",
+        "count" : "1"
+      } ],
+      "smallest" : "-",
+      "not_null" : "494389",
+      "count" : "621677",
+      "cardinality" : "6"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091920,
+    "name" : "Victim Descent",
+    "dataTypeName" : "text",
+    "description" : "Descent Code: A - Other Asian B - Black C - Chinese D - Cambodian F - Filipino G - Guamanian H - Hispanic/Latin/Mexican I - American Indian/Alaskan Native J - Japanese K - Korean L - Laotian O - Other P - Pacific Islander S - Samoan U - Hawaiian V - Vietnamese W - White X - Unknown Z - Asian Indian",
+    "fieldName" : "vict_descent",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763188,
+    "width" : 171,
+    "cachedContents" : {
+      "largest" : "Z",
+      "non_null" : "610029",
+      "null" : "11648",
+      "top" : [ {
+        "item" : "H",
+        "count" : "235060"
+      }, {
+        "item" : "W",
+        "count" : "140905"
+      }, {
+        "item" : "O",
+        "count" : "90589"
+      }, {
+        "item" : "B",
+        "count" : "82238"
+      }, {
+        "item" : "X",
+        "count" : "29918"
+      }, {
+        "item" : "A",
+        "count" : "22325"
+      }, {
+        "item" : "K",
+        "count" : "4553"
+      }, {
+        "item" : "F",
+        "count" : "1776"
+      }, {
+        "item" : "C",
+        "count" : "918"
+      }, {
+        "item" : "U",
+        "count" : "474"
+      }, {
+        "item" : "J",
+        "count" : "352"
+      }, {
+        "item" : "V",
+        "count" : "247"
+      }, {
+        "item" : "P",
+        "count" : "211"
+      }, {
+        "item" : "I",
+        "count" : "186"
+      }, {
+        "item" : "Z",
+        "count" : "161"
+      }, {
+        "item" : "G",
+        "count" : "52"
+      }, {
+        "item" : "S",
+        "count" : "36"
+      }, {
+        "item" : "D",
+        "count" : "17"
+      }, {
+        "item" : "L",
+        "count" : "8"
+      }, {
+        "item" : "-",
+        "count" : "3"
+      } ],
+      "smallest" : "-",
+      "not_null" : "493597",
+      "count" : "621677",
+      "cardinality" : "20"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 313837385,
+    "name" : "Premise Code",
+    "dataTypeName" : "text",
+    "description" : "The type of structure or location where the incident took place. ",
+    "fieldName" : "premis_cd",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763189,
+    "width" : 165,
+    "cachedContents" : {
+      "largest" : "970",
+      "non_null" : "620718",
+      "null" : "959",
+      "top" : [ {
+        "item" : "101",
+        "count" : "591306"
+      }, {
+        "item" : "108",
+        "count" : "19487"
+      }, {
+        "item" : "102",
+        "count" : "4183"
+      }, {
+        "item" : "103",
+        "count" : "1208"
+      }, {
+        "item" : "104",
+        "count" : "1127"
+      }, {
+        "item" : "110",
+        "count" : "620"
+      }, {
+        "item" : "501",
+        "count" : "378"
+      }, {
+        "item" : "301",
+        "count" : "367"
+      }, {
+        "item" : "212",
+        "count" : "221"
+      }, {
+        "item" : "710",
+        "count" : "206"
+      }, {
+        "item" : "707",
+        "count" : "173"
+      }, {
+        "item" : "109",
+        "count" : "149"
+      }, {
+        "item" : "116",
+        "count" : "147"
+      }, {
+        "item" : "105",
+        "count" : "123"
+      }, {
+        "item" : "107",
+        "count" : "100"
+      }, {
+        "item" : "502",
+        "count" : "95"
+      }, {
+        "item" : "123",
+        "count" : "87"
+      }, {
+        "item" : "203",
+        "count" : "80"
+      }, {
+        "item" : "726",
+        "count" : "77"
+      }, {
+        "item" : "210",
+        "count" : "46"
+      } ],
+      "smallest" : "101",
+      "not_null" : "501928",
+      "count" : "621677",
+      "cardinality" : "125"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091922,
+    "name" : "Premise Description",
+    "dataTypeName" : "text",
+    "description" : "Defines the Premise Code provided.",
+    "fieldName" : "premis_desc",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763190,
+    "width" : 203,
+    "cachedContents" : {
+      "largest" : "YARD (RESIDENTIAL/BUSINESS)",
+      "non_null" : "620717",
+      "null" : "960",
+      "top" : [ {
+        "item" : "STREET",
+        "count" : "591306"
+      }, {
+        "item" : "PARKING LOT",
+        "count" : "19487"
+      }, {
+        "item" : "SIDEWALK",
+        "count" : "4183"
+      }, {
+        "item" : "ALLEY",
+        "count" : "1208"
+      }, {
+        "item" : "DRIVEWAY",
+        "count" : "1127"
+      }, {
+        "item" : "FREEWAY",
+        "count" : "620"
+      }, {
+        "item" : "SINGLE FAMILY DWELLING",
+        "count" : "378"
+      }, {
+        "item" : "GAS STATION",
+        "count" : "367"
+      }, {
+        "item" : "TRANSPORTATION FACILITY (AIRPORT)",
+        "count" : "221"
+      }, {
+        "item" : "OTHER PREMISE",
+        "count" : "206"
+      }, {
+        "item" : "GARAGE/CARPORT",
+        "count" : "173"
+      }, {
+        "item" : "PARK/PLAYGROUND",
+        "count" : "149"
+      }, {
+        "item" : "OTHER/OUTSIDE",
+        "count" : "147"
+      }, {
+        "item" : "PEDESTRIAN OVERCROSSING",
+        "count" : "123"
+      }, {
+        "item" : "VACANT LOT",
+        "count" : "100"
+      }, {
+        "item" : "MULTI-UNIT DWELLING (APARTMENT, DUPLEX, ETC)",
+        "count" : "95"
+      }, {
+        "item" : "PARKING UNDERGROUND/BUILDING",
+        "count" : "87"
+      }, {
+        "item" : "OTHER BUSINESS",
+        "count" : "80"
+      }, {
+        "item" : "POLICE FACILITY",
+        "count" : "77"
+      }, {
+        "item" : "RESTAURANT/FAST FOOD",
+        "count" : "46"
+      } ],
+      "smallest" : "AIRCRAFT",
+      "not_null" : "501928",
+      "count" : "621677",
+      "cardinality" : "124"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091923,
+    "name" : "Address",
+    "dataTypeName" : "text",
+    "description" : "Street address of crime incident rounded to the nearest hundred block to maintain anonymity. ",
+    "fieldName" : "location",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763191,
+    "width" : 144,
+    "cachedContents" : {
+      "largest" : "ZUNIGA                       LN",
+      "non_null" : "621677",
+      "null" : "0",
+      "top" : [ {
+        "item" : "WESTERN                      AV",
+        "count" : "8378"
+      }, {
+        "item" : "SHERMAN                      WY",
+        "count" : "7295"
+      }, {
+        "item" : "VENTURA                      BL",
+        "count" : "7290"
+      }, {
+        "item" : "SEPULVEDA                    BL",
+        "count" : "7056"
+      }, {
+        "item" : "VERMONT                      AV",
+        "count" : "6841"
+      }, {
+        "item" : "VICTORY                      BL",
+        "count" : "6364"
+      }, {
+        "item" : "FIGUEROA                     ST",
+        "count" : "6344"
+      }, {
+        "item" : "SUNSET                       BL",
+        "count" : "6328"
+      }, {
+        "item" : "ROSCOE                       BL",
+        "count" : "5706"
+      }, {
+        "item" : "VANOWEN                      ST",
+        "count" : "5370"
+      }, {
+        "item" : "VAN NUYS                     BL",
+        "count" : "5300"
+      }, {
+        "item" : "OLYMPIC                      BL",
+        "count" : "5272"
+      }, {
+        "item" : "PICO                         BL",
+        "count" : "4731"
+      }, {
+        "item" : "WILSHIRE                     BL",
+        "count" : "4328"
+      }, {
+        "item" : "VENICE                       BL",
+        "count" : "4328"
+      }, {
+        "item" : "BROADWAY",
+        "count" : "4287"
+      }, {
+        "item" : "NORMANDIE                    AV",
+        "count" : "4264"
+      }, {
+        "item" : "LAUREL CANYON                BL",
+        "count" : "4221"
+      }, {
+        "item" : "3RD                          ST",
+        "count" : "3733"
+      }, {
+        "item" : "CENTRAL                      AV",
+        "count" : "3684"
+      } ],
+      "smallest" : "00",
+      "not_null" : "501953",
+      "count" : "621677",
+      "cardinality" : "29522"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091924,
+    "name" : "Cross Street",
+    "dataTypeName" : "text",
+    "description" : "Cross Street of rounded Address.",
+    "fieldName" : "cross_street",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 48763192,
+    "width" : 169,
+    "cachedContents" : {
+      "largest" : "ZORANA                       PL",
+      "non_null" : "592217",
+      "null" : "29460",
+      "top" : [ {
+        "item" : "VERMONT                      AV",
+        "count" : "4611"
+      }, {
+        "item" : "FIGUEROA                     ST",
+        "count" : "4497"
+      }, {
+        "item" : "WESTERN                      AV",
+        "count" : "4361"
+      }, {
+        "item" : "SHERMAN                      WY",
+        "count" : "3618"
+      }, {
+        "item" : "BROADWAY",
+        "count" : "3581"
+      }, {
+        "item" : "SEPULVEDA                    BL",
+        "count" : "3558"
+      }, {
+        "item" : "VICTORY                      BL",
+        "count" : "3495"
+      }, {
+        "item" : "PICO                         BL",
+        "count" : "3269"
+      }, {
+        "item" : "VANOWEN                      ST",
+        "count" : "3261"
+      }, {
+        "item" : "3RD                          ST",
+        "count" : "3246"
+      }, {
+        "item" : "MAIN                         ST",
+        "count" : "3224"
+      }, {
+        "item" : "OLYMPIC                      BL",
+        "count" : "3167"
+      }, {
+        "item" : "NORMANDIE                    AV",
+        "count" : "2948"
+      }, {
+        "item" : "ROSCOE                       BL",
+        "count" : "2902"
+      }, {
+        "item" : "6TH                          ST",
+        "count" : "2896"
+      }, {
+        "item" : "VENICE                       BL",
+        "count" : "2890"
+      }, {
+        "item" : "VAN NUYS                     BL",
+        "count" : "2886"
+      }, {
+        "item" : "WASHINGTON                   BL",
+        "count" : "2803"
+      }, {
+        "item" : "HOOVER                       ST",
+        "count" : "2673"
+      }, {
+        "item" : "SUNSET                       BL",
+        "count" : "2576"
+      } ],
+      "smallest" : "10",
+      "not_null" : "479064",
+      "count" : "621677",
+      "cardinality" : "21488"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 306091925,
+    "name" : "Location",
+    "dataTypeName" : "location",
+    "description" : "The location where the crime incident occurred. Actual address is omitted for confidentiality. XY coordinates reflect the nearest 100 block.",
+    "fieldName" : "location_1",
+    "position" : 18,
+    "renderTypeName" : "location",
+    "tableColumnId" : 48763193,
+    "width" : 181,
+    "format" : {
+      "view" : "coords",
+      "align" : "right"
+    }
+  }, {
+    "id" : 343794806,
+    "name" : "Zip Codes",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Zip Codes' (qz3q-ghft) the point in column 'location_1' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_qz3q_ghft",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 60907761,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_qz3q-ghft",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 343794807,
+    "name" : "Census Tracts",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Census Tracts' (k96s-3jcv) the point in column 'location_1' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_k96s_3jcv",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 60907762,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_k96s-3jcv",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 343794808,
+    "name" : "Precinct Boundaries",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Precinct Boundaries' (tatf-ua23) the point in column 'location_1' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_tatf_ua23",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 60907763,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_tatf-ua23",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 343794809,
+    "name" : "LA Specific Plans",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'LA Specific Plans' (ur2y-g4cx) the point in column 'location_1' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_ur2y_g4cx",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 60907764,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_ur2y-g4cx",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 343794810,
+    "name" : "Council Districts",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Council Districts' (kqwf-mjcx) the point in column 'location_1' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_kqwf_mjcx",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 60907765,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_kqwf-mjcx",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 343794811,
+    "name" : "Neighborhood Councils (Certified)",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Neighborhood Councils (Certified)' (2dna-qi2s) the point in column 'location_1' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_2dna_qi2s",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 60907766,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_2dna-qi2s",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Creative Commons 1.0 Universal (Public Domain Dedication)",
+    "logoUrl" : "images/licenses/ccZero.png",
+    "termsLink" : "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+  },
+  "metadata" : {
+    "rdfSubject" : "dr_no",
+    "rdfClass" : "",
+    "attachments" : [ {
+      "filename" : "MO_CODES_Numerical_20180627.pdf",
+      "assetId" : "8957b3b1-771a-4686-8f19-281d23a11f1b",
+      "name" : "MO_CODES_Numerical_20180627.pdf"
+    } ],
+    "custom_fields" : {
+      "Committed Update Frequency" : {
+        "Refresh rate" : "Weekly"
+      },
+      "Location Specified" : {
+        "Does this data have a Location column? (Yes or No)" : "Yes"
+      },
+      "Data Owner" : {
+        "Department" : "LAPD"
+      }
+    },
+    "rowIdentifier" : 313831413,
+    "rowLabel" : "traffic collision incident",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "art8-rc4x",
+    "displayName" : "LAPD OpenData",
+    "profileImageUrlLarge" : "/api/users/art8-rc4x/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/art8-rc4x/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/art8-rc4x/profile_images/TINY",
+    "screenName" : "LAPD OpenData",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "art8-rc4x",
+    "displayName" : "LAPD OpenData",
+    "profileImageUrlLarge" : "/api/users/art8-rc4x/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/art8-rc4x/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/art8-rc4x/profile_images/TINY",
+    "screenName" : "LAPD OpenData",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "lapd", "traffic", "traffic data", "police", "safe city", "traffic collision" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

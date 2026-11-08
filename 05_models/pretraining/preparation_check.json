@@ -1,0 +1,54 @@
+{
+  "scope": "prepare_only",
+  "training_executed": false,
+  "pipelines": {
+    "baseline": {
+      "features": [
+        "road_density_km_per_km2",
+        "intersection_density_km2",
+        "population_density_km2",
+        "landuse_share_residential",
+        "landuse_share_commercial",
+        "landuse_share_industrial",
+        "landuse_share_open_space_public_facilities",
+        "landuse_share_lax_airport",
+        "landuse_share_port_of_la",
+        "landuse_share_parking",
+        "landuse_uncovered_fraction",
+        "road_type_dominant"
+      ],
+      "all_missing_train_features": [],
+      "train_rows": 720,
+      "validation_rows": 166,
+      "test_rows": 227,
+      "pipeline_fitted": false
+    },
+    "enhanced": {
+      "features": [
+        "road_density_km_per_km2",
+        "intersection_density_km2",
+        "population_density_km2",
+        "landuse_share_residential",
+        "landuse_share_commercial",
+        "landuse_share_industrial",
+        "landuse_share_open_space_public_facilities",
+        "landuse_share_lax_airport",
+        "landuse_share_port_of_la",
+        "landuse_share_parking",
+        "landuse_uncovered_fraction",
+        "road_sinuosity_length_weighted",
+        "freeway_share_functional",
+        "arterial_share_functional",
+        "signal_density_snapshot_km2",
+        "road_type_dominant"
+      ],
+      "all_missing_train_features": [],
+      "train_rows": 720,
+      "validation_rows": 166,
+      "test_rows": 227,
+      "pipeline_fitted": false
+    }
+  },
+  "data_gate_status": "ready_for_training_inputs_no_fit",
+  "blocked_items": []
+}
